@@ -1,0 +1,13 @@
+﻿Build started 20/8/2560 7:01:15.
+     1>Project "E:\svn-ragnarok\SVN-01\3rdparty\mt19937ar\mt19937ar.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\mt19937ar\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\mt19937ar\Win32\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt mt19937ar.c
+         mt19937ar.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\svn-ragnarok\SVN-01\.vs\build\mt19937ar.lib" /NOLOGO "E:\svn-ragnarok\SVN-01\.vs\build\mt19937ar\Win32\Debug\mt19937ar.obj"
+         mt19937ar.vcxproj -> E:\svn-ragnarok\SVN-01\.vs\build\mt19937ar.lib
+     1>Done Building Project "E:\svn-ragnarok\SVN-01\3rdparty\mt19937ar\mt19937ar.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.36

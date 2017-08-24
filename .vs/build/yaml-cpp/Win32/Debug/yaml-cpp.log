@@ -1,0 +1,74 @@
+﻿Build started 20/8/2560 7:01:15.
+     1>Project "E:\svn-ragnarok\SVN-01\3rdparty\yaml-cpp\yaml-cpp.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\SVN-01\3rdparty\yaml-cpp\include\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\yaml-cpp\src\\" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\binary.cpp src\contrib\graphbuilder.cpp src\contrib\graphbuilderadapter.cpp src\convert.cpp src\directives.cpp src\emit.cpp src\emitfromevents.cpp src\emitter.cpp src\emitterstate.cpp src\emitterutils.cpp src\exceptions.cpp src\exp.cpp src\memory.cpp src\node.cpp src\nodebuilder.cpp src\nodeevents.cpp src\node_data.cpp src\null.cpp src\ostream_wrapper.cpp src\parse.cpp src\parser.cpp src\regex_yaml.cpp src\scanner.cpp src\scanscalar.cpp src\scantag.cpp src\scantoken.cpp src\simplekey.cpp src\singledocparser.cpp src\stream.cpp src\tag.cpp
+         tag.cpp
+         stream.cpp
+         singledocparser.cpp
+         simplekey.cpp
+         scantoken.cpp
+         scantag.cpp
+         scanscalar.cpp
+         scanner.cpp
+         regex_yaml.cpp
+         parser.cpp
+         parse.cpp
+         ostream_wrapper.cpp
+         null.cpp
+         node_data.cpp
+         nodeevents.cpp
+         nodebuilder.cpp
+         node.cpp
+         memory.cpp
+         exp.cpp
+         exceptions.cpp
+         Generating Code...
+         Compiling...
+         emitterutils.cpp
+         emitterstate.cpp
+         emitter.cpp
+         emitfromevents.cpp
+         emit.cpp
+         directives.cpp
+         convert.cpp
+         graphbuilderadapter.cpp
+         graphbuilder.cpp
+         binary.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp.lib" /NOLOGO "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\binary.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\graphbuilder.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\graphbuilderadapter.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\convert.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\directives.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\emit.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\emitfromevents.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\emitter.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\emitterstate.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\emitterutils.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\exceptions.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\exp.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\memory.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\node.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\nodebuilder.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\nodeevents.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\node_data.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\null.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\ostream_wrapper.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\parse.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\parser.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\regex_yaml.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\scanner.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\scanscalar.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\scantag.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\scantoken.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\simplekey.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\singledocparser.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\stream.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp\Win32\Debug\tag.obj"
+         yaml-cpp.vcxproj -> E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp.lib
+     1>Done Building Project "E:\svn-ragnarok\SVN-01\3rdparty\yaml-cpp\yaml-cpp.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:17.48

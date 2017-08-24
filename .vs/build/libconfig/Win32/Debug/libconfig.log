@@ -1,0 +1,22 @@
+﻿Build started 20/8/2560 7:01:15.
+     1>Project "E:\svn-ragnarok\SVN-01\3rdparty\libconfig\libconfig.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D YY_USE_CONST /D LIBCONFIG_STATIC /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D WIN32 /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\libconfig\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\libconfig\Win32\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt grammar.c libconfig.c scanctx.c scanner.c strbuf.c
+         strbuf.c
+         scanner.c
+         scanctx.c
+         libconfig.c
+         grammar.c
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\svn-ragnarok\SVN-01\.vs\build\libconfig.lib" /NOLOGO "E:\svn-ragnarok\SVN-01\.vs\build\libconfig\Win32\Debug\grammar.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\libconfig\Win32\Debug\libconfig.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\libconfig\Win32\Debug\scanctx.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\libconfig\Win32\Debug\scanner.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\libconfig\Win32\Debug\strbuf.obj"
+         libconfig.vcxproj -> E:\svn-ragnarok\SVN-01\.vs\build\libconfig.lib
+     1>Done Building Project "E:\svn-ragnarok\SVN-01\3rdparty\libconfig\libconfig.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.81

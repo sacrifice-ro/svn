@@ -1,0 +1,97 @@
+﻿Build started 20/8/2560 7:01:36.
+     1>Project "E:\svn-ragnarok\SVN-01\src\map\map-server.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D FD_SETSIZE=4096 /D PCRE_SUPPORT /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\vc120.pdb" /Gd /TC /wd4018 /analyze- /errorReport:prompt achievement.c atcommand.c battle.c battleground.c buyingstore.c cashshop.c channel.c chat.c chrif.c clan.c clif.c date.c duel.c elemental.c guild.c homunculus.c instance.c intif.c itemdb.c log.c mail.c mapreg.c mercenary.c mob.c npc.c npc_chat.c party.c path.c pc.c pc_groups.c pet.c quest.c script.c searchstore.c skill.c status.c storage.c trade.c unit.c vending.c
+         vending.c
+         unit.c
+         trade.c
+         storage.c
+         status.c
+         skill.c
+         searchstore.c
+         script.c
+         quest.c
+         pet.c
+         pc_groups.c
+         pc.c
+         path.c
+         party.c
+         npc_chat.c
+         npc.c
+         mob.c
+         mercenary.c
+         mapreg.c
+         mail.c
+         Generating Code...
+         Compiling...
+         log.c
+         itemdb.c
+         intif.c
+         instance.c
+         homunculus.c
+         guild.c
+         elemental.c
+         duel.c
+         date.c
+         clif.c
+         clan.c
+         chrif.c
+         chat.c
+         channel.c
+         cashshop.c
+         buyingstore.c
+         battleground.c
+         battle.c
+         atcommand.c
+         achievement.c
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D FD_SETSIZE=4096 /D PCRE_SUPPORT /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\vc120.pdb" /Gd /TP /wd4018 /analyze- /errorReport:prompt map.cpp
+         map.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\svn-ragnarok\SVN-01\map-server.exe" /INCREMENTAL /NOLOGO ws2_32.lib "E:\svn-ragnarok\SVN-01\.vs\build\common.lib" "E:\svn-ragnarok\SVN-01\.vs\build\libconfig.lib" "E:\svn-ragnarok\SVN-01\.vs\build\mt19937ar.lib" "E:\svn-ragnarok\SVN-01\3rdparty\zlib\lib\Win32\zlib.lib" "E:\svn-ragnarok\SVN-01\3rdparty\pcre\lib\Win32\pcre8.lib" "E:\svn-ragnarok\SVN-01\3rdparty\mysql\lib\Win32\libmysql.lib" "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\svn-ragnarok\SVN-01\map-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\svn-ragnarok\SVN-01\map-server.lib" /MACHINE:X86 "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\achievement.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\atcommand.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\battle.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\battleground.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\buyingstore.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\cashshop.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\channel.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\chat.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\chrif.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\clan.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\clif.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\date.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\duel.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\elemental.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\guild.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\homunculus.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\instance.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\intif.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\itemdb.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\log.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\mail.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\map.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\mapreg.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\mercenary.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\mob.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\npc.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\npc_chat.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\party.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\path.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\pc.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\pc_groups.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\pet.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\quest.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\script.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\searchstore.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\skill.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\status.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\storage.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\trade.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\unit.obj"
+         "E:\svn-ragnarok\SVN-01\.vs\build\map-server\Win32\Debug\vending.obj"
+         map-server.vcxproj -> E:\svn-ragnarok\SVN-01\map-server.exe
+     1>Done Building Project "E:\svn-ragnarok\SVN-01\src\map\map-server.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.29
