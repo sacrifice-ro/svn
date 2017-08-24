@@ -2,7 +2,7 @@ prt_monk,182,211,3	script	Warp Portal::capital_warp_portal_01	10007,{
 	OnInit: waitingroom " Warp Portal ",0;
 	callfunc "F_KafSet";
 	mes "[Warp Portal]";
-	mes "Portal Gate แห่งเทคโนโลยี Juno";
+	mes "PortalÿGate แห่งเทคโนโลยีÿJuno";
 	mes ".....................";
 	mes "โปรดเลือกพิกัดก่อนใช้งาน Gate";
 	next;
@@ -34,7 +34,7 @@ prt_monk,182,211,3	script	Warp Portal::capital_warp_portal_01	10007,{
 		"- Dimensional A",war_dimensional_a,
 		"- Dimensional B",war_dimensional_b,
 		"- Einbech",warp_einbroch,
-		"- Einbech Mining Village",warp_einbech_mining_village,
+		"- Einbech Mining Village",warp_einbech_mv,
 		"- Geffen",warp_geffen,
 		"- Gonryun",warp_gonryun,
 		"- Hugel",warp_hugel,
@@ -75,7 +75,7 @@ prt_monk,182,211,3	script	Warp Portal::capital_warp_portal_01	10007,{
 	war_dimensional_a: callfunc "Kf_ZWarp", "dali",66,113; close;
 	war_dimensional_b: callfunc "Kf_ZWarp", "dali02",114,83; close;
 	warp_einbroch: callfunc "Kf_ZWarp", "einbroch",167,245; close;
-	warp_einbech_mining_village: callfunc "Kf_ZWarp", "einbech",199,120; close;
+	warp_einbech_mv: callfunc "Kf_ZWarp", "einbech",199,120; close;
 	warp_geffen: callfunc "Kf_ZWarp", "geffen",50,118; close;
 	warp_gonryun: callfunc "Kf_ZWarp", "gonryun",161,105; close;
 	warp_hugel: callfunc "Kf_ZWarp", "hugel",101,225; close;
