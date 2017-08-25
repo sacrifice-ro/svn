@@ -104,14 +104,15 @@ prt_monk,182,211,3	script	Warp Portal::capital_warp_portal_01	10007,{
 
 field:
 	menu 
-	"- Amatsu Fields",wamafild,
-	"- Ayothaya Fields",wayofild,
-	"- Brasilis Fields",wbrafild,
-	"- Bifroft Fields",wbiffield,
-	"- Comodo Fields",wcmdfild,
+	"- Amatsu Fields",sf_amatsu,
+	"- Ayothaya Fields",sf_ayothaya,
+	"- Bifroft Fields",sf_bifrost,
+	"- Brasilis Fields",sf_brasills,
+	"- Comodo Fields",sf_comodo,
+	"- Dewata Fields",sf_dewata,
+	"- Eclage Fields",sf_eclage,
+	"- Einbroch Fields",sf_enibroch,
 	"- Dicastes Fields",wdicfild,
-	"- Dewata Fields",wdwtfield,
-	"- Einbroch Fields",weinfild,
 	"- Geffen Fields",wgeffild,
 	"- Gonryun Fields",wgonfild,
 	"- Hugel Fields",whufild,
@@ -132,6 +133,107 @@ field:
 	"- Umbala Fields",wumfild,
 	"- Veins Fields",wveinsfild,
 	"- Yuno Fields",wyunofild;
+
+	sf_amatsu:
+		mes "[Warp Portal]";
+		mes "เลือกแมพที่ต้องการ ";
+		next;
+		menu "- Amatsu Field 1",wf_amatsu1;
+	wf_amatsu1: callfunc "Kf_ZWarp","ama_fild01",190,197; close;
+
+	sf_ayothaya:
+		mes "[Warp Portal]";
+		mes "เลือกแมพที่ต้องการ ";
+		next;
+		menu
+		"- Ayothaya Field 1",wf_ayothaya1,
+		"- Ayothaya Field 2",wf_ayothaya2;
+	wf_ayothaya1: callfunc "Kf_ZWarp","ayo_fild01",173,134; close;
+	wf_ayothaya2: callfunc "Kf_ZWarp","ayo_fild02",212,150; close;
+
+	sf_bifrost:
+		mes "[Warp Portal]";
+		mes "เลือกแมพที่ต้องการ ";
+		next;
+		menu
+		"- Bifroft Fields 1",wf_bifroft1,
+		"- Bifroft Fields 2",wf_bifroft2;
+	wf_bifroft1: callfunc "Kf_ZWarp","bif_fild01",195,229; close;
+	wf_bifroft2: callfunc "Kf_ZWarp","bif_fild02",107,167; close;
+
+	sf_brasills:
+		mes "[Warp Portal]";
+		mes "เลือกแมพที่ต้องการ ";
+		next;
+		menu
+		"- Brasilis Field 1",wf_brasills1;
+	wf_brasills1: callfunc "Kf_ZWarp","bra_fild01",82,32; close;
+
+	sf_comodo:
+		mes "[Warp Portal]";
+		mes "เลือกแมพที่ต้องการ ";
+		next;
+		menu
+		"- Comodo Field 1",wf_comodo1,
+		"- Comodo Field 2",wf_comodo2,
+		"- Comodo Field 3",wf_comodo3,
+		"- Comodo Field 4",wf_comodo4,
+		"- Comodo Field 5",wf_comodo5,
+		"- Comodo Field 6",wf_comodo6,
+		"- Comodo Field 7",wf_comodo7,
+		"- Comodo Field 8",wf_comodo8,
+		"- Comodo Field 9",wf_comodo9;
+	wf_comodo1: callfunc "Kf_ZWarp","cmd_fild01",180,178; close;
+	wf_comodo2: callfunc "Kf_ZWarp","cmd_fild02",231,160; close;
+	wf_comodo3: callfunc "Kf_ZWarp","cmd_fild03",191,172; close;
+	wf_comodo4: callfunc "Kf_ZWarp","cmd_fild04",228,194; close;
+	wf_comodo5: callfunc "Kf_ZWarp","cmd_fild05",224,203; close;
+	wf_comodo6: callfunc "Kf_ZWarp","cmd_fild06",190,223; close;
+	wf_comodo7: callfunc "Kf_ZWarp","cmd_fild07",234,177; close;
+	wf_comodo8: callfunc "Kf_ZWarp","cmd_fild08",194,175; close;
+	wf_comodo9: callfunc "Kf_ZWarp","cmd_fild09",172,172; close;
+
+	sf_dewata:
+		mes "[Warp Portal]";
+		mes "เลือกแมพที่ต้องการ ";
+		next;
+		menu
+		"- Dewata Fields 1",wf_dewata1;
+	wf_dewata1: callfunc "Kf_ZWarp","dew_fild01",0,0; close;
+
+	sf_eclage:
+		mes "[Warp Portal]";
+		mes "เลือกแมพที่ต้องการ ";
+		next;
+		menu
+		"- Eclage Fields 1",wf_eclage1;
+	wf_eclage1: callfunc "Kf_ZWarp", "ecl_fild01",,; close;
+
+	sf_enibroch:
+		mes "[Warp Portal]";
+		mes "เลือกแมพที่ต้องการ ";
+		next;
+		menu
+		"- Einbroch Field 1",wf_enibroch1,
+		"- Einbroch Field 2",wf_enibroch2,
+		"- Einbroch Field 3",wf_enibroch3,
+		"- Einbroch Field 4",wf_enibroch4,
+		"- Einbroch Field 5",wf_enibroch5,
+		"- Einbroch Field 6",wf_enibroch6,
+		"- Einbroch Field 7",wf_enibroch7,
+		"- Einbroch Field 8",wf_enibroch8,
+		"- Einbroch Field 9",wf_enibroch9,
+		"- Einbroch Field 10",wf_enibroch10;
+	wf_enibroch1: callfunc "Kf_ZWarp","ein_fild01",142,225; close;
+	wf_enibroch2: callfunc "Kf_ZWarp","ein_fild02",182,141; close;
+	wf_enibroch3: callfunc "Kf_ZWarp","ein_fild03",187,228; close;
+	wf_enibroch4: callfunc "Kf_ZWarp","ein_fild04",185,173; close;
+	wf_enibroch5: callfunc "Kf_ZWarp","ein_fild05",216,173; close;
+	wf_enibroch6: callfunc "Kf_ZWarp","ein_fild06",195,148; close;
+	wf_enibroch7: callfunc "Kf_ZWarp","ein_fild07",272,220; close;
+	wf_enibroch8: callfunc "Kf_ZWarp","ein_fild08",173,214; close;
+	wf_enibroch9: callfunc "Kf_ZWarp","ein_fild09",207,174; close;
+	wf_enibroch10: callfunc "Kf_ZWarp","ein_fild10",196,200; close;
 
 dungeon:
 	menu
@@ -177,27 +279,6 @@ dungeon:
 	"- Umbala Dungeon",umba;
 
 //----------------Fields----------------\\
-wdwtfield:
-mes "[ ^FF0000Warp NPC^000000 ]";
-mes "เลือกแมพที่ต้องการ ";
-next;
-menu
-"- Dewata Fields 1",dwt1field;
-
-wbiffield:
-mes "[ ^FF0000Warp NPC^000000 ]";
-mes "เลือกแมพที่ต้องการ ";
-next;
-menu
-"- Bifroft Fields 1",bif1field,
-"- Bifroft Fields 2",bif2field;
-
-wbrafild:
-mes "[ ^FF0000Warp NPC^000000 ]";
-mes "เลือกแมพที่ต้องการ ";
-next;
-menu
-"- Brasilis Field 1",bra1fild;
 
 wdicfild:
 mes "[ ^FF0000Warp NPC^000000 ]";
@@ -360,21 +441,6 @@ next;
 menu
 "- Lutie Field 1",dxmasfild1;
 
-wcmdfild:
-mes "[ ^FF0000Warp NPC^000000 ]";
-mes "เลือกแมพที่ต้องการ ";
-next;
-menu
-"- Comodo Field 1",dcmdfild1,
-"- Comodo Field 2",dcmdfild2,
-"- Comodo Field 3",dcmdfild3,
-"- Comodo Field 4",dcmdfild4,
-"- Comodo Field 5",dcmdfild5,
-"- Comodo Field 6",dcmdfild6,
-"- Comodo Field 7",dcmdfild7,
-"- Comodo Field 8",dcmdfild8,
-"- Comodo Field 9",dcmdfild9;
-
 wyunofild:
 mes "[ ^FF0000Warp NPC^000000 ]";
 mes "เลือกแมพที่ต้องการ ";
@@ -392,13 +458,6 @@ menu
 "- Yuno Field 10",dyunofild10,
 "- Yuno Field 11",dyunofild11,
 "- Yuno Field 12",dyunofild12;
-
-wamafild:
-mes "[ ^FF0000Warp NPC^000000 ]";
-mes "เลือกแมพที่ต้องการ ";
-next;
-menu
-"- Amatsu Field 1",damafild1;
 
 wgonfild:
 mes "[ ^FF0000Warp NPC^000000 ]";
@@ -449,30 +508,6 @@ menu
 "- Louyang Field 1",dloufild1,
 "- Louyang Field 2",dloufild2;
 
-wayofild:
-mes "[ ^FF0000Warp NPC^000000 ]";
-mes "เลือกแมพที่ต้องการ ";
-next;
-menu
-"- Ayothaya Field 1",dayofild1,
-"- Ayothaya Field 2",dayofild2;
-
-weinfild:
-mes "[ ^FF0000Warp NPC^000000 ]";
-mes "เลือกแมพที่ต้องการ ";
-next;
-menu
-"- Einbroch Field 1",deinfild1,
-"- Einbroch Field 2",deinfild2,
-"- Einbroch Field 3",deinfild3,
-"- Einbroch Field 4",deinfild4,
-"- Einbroch Field 5",deinfild5,
-"- Einbroch Field 6",deinfild6,
-"- Einbroch Field 7",deinfild7,
-"- Einbroch Field 8",deinfild8,
-"- Einbroch Field 9",deinfild9,
-"- Einbroch Field 10",deinfild10;
-
 wlhzfild:
 mes "[ ^FF0000Warp NPC^000000 ]";
 mes "เลือกแมพที่ต้องการ ";
@@ -514,13 +549,9 @@ menu
 dsplfild1: callfunc "Kf_ZWarp","spl_fild01",0,0; close;
 dsplfild2: callfunc "Kf_ZWarp","spl_fild02",0,0; close;
 dsplfild3: callfunc "Kf_ZWarp","spl_fild03",0,0; close;
-bif1field: callfunc "Kf_ZWarp","bif_fild01",195,229; close;
-bif2field: callfunc "Kf_ZWarp","bif_fild02",107,167; close;
-dwt1field: callfunc "Kf_ZWarp","dew_fild01",0,0; close;
 dmanfild1: callfunc "Kf_ZWarp","man_fild01",0,0; close;
 dmanfild2: callfunc "Kf_ZWarp","man_fild02",0,0; close;
 dmanfild3: callfunc "Kf_ZWarp","man_fild03",0,0; close;
-bra1fild: callfunc "Kf_ZWarp","bra_fild01",82,32; close;
 dic1fild: callfunc "Kf_ZWarp","dic_fild01",75,42; close;
 dic2fild: callfunc "Kf_ZWarp","dic_fild02",73,359; close;
 djawaiifild1: callfunc "Kf_ZWarp","jawaii",0,0; close;
@@ -612,15 +643,6 @@ dprtfild9: callfunc "Kf_ZWarp","prt_fild09",210,183; close;
 dprtfild10: callfunc "Kf_ZWarp","prt_fild10",195,149; close;
 dprtfild11: callfunc "Kf_ZWarp","prt_fild11",198,164; close;
 dxmasfild1: callfunc "Kf_ZWarp","xmas_fild01",115,145; close;
-dcmdfild1: callfunc "Kf_ZWarp","cmd_fild01",180,178; close;
-dcmdfild2: callfunc "Kf_ZWarp","cmd_fild02",231,160; close;
-dcmdfild3: callfunc "Kf_ZWarp","cmd_fild03",191,172; close;
-dcmdfild4: callfunc "Kf_ZWarp","cmd_fild04",228,194; close;
-dcmdfild5: callfunc "Kf_ZWarp","cmd_fild05",224,203; close;
-dcmdfild6: callfunc "Kf_ZWarp","cmd_fild06",190,223; close;
-dcmdfild7: callfunc "Kf_ZWarp","cmd_fild07",234,177; close;
-dcmdfild8: callfunc "Kf_ZWarp","cmd_fild08",194,175; close;
-dcmdfild9: callfunc "Kf_ZWarp","cmd_fild09",172,172; close;
 dyunofild1: callfunc "Kf_ZWarp","yuno_fild01",189,224; close;
 dyunofild2: callfunc "Kf_ZWarp","yuno_fild02",192,207; close;
 dyunofild3: callfunc "Kf_ZWarp","yuno_fild03",221,157; close;
@@ -633,7 +655,6 @@ dyunofild9: callfunc "Kf_ZWarp","yuno_fild09",183,214; close;
 dyunofild10: callfunc "Kf_ZWarp","yuno_fild10",200,124; close;
 dyunofild11: callfunc "Kf_ZWarp","yuno_fild11",195,226; close;
 dyunofild12: callfunc "Kf_ZWarp","yuno_fild12",210,304; close;
-damafild1: callfunc "Kf_ZWarp","ama_fild01",190,197; close;
 dgonfild1: callfunc "Kf_ZWarp","gon_fild01",220,227; close;
 dumfild1: callfunc "Kf_ZWarp","um_fild01",217,206; close;
 dumfild2: callfunc "Kf_ZWarp","um_fild02",223,221; close;
@@ -644,18 +665,6 @@ dniffild2: callfunc "Kf_ZWarp","nif_fild02",167,234; close;
 dyggdrasil1: callfunc "Kf_ZWarp","yggdrasil01",204,78; close;
 dloufild1: callfunc "Kf_ZWarp","lou_fild01",229,187; close;
 dloufild2: callfunc "Kf_ZWarp","lou_fild01",181,170; close;
-dayofild1: callfunc "Kf_ZWarp","ayo_fild01",173,134; close;
-dayofild2: callfunc "Kf_ZWarp","ayo_fild02",212,150; close;
-deinfild1: callfunc "Kf_ZWarp","ein_fild01",142,225; close;
-deinfild2: callfunc "Kf_ZWarp","ein_fild02",182,141; close;
-deinfild3: callfunc "Kf_ZWarp","ein_fild03",187,228; close;
-deinfild4: callfunc "Kf_ZWarp","ein_fild04",185,173; close;
-deinfild5: callfunc "Kf_ZWarp","ein_fild05",216,173; close;
-deinfild6: callfunc "Kf_ZWarp","ein_fild06",195,148; close;
-deinfild7: callfunc "Kf_ZWarp","ein_fild07",272,220; close;
-deinfild8: callfunc "Kf_ZWarp","ein_fild08",173,214; close;
-deinfild9: callfunc "Kf_ZWarp","ein_fild09",207,174; close;
-deinfild10: callfunc "Kf_ZWarp","ein_fild10",196,200; close;
 dlhzfild1: callfunc "Kf_ZWarp","lhz_fild01",240,179; close;
 dlhzfild2: callfunc "Kf_ZWarp","lhz_fild02",185,235; close;
 dlhzfild3: callfunc "Kf_ZWarp","lhz_fild03",240,226; close;
