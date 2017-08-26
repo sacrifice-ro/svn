@@ -5,22 +5,15 @@ function	script	Kf_ZWarp	{
 	warp getarg(0),getarg(1),getarg(2);
 }
 
-function	script	Kf_Menu	{
-	if(warp_last_map$ != "") {
-		menu "^FF0033    - วาปไปยังสถานที่ล่าสุด -^000000",checksafewarp,"->  Town",stadt,"->  Field",field,"->  Dungeon",dungeon;
-	} else {
-		menu "->  Town",stadt,"->  Field",field,"->  Dungeon",dungeon;
-	}
+function	script	Kf_MessageSelect	{
+	mes "[Warp Portal]";
+	mes "เลือกแมพที่ต้องการ";
+	next;
+	return;
+}
 
-	checksafewarp:
-		warp warp_last_map$,warp_last_x,warp_last_y;
-
-	end;
-
-	//--------------------------------Start Towns--------------------------------\\
-
-	stadt:
-		menu 
+function	script	Kf_Towns	{
+	menu 
 		"^FF0033- Pontera Monk ( เมืองหลวง )^000000",warp_capital,
 		"^3FCC10- Market Place ( ตลาดขายของ )^000000",warp_market,
 		"- Alberta",warp_alberta,
@@ -101,38 +94,10 @@ function	script	Kf_Menu	{
 	warp_jawaii: callfunc "Kf_ZWarp", "jawaii",178,125; close;
 	warp_veins: callfunc "Kf_ZWarp", "veins",204,104; close;
 	warp_yuno: callfunc "Kf_ZWarp", "yuno",159,167; close;
-	
-	//--------------------------------Ending Towns--------------------------------\\
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//--------------------------------Start Field--------------------------------\\
-
-	field:
-		menu 
+function	script	Kf_Fields	{
+	menu 
 		"- Amatsu Fields",sf_amatsu,
 		"- Ayothaya Fields",sf_ayothaya,
 		"- Bifroft Fields",sf_bifrost,
@@ -165,20 +130,15 @@ function	script	Kf_Menu	{
 		"- Veins Fields",sf_veins,
 		"- Yggdrasil Tree",sf_yggdrasil_tree,
 		"- Yuno Fields",sf_yuno;
-
 	// ------ end Menu
 
 	sf_amatsu:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu "- Amatsu Field 1",wf_amatsu1;
 	wf_amatsu1: callfunc "Kf_ZWarp","ama_fild01",190,197; close;
 
 	sf_ayothaya:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Ayothaya Field 1",wf_ayothaya1,
 		"- Ayothaya Field 2",wf_ayothaya2;
@@ -186,9 +146,7 @@ function	script	Kf_Menu	{
 	wf_ayothaya2: callfunc "Kf_ZWarp","ayo_fild02",212,150; close;
 
 	sf_bifrost:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Bifroft Fields 1",wf_bifroft1,
 		"- Bifroft Fields 2",wf_bifroft2;
@@ -196,17 +154,13 @@ function	script	Kf_Menu	{
 	wf_bifroft2: callfunc "Kf_ZWarp","bif_fild02",107,167; close;
 
 	sf_brasills:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Brasilis Field 1",wf_brasills1;
 	wf_brasills1: callfunc "Kf_ZWarp","bra_fild01",82,32; close;
 
 	sf_comodo:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Comodo Field 1",wf_comodo1,
 		"- Comodo Field 2",wf_comodo2,
@@ -228,25 +182,19 @@ function	script	Kf_Menu	{
 	wf_comodo9: callfunc "Kf_ZWarp","cmd_fild09",172,172; close;
 
 	sf_dewata:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Dewata Fields 1",wf_dewata1;
 	wf_dewata1: callfunc "Kf_ZWarp","dew_fild01",0,0; close;
 
 	sf_eclage:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Eclage Fields 1",wf_eclage1;
 	wf_eclage1: callfunc "Kf_ZWarp", "ecl_fild01",203,308; close;
 
 	sf_enibroch:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Einbroch Field 1",wf_enibroch1,
 		"- Einbroch Field 2",wf_enibroch2,
@@ -270,9 +218,7 @@ function	script	Kf_Menu	{
 	wf_enibroch10: callfunc "Kf_ZWarp","ein_fild10",196,200; close;
 
 	sf_el_dicastes:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- El Dicastes Field 1",wf_el_dicastes1,
 		"- El Dicastes Field 2",wf_el_dicastes2;
@@ -280,17 +226,13 @@ function	script	Kf_Menu	{
 	wf_el_dicastes2: callfunc "Kf_ZWarp","dic_fild02",73,359; close;
 
 	sf_flame_basin:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Flame Basin volcano",wf_flame_basin1;
 	wf_flame_basin1: callfunc "Kf_ZWarp","moro_vol",214,176; close;
 
 	sf_geffen:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Geffen Field 0",wf_geffen0,
 		"- Geffen Field 1",wf_geffen1,
@@ -324,17 +266,13 @@ function	script	Kf_Menu	{
 	wf_geffen14: callfunc "Kf_ZWarp","gef_fild14",211,185; close;
 
 	sf_gonryun:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Gonryun Field 1",wf_gonryun1;
 	wf_gonryun1: callfunc "Kf_ZWarp","gon_fild01",220,227; close;
 
 	sf_hugel:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Hugel Field 1",wf_hugel1,
 		"- Hugel Field 2",wf_hugel2,
@@ -352,9 +290,7 @@ function	script	Kf_Menu	{
 	wf_hugel7: callfunc "Kf_ZWarp","hu_fild07",227,197; close;
 
 	sf_lasagna:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Lasagna Field 1",wf_lasagna1,
 		"- Lasagna Field 2",wf_lasagna2;
@@ -362,9 +298,7 @@ function	script	Kf_Menu	{
 	wf_lasagna2: callfunc "Kf_ZWarp","lasa_fild02",339,244; close;
 
 	sf_lighthalzen:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Lighthalzen Field 1",wf_lighthalzen1,
 		"- Lighthalzen Field 2",wf_lighthalzen2,
@@ -374,9 +308,7 @@ function	script	Kf_Menu	{
 	wf_lighthalzen3: callfunc "Kf_ZWarp","lhz_fild03",240,226; close;
 
 	sf_louyang:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Louyang Field 1",wf_louyang1,
 		"- Louyang Field 2",wf_louyang2;
@@ -384,17 +316,13 @@ function	script	Kf_Menu	{
 	wf_louyang2: callfunc "Kf_ZWarp","lou_fild01",181,170; close;
 
 	sf_lutie:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Lutie Field 1",wf_lutie1;
 	wf_lutie1: callfunc "Kf_ZWarp","xmas_fild01",115,145; close;
 
 	sf_malaya:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Malaya Field 1",wf_malaya1,
 		"- Malaya Field 2",wf_malaya2,
@@ -404,9 +332,7 @@ function	script	Kf_Menu	{
 	wf_malaya_s1: callfunc "Kf_ZWarp","ma_scene01",144,77; close;
 
 	sf_manuk:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Manuk Field 1",wf_manuk1,
 		"- Manuk Field 2",wf_manuk2,
@@ -416,9 +342,7 @@ function	script	Kf_Menu	{
 	wf_manuk3: callfunc "Kf_ZWarp","man_fild03",0,0; close;
 
 	sf_morroc:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Morroc Field 1",wf_mooroc1,
 		"- Morroc Field 2",wf_mooroc2,
@@ -466,9 +390,7 @@ function	script	Kf_Menu	{
 	wf_mooroc22: callfunc "Kf_ZWarp","moc_fild22",0,0; close;
 
 	sf_moscovia:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Moscovia Field 1",wf_moscovia1,
 		"- Moscovia Field 2",wf_moscovia2;
@@ -476,9 +398,7 @@ function	script	Kf_Menu	{
 	wf_moscovia2: callfunc "Kf_ZWarp","mosk_fild02",0,0; close;
 
 	sf_mjolnir:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Mjolnir Field 1",wf_mjolnir1,
 		"- Mjolnir Field 2",wf_mjolnir2,
@@ -506,9 +426,7 @@ function	script	Kf_Menu	{
 	wf_mjolnir12: callfunc "Kf_ZWarp","mjolnir_12",196,208; close;
 
 	sf_niflheim:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Niflheim Field 1",wf_niflheim1,
 		"- Niflheim Field 2",wf_niflheim2;
@@ -516,9 +434,7 @@ function	script	Kf_Menu	{
 	wf_niflheim2: callfunc "Kf_ZWarp","nif_fild02",167,234; close;
 
 	sf_payon:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Payon Forest 1",wf_payon1,
 		"- Payon Forest 2",wf_payon2,
@@ -544,9 +460,7 @@ function	script	Kf_Menu	{
 	wf_payon11: callfunc "Kf_ZWarp","pay_fild11",194,150; close;
 
 	sf_prontera:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Prontera Field 0",wf_prontera0,
 		"- Prontera Field 1",wf_prontera1,
@@ -574,9 +488,7 @@ function	script	Kf_Menu	{
 	wf_prontera11: callfunc "Kf_ZWarp","prt_fild11",198,164; close;
 
 	sf_rachel:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Rachel Field 1",wf_rachel1,
 		"- Rachel Field 2",wf_rachel2,
@@ -606,9 +518,7 @@ function	script	Kf_Menu	{
 	wf_rachel13: callfunc "Kf_ZWarp","ra_fild13",174,197; close;
 
 	sd_rock_rider:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Rock Rider Desert 1",wd_rockrider1,
 		"- Rock Rider Desert 2",wd_rockrider2;
@@ -616,9 +526,7 @@ function	script	Kf_Menu	{
 	wd_rockrider2: callfunc "Kf_ZWarp","rockrdg2",304,323; close;
 
 	sf_splendide:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Splendide Field 1",wf_splendide1,
 		"- Splendide Field 2",wf_splendide2,
@@ -628,9 +536,7 @@ function	script	Kf_Menu	{
 	wf_splendide3: callfunc "Kf_ZWarp","spl_fild03",0,0; close;
 
 	sf_umbala:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Umbala Forest 1",wf_umbala1,
 		"- Umbala Forest 2",wf_umbala2,
@@ -642,9 +548,7 @@ function	script	Kf_Menu	{
 	wf_umbala4: callfunc "Kf_ZWarp","um_fild04",202,197; close;
 
 	sf_veins:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Veins Field 1",wf_veins1,
 		"- Veins Field 2",wf_veins2,
@@ -662,17 +566,13 @@ function	script	Kf_Menu	{
 	wf_veins7: callfunc "Kf_ZWarp","ve_fild07",149,307; close;
 
 	sf_yggdrasil_tree:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Yggdrasil Tree 01",wf_yggdrasil_tree;
 	wf_yggdrasil_tree: callfunc "Kf_ZWarp","yggdrasil01",204,78; close;
 
 	sf_yuno:
-		mes "[Warp Portal]";
-		mes "เลือกแมพที่ต้องการ";
-		next;
+		callfunc "Kf_MessageSelect";
 		menu
 		"- Yuno Field 1",wf_yuno1,
 		"- Yuno Field 2",wf_yuno2,
@@ -698,65 +598,43 @@ function	script	Kf_Menu	{
 	wf_yuno10: callfunc "Kf_ZWarp","yuno_fild10",200,124; close;
 	wf_yuno11: callfunc "Kf_ZWarp","yuno_fild11",195,226; close;
 	wf_yuno12: callfunc "Kf_ZWarp","yuno_fild12",210,304; close;
+}
 
-	//--------------------------------Ending Towns--------------------------------\\
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-	dungeon:
-		menu
-		"- Abbey Dungeon",dabbey,
-		"- Abyss Lake",dabyss,
-		"- Amatsu Dungeon",damatsu,
-		"- Anthell",dant,
-		"- Arunafeltz Dungeon",arugdun,
-		"- Ayothaya Dungeon",dayo,
-		"- Byalan Dungeon",dbibilan,
-		"- Beach Dungeon",beach,
-		"- Brasilis Dungeon",bradun,
-		"- Coal Mine",dcoal,
-		"- Clock Tower",dclock,
-		"- Culvert",dculvert,
-		"- Dicastes Dungeon",ddicdun,
-		"- Einbeach Dungeon",deindun,
-		"- Geffen Dungeon",dgifdun,
-		"- Gefenia",dgefenia,
-		"- Glast Heim",dglast,
-		"- Gonryun Dungeon",dgonryun,
-		"- Hidden Dungeon",dhiden,
-		"- Ice Dungeon",dicedungeon,
-		"- Juperos Dungeon",djupe,
-		"- Kiel Dungeon",dkiela,
-		"- Lighthalzen Dungeon",dlhz,
-		"- Louyang Dungeon",dlouyang,
+function	script	Kf_Dungeon	{
+	menu
+		"- Abyss Lake Dungeon",sd_abyss_lake,
+		"- Amatsu Dungeon",sd_amatsu,
+		"- Ant Hell",sd_ant_hell,
+		"- Ayothaya Ancient Shrine",sd_ayothaya,
+		"- Bangungot Hospital",sd_bangungot,
+		"- Beach Dungeon",sd_beach,
+		"- Bifrost Tower",sd_bifrost_tower,
+		"- Bio Laboratory",sd_bio_laboratory,
+		"- Brasilis Dungeon",sd_brasills,
+		"- Byalan Island Dungeon",sd_byalan_island,
+		"- Clock Tower",sd_clock_tower,
+		"- Coal Mine",sd_coal_mine,
+		"- Dewata Dungeon",sd_dewata,
+		"- Dragon's Nest",sd_dragon_nest,
+		"- Einbroch Mine Dungeon",sd_enibroch_mine,
+		"- Geffen Dungeon",sd_geffen,
+		"- Gefenia",sd_gefenia,
+		"- Glast Heim",sd_glast_heim,
+		"- Gonryun Dungeon",sd_gonryun,
+		"- Hidden Temple",sd_hidden_temple,
+		"- Ice Cave",sd_icecave,
+		"- Illusion Dungeons",sd_illusion,
+		"- Juperos Ruins",sd_juperos,
+		"- Kiel Robot Factory",sd_kiel,
+		"- Lou Yang Dungeon",sd_louyang,
 		"- Misty Forest Labyrinth",dmist,
 		"- Magma Dungeon",dmagma,
 		"- Moscovia Dungeon",dmoscovia,
+		"- Nameless Island",dabbey,
 		"- Nidhogg's or Nyd Dungeon",dnight,
 		"- Orc Dungeon",dorc,
 		"- Odin Temple",odin,
+		"- Prontera Culvert",dculvert,
 		"- Payon Dungeon",dpayon,
 		"- Pyramids",dpyramids,
 		"- Rachel Sanctuary",drasan,
@@ -767,16 +645,309 @@ function	script	Kf_Menu	{
 		"- Toy Factory",dtoy,
 		"- Turtle Dungeon",dturtle,
 		"- Umbala Dungeon",umba;
+	
+	sd_abyss_lake:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Abyss Lake 1",wd_abyss_lake1,
+		"- Abyss Lake 2",wd_abyss_lake2,
+		"- Abyss Lake 3",wd_abyss_lake3;
+	wd_abyss_lake1: callfunc "Kf_ZWarp","abyss_01",258,270; close;
+	wd_abyss_lake2: callfunc "Kf_ZWarp","abyss_02",273,274; close;
+	wd_abyss_lake3: callfunc "Kf_ZWarp","abyss_03",116,27; close;
 
+	sd_amatsu:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Amatsu Dungeon 1",wd_amatsu1,
+		"- Amatsu Dungeon 2",wd_amatsu2,
+		"- Amatsu Dungeon 3",wd_amatsu3;
+	wd_amatsu1: callfunc "Kf_ZWarp","ama_dun01",228,11; close;
+	wd_amatsu2: callfunc "Kf_ZWarp","ama_dun02",123,115; close;
+	wd_amatsu3: callfunc "Kf_ZWarp","ama_dun03",90,79; close;
 
-	//=======================
-	// ?????????????
-	//=======================
-	safewarp: warp warp_last_map$,warp_last_x,warp_last_y; close;
+	sd_ant_hell:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Ant Hell 1",wd_ant_hell1,
+		"- Ant Hell 2",wd_ant_hell2;
+	wd_ant_hell1: callfunc "Kf_ZWarp","anthell01",35,262; close;
+	wd_ant_hell2: callfunc "Kf_ZWarp","anthell02",34,261; close;
 
-	//========================
-	// Dungeons
-	//========================
+	sd_ayothaya:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Ayothaya Ancient Shrine 1",wd_ayothaya1,
+		"- Ayothaya Ancient Shrine 2",wd_ayothaya2;
+	wd_ayothaya1: callfunc "Kf_ZWarp","ayo_dun01",0,0; close;
+	wd_ayothaya2: callfunc "Kf_ZWarp","ayo_dun02",150,16; close;
+
+	sd_bangungot:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Bangungot Hospital 1",wd_bangungot1;
+	wd_bangungot1: callfunc "Kf_ZWarp","ma_dun01",39,109; close;
+
+	sd_beach:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Beach Dungeon 1",wd_beach1,
+		"- Beach Dungeon 2",wd_beach2,
+		"- Beach Dungeon 3",wd_beach3;
+	wd_beach1: callfunc "Kf_ZWarp","beach_dun",266,67; close;
+	wd_beach2: callfunc "Kf_ZWarp","beach_dun2",255,244; close;
+	wd_beach3: callfunc "Kf_ZWarp","beach_dun3",23,260; close;
+
+	sd_bifrost_tower:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Bifrost Tower 1",wd_bifrost_tower1,
+		"- Bifrost Tower 2",wd_bifrost_tower2,
+		"- Bifrost Tower 3",wd_bifrost_tower3;
+	wd_bifrost_tower1: callfunc "Kf_ZWarp","ecl_tdun01",61,22; close;
+	wd_bifrost_tower2: callfunc "Kf_ZWarp","ecl_tdun02",48,10; close;
+	wd_bifrost_tower3: callfunc "Kf_ZWarp","ecl_tdun03",45,12; close;
+
+	sd_bio_laboratory:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Bio Laboratory 1",wd_bio_laboratory1,
+		"- Bio Laboratory 2",wd_bio_laboratory2,
+		"- Bio Laboratory 3",wd_bio_laboratory3,
+		"- Bio Laboratory 4",wd_bio_laboratory4,
+		"- Human Experimentation Laboratory",wd_bio_laboratory5,
+		"- Tomb of the Fallen",wd_bio_laboratory6;
+	wd_bio_laboratory1: callfunc "Kf_ZWarp","lhz_dun01",143,11; close;
+	wd_bio_laboratory2: callfunc "Kf_ZWarp","lhz_dun02",155,19; close;
+	wd_bio_laboratory3: callfunc "Kf_ZWarp","lhz_dun03",140,134; close;
+	wd_bio_laboratory4: callfunc "Kf_ZWarp","lhz_dun04",102,144; close;
+	wd_bio_laboratory5: callfunc "Kf_ZWarp","que_lhz",155,213; close;
+	wd_bio_laboratory6: callfunc "Kf_ZWarp","lhz_dun_n",139,137; close;
+
+	sd_brasills:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Brasilis Dungeon 1",wd_brasills1,
+		"- Brasilis Dungeon 2",wd_brasills2;
+	wd_brasills1: callfunc "Kf_ZWarp","bra_dun01",128,138; close;
+	wd_brasills2: callfunc "Kf_ZWarp","bra_dun02",157,249; close;
+
+	sd_byalan_island:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Byalan Dungeon 0",wd_byalan_island0,
+		"- Byalan Dungeon 1",wd_byalan_island1,
+		"- Byalan Dungeon 2",wd_byalan_island2,
+		"- Byalan Dungeon 3",wd_byalan_island3,
+		"- Byalan Dungeon 4",wd_byalan_island4,
+		"- Byalan Dungeon 5",wd_byalan_island5;
+	wd_byalan_island0: callfunc "Kf_ZWarp","iz_dun00",168,168; close; 
+	wd_byalan_island1: callfunc "Kf_ZWarp","iz_dun01",41,40; close; 
+	wd_byalan_island2: callfunc "Kf_ZWarp","iz_dun02",236,204; close; 
+	wd_byalan_island3: callfunc "Kf_ZWarp","iz_dun03",33,64; close; 
+	wd_byalan_island4: callfunc "Kf_ZWarp","iz_dun04",26,30; close;
+	wd_byalan_island5: callfunc "Kf_ZWarp","iz_dun05",141,187; close;
+
+	sd_clock_tower:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Clock Tower 1F",wd_clock_tower1,
+		"- Clock Tower 2F",wd_clock_tower2,
+		"- Clock Tower 3F",wd_clock_tower3,
+		"- Clock Tower 4F",wd_clock_tower4,
+		"- Clock Tower B1",wd_clock_tower5,
+		"- Clock Tower B2",wd_clock_tower6,
+		"- Clock Tower B3",wd_clock_tower7,
+		"- Clock Tower B4",wd_clock_tower8,
+		"- Clock Tower Twisted Time 2F",wd_clock_tower9,
+		"- Clock Tower Twisted Time 3F",wd_clock_tower10;
+	wd_clock_tower1: callfunc "Kf_ZWarp","c_tower1",199,159; close;
+	wd_clock_tower2: callfunc "Kf_ZWarp","c_tower2",148,283; close;
+	wd_clock_tower3: callfunc "Kf_ZWarp","c_tower3",65,174; close;
+	wd_clock_tower4: callfunc "Kf_ZWarp","c_tower4",56,155; close;
+	wd_clock_tower5: callfunc "Kf_ZWarp","alde_dun01",297,25; close;
+	wd_clock_tower6: callfunc "Kf_ZWarp","alde_dun02",127,169; close;
+	wd_clock_tower7: callfunc "Kf_ZWarp","alde_dun03",277,178; close;
+	wd_clock_tower8: callfunc "Kf_ZWarp","alde_dun04",268,74; close;
+	wd_clock_tower9: callfunc "Kf_ZWarp","c_tower2_",268,26; close;
+	wd_clock_tower10: callfunc "Kf_ZWarp","c_tower3_",64,148; close;
+
+	sd_coal_mine:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Coal Mine 1",wd_coal1,
+		"- Coal Mine 2",wd_coal2,
+		"- Coal Mine 3",wd_coal3;
+	wd_coal1: callfunc "Kf_ZWarp","mjo_dun01",52,32; close;
+	wd_coal2: callfunc "Kf_ZWarp","mjo_dun02",58,174; close;
+	wd_coal3: callfunc "Kf_ZWarp","mjo_dun03",84,132; close;
+
+	sd_dewata:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Dewata Dungeon 01",wd_dewata1,
+		"- Dewata Dungeon 02",wd_dewata2;
+	wd_dewata1: callfunc "Kf_ZWarp","dew_dun01",166,128; close;
+	wd_dewata2: callfunc "Kf_ZWarp","dew_dun02",300,30; close;
+
+	sd_dragon_nest:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Dragon's Nest 01",wd_dragon_nest1,
+		"- Dragon's Nest 02",wd_dragon_nest2,
+		"- Dragon's Nest 03",wd_dragon_nest3,
+		"- Dragon's Nest, Lasagna Dungeon",wd_dragon_nest4;
+	wd_dragon_nest1: callfunc "Kf_ZWarp","lasa_dun01",22,143; close;
+	wd_dragon_nest2: callfunc "Kf_ZWarp","lasa_dun02",22,171; close;
+	wd_dragon_nest3: callfunc "Kf_ZWarp","lasa_dun03",190,20; close;
+	wd_dragon_nest4: callfunc "Kf_ZWarp","lasa_dun_q",190,20; close;
+
+	sd_enibroch_mine:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Mine Dungeon F1",wd_enibroch_mine1,
+		"- Mine Dungeon F2",wd_enibroch_mine2;
+	wd_enibroch_mine1: callfunc "Kf_ZWarp","ein_dun01",197,49; close;
+	wd_enibroch_mine2: callfunc "Kf_ZWarp","ein_dun02",248,20; close;
+
+	sd_geffen:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Geffen Dungeon F1",wd_geffen1,
+		"- Geffen Dungeon F2",wd_geffen2,
+		"- Geffen Dungeon F3",wd_geffen3,
+		"- Geffen Dungeon F4",wd_geffen4;
+	wd_geffen1: callfunc "Kf_ZWarp","gef_dun00",104,99; close;
+	wd_geffen2: callfunc "Kf_ZWarp","gef_dun01",115,236; close;
+	wd_geffen3: callfunc "Kf_ZWarp","gef_dun02",106,132; close;
+	wd_geffen4: callfunc "Kf_ZWarp","gef_dun03",203,200; close;
+
+	sd_gefenia:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Gefenia 1",wd_gefenia1,
+		"- Gefenia 2",wd_gefenia2,
+		"- Gefenia 3",wd_gefenia3,
+		"- Gefenia 4",wd_gefenia4;
+	wd_gefenia1: callfunc "Kf_ZWarp","gefenia01",40,103; close;
+	wd_gefenia2: callfunc "Kf_ZWarp","gefenia02",203,34; close;
+	wd_gefenia3: callfunc "Kf_ZWarp","gefenia03",266,168; close;
+	wd_gefenia4: callfunc "Kf_ZWarp","gefenia04",130,272; close;
+
+	sd_glast_heim:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Glast Heim St.Abbey",wd_glast_heim3,
+		"- Glast Heim Churchyard",wd_glast_heim4,
+		"- Glast Heim 1F",wd_glast_heim1,
+		"- Glast Heim 2F",wd_glast_heim2,
+		"- Glast Heim Underprison F1",wd_glast_heim10,
+		"- Glast Heim Underprison F2",wd_glast_heim11,
+		"- Inside Glast Heim Chivalry F1",wd_glast_heim8,
+		"- Inside Glast Heim Chivalry F2",wd_glast_heim9,
+		"- Inside Glast Heim",wd_glast_heim7,
+		"- Glast Heim Staircase Dungeon",wd_glast_heim16,
+		"- Glast Heim Culvert F1",wd_glast_heim12,
+		"- Glast Heim Culvert F2",wd_glast_heim13,
+		"- Glast Heim Culvert F3",wd_glast_heim14,
+		"- Glast Heim Culvert F4",wd_glast_heim15,
+		"- Lowest Cave in Glast Heim F1",wd_glast_heim5,
+		"- Lowest Cave in Glast Heim F2",wd_glast_heim6,
+		"- Nightmare 2nd Hall",wd_glast_heim17,
+		"- Nightmare Churchyard",wd_glast_heim18;
+	wd_glast_heim1: callfunc "Kf_ZWarp","gl_cas01",199,29; close; 
+	wd_glast_heim2: callfunc "Kf_ZWarp","gl_cas02",104,25; close;
+	wd_glast_heim3: callfunc "Kf_ZWarp","gl_church",156,7; close;
+	wd_glast_heim4: callfunc "Kf_ZWarp","gl_chyard",147,15; close;
+	wd_glast_heim5: callfunc "Kf_ZWarp","gl_dun01",133,271; close;
+	wd_glast_heim6: callfunc "Kf_ZWarp","gl_dun02",224,274; close;
+	wd_glast_heim7: callfunc "Kf_ZWarp","gl_in01",0,0; close;
+	wd_glast_heim8: callfunc "Kf_ZWarp","gl_knt01",150,15; close;
+	wd_glast_heim9: callfunc "Kf_ZWarp","gl_knt02",157,287; close;
+	wd_glast_heim10: callfunc "Kf_ZWarp","gl_prison",14,70; close;
+	wd_glast_heim11: callfunc "Kf_ZWarp","gl_prison1",150,14; close;
+	wd_glast_heim12: callfunc "Kf_ZWarp","gl_sew01",258,255; close;
+	wd_glast_heim13: callfunc "Kf_ZWarp","gl_sew02",108,291; close;
+	wd_glast_heim14: callfunc "Kf_ZWarp","gl_sew03",171,283; close;
+	wd_glast_heim15: callfunc "Kf_ZWarp","gl_sew04",68,277; close;
+	wd_glast_heim16: callfunc "Kf_ZWarp","gl_step",12,7; close;
+	wd_glast_heim17: callfunc "Kf_ZWarp","gl_cas02_",102,180; close;
+	wd_glast_heim18: callfunc "Kf_ZWarp","gl_chyard_",147,139; close;
+
+	sd_gonryun:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Gonryun Dungeon 1",wd_gonryun1,
+		"- Gonryun Dungeon 2",wd_gonryun2,
+		"- Gonryun Dungeon 3",wd_gonryun3;
+	wd_gonryun1: callfunc "Kf_ZWarp","gon_dun01",153,50; close;
+	wd_gonryun2: callfunc "Kf_ZWarp","gon_dun02",16,108; close;
+	wd_gonryun3: callfunc "Kf_ZWarp","gon_dun03",68,12; close;
+
+	sd_hidden_temple:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Labyrinth Forest F1",wd_hiden_temple1,
+		"- Labyrinth Forest F2",wd_hiden_temple2,
+		"- Labyrinth Forest F3",wd_hiden_temple3;
+	wd_hiden_temple1: callfunc "Kf_ZWarp","prt_maze01",176,7; close;
+	wd_hiden_temple2: callfunc "Kf_ZWarp","prt_maze02",92,22; close;
+	wd_hiden_temple3: callfunc "Kf_ZWarp","prt_maze03",23,8; close;
+
+	sd_icecave:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Ice Cave F1",wd_icecave1,
+		"- Ice Cave F2",wd_icecave2,
+		"- Ice Cave F3",wd_icecave3,
+		"- Ice Cave F4",wd_icecave4;
+	wd_icecave1: callfunc "Kf_ZWarp","ice_dun01",0,0; close;
+	wd_icecave2: callfunc "Kf_ZWarp","ice_dun02",0,0; close;
+	wd_icecave3: callfunc "Kf_ZWarp","ice_dun03",0,0; close;
+	wd_icecave4: callfunc "Kf_ZWarp","ice_dun04",0,0; close;
+
+	sd_illusion:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Illusion of Vampire",wd_illusion1,
+		"- Illusion of Frozen",wd_illusion2,
+		"- Illusion of Moonlight",wd_illusion3,
+		"- Illusion of Lonely Village",wd_illusion4,
+		"- Illusion of Archery",wd_illusion5;
+	wd_illusion1: callfunc "Kf_ZWarp","gef_d01_i",115,235; close;
+	wd_illusion2: callfunc "Kf_ZWarp","ice_d03_i",149,25; close;
+	wd_illusion3: callfunc "Kf_ZWarp","pay_d03_i",155,155; close;
+	wd_illusion4: callfunc "Kf_ZWarp","tur_d03_i",132,187; close;
+	wd_illusion5: callfunc "Kf_ZWarp","tur_d04_i",99,193; close;
+
+	sd_juperos:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Juperos Ruins F1",wd_juperos1,
+		"- Juperos Ruins F2",wd_juperos2,
+		"- Juperos Core",wd_juperos3;
+	wd_juperos1: callfunc "Kf_ZWarp","juperos_01",53,224; close;
+	wd_juperos2: callfunc "Kf_ZWarp","juperos_02",33,64; close;
+	wd_juperos3: callfunc "Kf_ZWarp","jupe_core",150,125; close;
+
+	sd_kiel:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Robot Factory Level 1",wd_kiel1,
+		"- Robot Factory Level 2",wd_kiel2;
+	wd_kiel1: callfunc "Kf_ZWarp","kh_dun01",0,0; close;
+	wd_kiel2: callfunc "Kf_ZWarp","kh_dun02",0,0; close;
+
+	sd_louyang:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Lou Yang Dungeon F1",wd_louyang1,
+		"- Lou Yang Dungeon F2",wd_louyang2,
+		"- Lou Yang Dungeon F3",wd_louyang3;
+	wd_louyang1: callfunc "Kf_ZWarp","lou_dun01",215,195; close;
+	wd_louyang2: callfunc "Kf_ZWarp","lou_dun02",279,20; close;
+	wd_louyang3: callfunc "Kf_ZWarp","lou_dun03",165,38; close;
+
 	odin:
 	mes "[ ^FF0000Warp NPC^000000 ]";
 	mes "เลือกแมพที่ต้องการ ";
@@ -804,15 +975,6 @@ function	script	Kf_Menu	{
 	"- Umbala Dungeon 1",umbadun1,
 	"- Umbala Dungeon 2",umbadun2;
 
-	beach:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Beach Dungeon 1",dbeach1,
-	"- Beach Dungeon 2",dbeach2,
-	"- Beach Dungeon 3",dbeach3;
-
 	ddicdun:
 	mes "[ ^FF0000Warp NPC^000000 ]";
 	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
@@ -821,14 +983,6 @@ function	script	Kf_Menu	{
 	"- Dicastes Dungeon 1 ",dicdun1,
 	"- Dicastes Dungeon 2",dicdun2,
 	"- Dicastes Dungeon 3",dicdun3;
-
-	bradun:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Brasilis Dungeon 1",bradun1,
-	"- Brasilis Dungeon 2",bradun2;
 
 	dabbey:
 	mes "[ ^FF0000Warp NPC^000000 ]";
@@ -839,72 +993,6 @@ function	script	Kf_Menu	{
 	"- Abbey Dungeon 2",dabbey_2,
 	"- Abbey Dungeon 3",dabbey_3;
 
-	damatsu:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Amatsu Dungeon 1",damatsu_1,
-	"- Amatsu Dungeon 2",damatsu_2,
-	"- Amatsu Dungeon 3",damatsu_3;
-
-	dant:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Anthell 1",dant_1,
-	"- Anthell 2",dant_2;
-
-	arugdun:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Arunafeltz Dungeon",arugdun_1;
-
-	dayo:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Ayothaya Dungeon 1",dayo_1,
-	"- Ayothaya Dungeon 2",dayo_2;
-
-	dbibilan:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Byalan Dungeon 1",dbibilan_1,
-	"- Byalan Dungeon 2",dbibilan_2,
-	"- Byalan Dungeon 3",dbibilan_3,
-	"- Byalan Dungeon 4",dbibilan_4,
-	"- Byalan Dungeon 5",dbibilan_5;
-
-	dcoal:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Coal Mine 1",dcoal_1,
-	"- Coal Mine 2",dcoal_2,
-	"- Coal Mine 3",dcoal_3;
-
-	dclock:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Clock Tower 1",dclock_1,
-	"- Clock Tower 2",dclock_2,
-	"- Clock Tower 3",dclock_3,
-	"- Clock Tower 4",dclock_4,
-	"- Clock Tower 5",dclock_5,
-	"- Clock Tower 6",dclock_6,
-	"- Clock Tower 7",dclock_7,
-	"- Clock Tower 8",dclock_8;
-
 	dculvert:
 	mes "[ ^FF0000Warp NPC^000000 ]";
 	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
@@ -914,99 +1002,6 @@ function	script	Kf_Menu	{
 	"- Culvert 2",dculvert_2,
 	"- Culvert 3",dculvert_3,
 	"- Culvert 4",dculvert_4;
-
-	deindun:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Einbeach Dungeon 1",deindun_1,
-	"- Einbeach Dungeon 2",deindun_2;
-
-	dgifdun:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Geffen Dungeon 1",dgifdun_1,
-	"- Geffen Dungeon 2",dgifdun_2,
-	"- Geffen Dungeon 3",dgifdun_3,
-	"- Geffen Dungeon 4",dgifdun_4;
-
-	dglast:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Castle F1",dglast_1,
-	"- Castle F2",dglast_2,
-	"- Chivalry F1",dglast_8,
-	"- Chivalry F2",dglast_9,
-	"- Churchyard",dglast_4,
-	"- Culvert F1",dglast_12,
-	"- Culvert F2",dglast_13,
-	"- Culvert F3",dglast_14,
-	"- Culvert F4",dglast_15,
-	"- St. Abbey",dglast_3,
-	"- Staircase Dungeon",dglast_16,
-	"- Inside Glast Heim",dglast_7,
-	"- Underground Cave F1",dglast_5,
-	"- Underground Cave F2",dglast_6,
-	"- Underground Prison F1",dglast_10,
-	"- Underground Prison F2",dglast_11;
-
-	dgonryun:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Gonryun Dungeon 1",dgonryun_1,
-	"- Gonryun Dungeon 2",dgonryun_2,
-	"- Gonryun Dungeon 3",dgonryun_3;
-
-	dhiden:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Hidden Dungeon 1",dhiden_1,
-	"- Hidden Dungeon 2",dhiden_2,
-	"- Hidden Dungeon 3",dhiden_3;
-
-	dicedungeon:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Ice Dungeon 1",dicedungeon_1,
-	"- Ice Dungeon 2",dicedungeon_2,
-	"- Ice Dungeon 3",dicedungeon_3;
-
-	djupe:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Juperos Dungeon 1",djupe_1,
-	"- Juperos Dungeon 2",djupe_2,
-	"- Juperos Dungeon 3",djupe_3;
-
-	dkiela:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Kiel Dungeon 1",dkiela_1,
-	"- Kiel Dungeon 2",dkiela_2;
-
-	dlouyang:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Louyang Dungeon 1",dlouyang_1,
-	"- Louyang Dungeon 2",dlouyang_2,
-	"- Louyang Dungeon 3",dlouyang_3;
 
 	dmist:
 	mes "[ ^FF0000Warp NPC^000000 ]";
@@ -1092,35 +1087,6 @@ function	script	Kf_Menu	{
 	"- Moscovia Dungeon 2",dmoscovia_2,
 	"- Moscovia Dungeon 3",dmoscovia_3;
 
-	dlhz:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Lighthalzen Dungeon 1",dlhz_1,
-	"- Lighthalzen Dungeon 2",dlhz_2,
-	"- Lighthalzen Dungeon 3",dlhz_3,
-	"- Lighthalzen Dungeon 4",dlhz_4;
-
-	dabyss:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Abyss Lake 1",dabyss_1,
-	"- Abyss Lake 2",dabyss_2,
-	"- Abyss Lake 3",dabyss_3;
-
-	dgefenia:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Gefenia 1",dgefenia_1,
-	"- Gefenia 2",dgefenia_2,
-	"- Gefenia 3",dgefenia_3,
-	"- Gefenia 4",dgefenia_4;
-
 	drasan:
 	mes "[ ^FF0000Warp NPC^000000 ]";
 	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
@@ -1176,78 +1142,13 @@ function	script	Kf_Menu	{
 	dicdun1: callfunc "Kf_ZWarp","dic_dun01",349,44; close;
 	dicdun2: callfunc "Kf_ZWarp","dic_dun02",102,142; close;
 	dicdun3: callfunc "Kf_ZWarp","dic_dun03",43,182; close;
-	bradun1: callfunc "Kf_ZWarp","bra_dun01",128,138; close;
-	bradun2: callfunc "Kf_ZWarp","bra_dun02",157,249; close;
 	dabbey_1: callfunc "Kf_ZWarp","abbey01",13,200; close;
 	dabbey_2: callfunc "Kf_ZWarp","abbey02",149,14; close;
-	dabbey_3: callfunc "Kf_ZWarp","abbey03",119,8; close;
-	damatsu_1: callfunc "Kf_ZWarp","ama_dun01",228,11; close;
-	damatsu_2: callfunc "Kf_ZWarp","ama_dun02",123,115; close;
-	damatsu_3: callfunc "Kf_ZWarp","ama_dun03",90,79; close;
-	dant_1: callfunc "Kf_ZWarp","anthell01",35,262; close;
-	dant_2: callfunc "Kf_ZWarp","anthell02",34,261; close;
-	arugdun_1: callfunc "Kf_ZWarp","arug_dun01",0,0; close;
-	dayo_1: callfunc "Kf_ZWarp","ayo_dun01",0,0; close;
-	dayo_2: callfunc "Kf_ZWarp","ayo_dun02",150,16; close;
-	dbibilan_1: callfunc "Kf_ZWarp","iz_dun00",168,168; close; 
-	dbibilan_2: callfunc "Kf_ZWarp","iz_dun01",41,40; close; 
-	dbibilan_3: callfunc "Kf_ZWarp","iz_dun02",236,204; close; 
-	dbibilan_4: callfunc "Kf_ZWarp","iz_dun03",33,64; close; 
-	dbibilan_5: callfunc "Kf_ZWarp","iz_dun04",26,30; close; 
-	dcoal_1: callfunc "Kf_ZWarp","mjo_dun01",52,32; close;
-	dcoal_2: callfunc "Kf_ZWarp","mjo_dun02",58,174; close;
-	dcoal_3: callfunc "Kf_ZWarp","mjo_dun03",84,132; close;
-	dclock_1: callfunc "Kf_ZWarp","c_tower1",199,159; close;
-	dclock_2: callfunc "Kf_ZWarp","c_tower2",148,283; close;
-	dclock_3: callfunc "Kf_ZWarp","c_tower3",65,174; close;
-	dclock_4: callfunc "Kf_ZWarp","c_tower4",56,155; close;
-	dclock_5: callfunc "Kf_ZWarp","alde_dun01",297,25; close;
-	dclock_6: callfunc "Kf_ZWarp","alde_dun02",127,169; close;
-	dclock_7: callfunc "Kf_ZWarp","alde_dun03",277,178; close;
-	dclock_8: callfunc "Kf_ZWarp","alde_dun04",268,74; close;
+	dabbey_3: callfunc "Kf_ZWarp","abbey03",119,8; close; 
 	dculvert_1: callfunc "Kf_ZWarp","prt_sewb1",52,17; close; 
 	dculvert_2: callfunc "Kf_ZWarp","prt_sewb2",137,171; close; 
 	dculvert_3: callfunc "Kf_ZWarp","prt_sewb3",179,91; close; 
-	dculvert_4: callfunc "Kf_ZWarp","prt_sewb4",104,129; close; 
-	deindun_1: callfunc "Kf_ZWarp","ein_dun01",197,49; close;
-	deindun_2: callfunc "Kf_ZWarp","ein_dun02",248,20; close;
-	dgifdun_1: callfunc "Kf_ZWarp","gef_dun00",104,99; close;
-	dgifdun_2: callfunc "Kf_ZWarp","gef_dun01",115,236; close;
-	dgifdun_3: callfunc "Kf_ZWarp","gef_dun02",106,132; close;
-	dgifdun_4: callfunc "Kf_ZWarp","gef_dun03",203,200; close;
-	dglast_1: callfunc "Kf_ZWarp","gl_cas01",199,29; close; 
-	dglast_2: callfunc "Kf_ZWarp","gl_cas02",104,25; close;
-	dglast_3: callfunc "Kf_ZWarp","gl_church",156,7; close;
-	dglast_4: callfunc "Kf_ZWarp","gl_chyard",147,15; close;
-	dglast_5: callfunc "Kf_ZWarp","gl_dun01",133,271; close;
-	dglast_6: callfunc "Kf_ZWarp","gl_dun02",224,274; close;
-	dglast_7: callfunc "Kf_ZWarp","gl_in01",0,0; close;
-	dglast_8: callfunc "Kf_ZWarp","gl_knt01",150,15; close;
-	dglast_9: callfunc "Kf_ZWarp","gl_knt02",157,287; close;
-	dglast_10: callfunc "Kf_ZWarp","gl_prison",14,70; close;
-	dglast_11: callfunc "Kf_ZWarp","gl_prison1",150,14; close;
-	dglast_12: callfunc "Kf_ZWarp","gl_sew01",258,255; close;
-	dglast_13: callfunc "Kf_ZWarp","gl_sew02",108,291; close;
-	dglast_14: callfunc "Kf_ZWarp","gl_sew03",171,283; close;
-	dglast_15: callfunc "Kf_ZWarp","gl_sew04",68,277; close;
-	dglast_16: callfunc "Kf_ZWarp","gl_step",12,7; close;
-	dgonryun_1: callfunc "Kf_ZWarp","gon_dun01",153,50; close;
-	dgonryun_2: callfunc "Kf_ZWarp","gon_dun02",16,108; close;
-	dgonryun_3: callfunc "Kf_ZWarp","gon_dun03",68,12; close;
-	dhiden_1: callfunc "Kf_ZWarp","prt_maze01",176,7; close;
-	dhiden_2: callfunc "Kf_ZWarp","prt_maze02",92,22; close;
-	dhiden_3: callfunc "Kf_ZWarp","prt_maze03",23,8; close;
-	dicedungeon_1: callfunc "Kf_ZWarp","ice_dun01",0,0; close;
-	dicedungeon_2: callfunc "Kf_ZWarp","ice_dun02",0,0; close;
-	dicedungeon_3: callfunc "Kf_ZWarp","ice_dun03",0,0; close;
-	djupe_1: callfunc "Kf_ZWarp","juperos_01",53,224; close;
-	djupe_2: callfunc "Kf_ZWarp","juperos_02",33,64; close;
-	djupe_3: callfunc "Kf_ZWarp","jupe_core",150,125; close;
-	dkiela_1: callfunc "Kf_ZWarp","kh_dun01",0,0; close;
-	dkiela_2: callfunc "Kf_ZWarp","kh_dun02",0,0; close;
-	dlouyang_1: callfunc "Kf_ZWarp","lou_dun01",215,195; close;
-	dlouyang_2: callfunc "Kf_ZWarp","lou_dun02",279,20; close;
-	dlouyang_3: callfunc "Kf_ZWarp","lou_dun03",165,38; close;
+	dculvert_4: callfunc "Kf_ZWarp","prt_sewb4",104,129; close;
 	dmist1: callfunc "Kf_ZWarp","1@mist",254,124; close;
 	dmagma_1: callfunc "Kf_ZWarp","mag_dun01",126,68; close;
 	dmagma_2: callfunc "Kf_ZWarp","mag_dun02",47,30; close;
@@ -1258,9 +1159,6 @@ function	script	Kf_Menu	{
 	dpayon_3: callfunc "Kf_ZWarp","pay_dun02",19,63; close;
 	dpayon_4: callfunc "Kf_ZWarp","pay_dun03",155,159; close;
 	dpayon_5: callfunc "Kf_ZWarp","pay_dun04",201,204; close;
-	dbeach1: callfunc "Kf_ZWarp","beach_dun",266,67; close;
-	dbeach2: callfunc "Kf_ZWarp","beach_dun2",255,244; close;
-	dbeach3: callfunc "Kf_ZWarp","beach_dun3",23,260; close;
 	dpyramids_1: callfunc "Kf_ZWarp","moc_pryd01",192,9; close;
 	dpyramids_2: callfunc "Kf_ZWarp","moc_pryd02",10,192; close;
 	dpyramids_3: callfunc "Kf_ZWarp","moc_pryd03",100,92; close;
@@ -1281,17 +1179,6 @@ function	script	Kf_Menu	{
 	dmoscovia_1: callfunc "Kf_ZWarp","mosk_dun01",154,49; close;
 	dmoscovia_2: callfunc "Kf_ZWarp","mosk_dun02",148,261; close;
 	dmoscovia_3: callfunc "Kf_ZWarp","mosk_dun03",132,189; close;
-	dlhz_1: callfunc "Kf_ZWarp","lhz_dun01",143,11; close;
-	dlhz_2: callfunc "Kf_ZWarp","lhz_dun02",155,19; close;
-	dlhz_3: callfunc "Kf_ZWarp","lhz_dun03",140,134; close;
-	dlhz_4: callfunc "Kf_ZWarp","lhz_dun04",102,144; close;
-	dabyss_1: callfunc "Kf_ZWarp","abyss_01",258,270; close;
-	dabyss_2: callfunc "Kf_ZWarp","abyss_02",273,274; close;
-	dabyss_3: callfunc "Kf_ZWarp","abyss_03",116,27; close;
-	dgefenia_1: callfunc "Kf_ZWarp","gefenia01",40,103; close;
-	dgefenia_2: callfunc "Kf_ZWarp","gefenia02",203,34; close;
-	dgefenia_3: callfunc "Kf_ZWarp","gefenia03",266,168; close;
-	dgefenia_4: callfunc "Kf_ZWarp","gefenia04",130,272; close;
 	drasan_1: callfunc "Kf_ZWarp","ra_san01",0,0; close;
 	drasan_2: callfunc "Kf_ZWarp","ra_san02",0,0; close;
 	drasan_3: callfunc "Kf_ZWarp","ra_san03",0,0; close;
@@ -1320,14 +1207,120 @@ function	script	Kf_Menu	{
 	nnight2: callfunc "Kf_ZWarp","nyd_dun02",108,113; close;
 	nnyd1: callfunc "Kf_ZWarp","1@nyd",60,220; close;
 	nnyd2: callfunc "Kf_ZWarp","2@nyd",108,113; close;
+}
+
+function	script	Kf_Guild_Dungeon	{
+	mes "[Warp Portal]";
+	mes "Warp Gate ต้องการค่าใช้จ่าย 100,000";
+	mes "Zeny ในการส่งท่านไปยัง GuildDungeon";
+	mes "ที่ต้องการ...กรุณาเตรียมเงินให้";
+	mes "พร้อมก่อนเลือกแผนที่";
+	next;
+	menu
+		"- Al De Baran",sgd_luina,
+		"- Geffen",sgd_britoniah,
+		"- Payon",sgd_greenwood_lake,
+		"- Prontera",sgd_valkyrie,
+		"- Rachel",sgd_arunafeltz,
+		"- (TE)",sgd_te_subterranean,
+		"- Yuno",sgd_schwartzvald;
+
+	sgd_luina:
+		menu
+		"- Luina Guild Dungeon F1",wd_luina1,
+		"- Luina Guild Dungeon F2",wd_luina2,
+		"- Luina Guild Hall of the Abyss",wd_luina3;
+	wd_luina1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun02",25,159; close;
+	wd_luina2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun02_2",25,159; close;
+	wd_luina3: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld2_ald",194,148; close;
+
+	sgd_britoniah:
+		menu
+		"- Britoniah Guild Dungeon F1",wd_britoniah1,
+		"- Britoniah Guild Dungeon F2",wd_britoniah2,
+		"- Britoniah Guild Hall of the Abyss",wd_britoniah3;
+	wd_britoniah1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun02",43,230; close;
+	wd_britoniah2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun04_2",43,230; close;
+	wd_britoniah3: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld2_gef",101,122; close;
+
+	sgd_greenwood_lake:
+		menu
+		"- Greenwood Lake Guild Dungeon F1",wd_greenwood_lake1,
+		"- Greenwood Lake Guild Dungeon F2",wd_greenwood_lake2,
+		"- Greenwood Lake Guild Hall of the Abyss",wd_greenwood_lake3;
+	wd_greenwood_lake1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun01",120,20; close;
+	wd_greenwood_lake2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun01_2",120,20; close;
+	wd_greenwood_lake3: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld2_pay",99,168; close;
+
+	sgd_valkyrie:
+		menu
+		"- Valkyrie Guild Dungeon F1",wd_valkyrie1,
+		"- Valkyrie Guild Dungeon F2",wd_valkyrie2,
+		"- Valkyrie Guild Hall of the Abyss",wd_valkyrie3;
+	wd_valkyrie1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun03",41,35; close;
+	wd_valkyrie2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun03_2",41,35; close;
+	wd_valkyrie3: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld2_prt",91,102; close;
+
+	sgd_arunafeltz:
+		menu
+		"- Arunafeltz Guild Dungeon",wd_arunafeltz1;
+	wd_arunafeltz1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","arug_dun01",199,14; close;
+
+	sgd_te_subterranean:
+		menu
+		"- TE Subterranean Guild Dungeon F1",wd_te_subterranean1,
+		"- TE Subterranean Guild Dungeon F2",wd_te_subterranean2;
+	wd_te_subterranean1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","teg_dun01",236,268; close;
+	wd_te_subterranean2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","teg_dun02",26,159; close;
+
+	sgd_schwartzvald:
+		menu
+		"- Schwartzvald Guild Dungeon",wd_schwartzvald1;
+	wd_schwartzvald1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","schg_dun01",200,134; close;
+}
+
+function	script	Kf_minus_zeny	{
+	set $minusZeny,getarg(0);
+
+	if (Zeny > $minusZeny) {
+		set Zeny, Zeny-$minusZeny;
+		return;
+	}
+
+	mes "[Warp Portal]";
+	mes "เสียใจด้วย... ท่านมีเงินไม่เพียงพอ";
+	close;
+	end;
+}
+
+function	script	Kf_Menu	{
+	if(warp_last_map$ != "") {
+		menu
+		"^FF0033- วาปไปยังสถานที่ล่าสุด -^000000",checksafewarp,
+		"->  Town",menuTown,
+		"->  Field",menuField,
+		"->  Dungeon",menuDungeon,
+		"^#FF000->  Guild Dungeon^000000",menuGuildDungeon;
+	} else {
+		menu
+		"->  Town",menuTown,
+		"->  Field",menuField,
+		"->  Dungeon",menuDungeon,
+		"^#FF000->  Guild Dungeon^000000",menuGuildDungeon;
+	}
+
+	checksafewarp: warp warp_last_map$,warp_last_x,warp_last_y; end;
+	menuTown: callfunc "Kf_Towns"; close;
+	menuField: callfunc "Kf_Fields"; close;
+	menuDungeon: callfunc "Kf_Dungeon"; close;
+	menuGuildDungeon: callfunc "Kf_Guild_Dungeon"; close;
 
 }
 
 prt_monk,182,211,3	script	Warp Portal::capital_warp_portal_01	10007,{
 	OnInit: waitingroom " Warp Portal ",0;
-	//callfunc "F_KafSet";
 	mes "[Warp Portal]";
-	mes "PortalÿGate แห่งเทคโนโลยีÿJuno";
+	mes "Portal Gate แห่งเทคโนโลยี Juno";
 	mes ".....................";
 	mes "โปรดเลือกพิกัดก่อนใช้งาน Gate";
 	next;
