@@ -627,24 +627,26 @@ function	script	Kf_Dungeon	{
 		"- Juperos Ruins",sd_juperos,
 		"- Kiel Robot Factory",sd_kiel,
 		"- Lou Yang Dungeon",sd_louyang,
-		"- Misty Forest Labyrinth",dmist,
-		"- Magma Dungeon",dmagma,
-		"- Moscovia Dungeon",dmoscovia,
-		"- Nameless Island",dabbey,
-		"- Nidhogg's or Nyd Dungeon",dnight,
-		"- Orc Dungeon",dorc,
-		"- Odin Temple",odin,
-		"- Prontera Culvert",dculvert,
-		"- Payon Dungeon",dpayon,
-		"- Pyramids",dpyramids,
-		"- Rachel Sanctuary",drasan,
-		"- Sphinx",dsphinx,
-		"- Sunken Ship",dsunken,
-		"- Thanatos Tower",dtha,
-		"- Thor Valcono",dthor,
-		"- Toy Factory",dtoy,
-		"- Turtle Dungeon",dturtle,
-		"- Umbala Dungeon",umba;
+		"- Magma Dungeon",sd_magma,
+		"- Malangdo Dungeon",sd_malangdo,
+		"- Moscovia Dungeon",sd_moscovia,
+		"- Nameless Island",sd_nameless,
+		"- Nidhogg's Dungeon",sd_nidhogg,
+		"- Odin Temple",sd_odin,
+		"- Orc Dungeon",sd_orc,
+		"- Payon Cave",sd_payon,
+		"- Prontera Culvert",sd_prontera_culvert,
+		"- Pyramids",sd_pyramids,
+		"- Rachel Sanctuary",sd_rachel_sanctuary,
+		"- Rock Ridge Mine",sd_rock_ridge_mine,
+		"- Scaraba Hole Dungeon",sd_scaraba_hole,
+		"- Sphinx",sd_sphinx,
+		"- Sunken Ship",sd_sunken_ship,
+		"- Thanatos Tower",sd_thanatos_tower,
+		"- Thors Volcano Dungeon",sd_thors_volcano,
+		"- Toy Factory",sd_toy_factory,
+		"- Turtle Island Dungeon",sd_turtle_island,
+		"- Umbala Dungeon",sd_umbala;
 	
 	sd_abyss_lake:
 		callfunc "Kf_MessageSelect";
@@ -948,265 +950,242 @@ function	script	Kf_Dungeon	{
 	wd_louyang2: callfunc "Kf_ZWarp","lou_dun02",279,20; close;
 	wd_louyang3: callfunc "Kf_ZWarp","lou_dun03",165,38; close;
 
-	odin:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกแมพที่ต้องการ ";
-	next;
-	menu
-	"- Odin Temple 1",owodtemp1,
-	"- Odin Temple 2",owodtemp2,
-	"- Odin Temple 3",owodtemp3;
+	sd_magma:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Nogg Road F1",wd_magma1,
+		"- Nogg Road F2",wd_magma2;
+	wd_magma1: callfunc "Kf_ZWarp","mag_dun01",126,68; close;
+	wd_magma2: callfunc "Kf_ZWarp","mag_dun02",47,30; close;
 
-	dnight:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Nidhogg's or Nyd Dungeon 1",nnight1,
-	"- Nidhogg's or Nyd Dungeon 2",nnight2,
-	"- Nest Level 1",nnyd1,
-	"- Nest Level 2",nnyd2;
+	sd_malangdo:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Starry Coral Area",wd_malangdo1;
+	wd_malangdo1: callfunc "Kf_ZWarp","mal_dun01",37,232; close;
 
-	umba:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Umbala Dungeon 1",umbadun1,
-	"- Umbala Dungeon 2",umbadun2;
+	sd_moscovia:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Moscovia Dungeon 1",wd_moscovia1,
+		"- Moscovia Dungeon 2",wd_moscovia2,
+		"- Moscovia Dungeon 3",wd_moscovia3;
+	wd_moscovia1: callfunc "Kf_ZWarp","mosk_dun01",154,49; close;
+	wd_moscovia2: callfunc "Kf_ZWarp","mosk_dun02",148,261; close;
+	wd_moscovia3: callfunc "Kf_ZWarp","mosk_dun03",132,189; close;
 
-	ddicdun:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Dicastes Dungeon 1 ",dicdun1,
-	"- Dicastes Dungeon 2",dicdun2,
-	"- Dicastes Dungeon 3",dicdun3;
+	sd_nameless:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Cursed Monastery F1",wd_nameless1,
+		"- Cursed Monastery F2",wd_nameless2,
+		"- Cursed Monastery F3",wd_nameless3;
+	wd_nameless1: callfunc "Kf_ZWarp","abbey01",13,200; close;
+	wd_nameless2: callfunc "Kf_ZWarp","abbey02",149,14; close;
+	wd_nameless3: callfunc "Kf_ZWarp","abbey03",119,8; close;
 
-	dabbey:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Abbey Dungeon 1",dabbey_1,
-	"- Abbey Dungeon 2",dabbey_2,
-	"- Abbey Dungeon 3",dabbey_3;
+	sd_nidhogg:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Nidhogg's Dungeon Lv 1",wd_nidhogg1,
+		"- Nidhogg's Dungeon Lv 2",wd_nidhogg2;
+	wd_nidhogg1: callfunc "Kf_ZWarp","nyd_dun01",60,220; close;
+	wd_nidhogg2: callfunc "Kf_ZWarp","nyd_dun02",108,113; close;
 
-	dculvert:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Culvert 1",dculvert_1,
-	"- Culvert 2",dculvert_2,
-	"- Culvert 3",dculvert_3,
-	"- Culvert 4",dculvert_4;
+	sd_odin:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Odin Temple 1",wd_odin1,
+		"- Odin Temple 2",wd_odin2,
+		"- Odin Temple 3",wd_odin3;
+	wd_odin1: callfunc "Kf_ZWarp","odin_tem01",298,167; close;
+	wd_odin2: callfunc "Kf_ZWarp","odin_tem02",224,149; close;
+	wd_odin3: callfunc "Kf_ZWarp","odin_tem03",266,280; close;
 
-	dmist:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Misty Forest Labyrinth 1",dmist1;
+	sd_orc:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Orc Dungeon F1",wd_orc1,
+		"- Orc Dungeon F2",wd_orc2;
+	wd_orc1: callfunc "Kf_ZWarp","orcsdun01",32,170; close; 
+	wd_orc2: callfunc "Kf_ZWarp","orcsdun02",21,185; close;
 
-	dmagma:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Magma Dungeon 1",dmagma_1,
-	"- Magma Dungeon 2",dmagma_2;
+	sd_payon:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Payon Cave F1",wd_payon1,
+		"- Payon Cave F2",wd_payon2,
+		"- Payon Cave F3",wd_payon3,
+		"- Payon Cave F4",wd_payon4,
+		"- Payon Cave F5",wd_payon5;
+	wd_payon1: callfunc "Kf_ZWarp","pay_dun00",21,183; close;
+	wd_payon2: callfunc "Kf_ZWarp","pay_dun01",19,33; close;
+	wd_payon3: callfunc "Kf_ZWarp","pay_dun02",19,63; close;
+	wd_payon4: callfunc "Kf_ZWarp","pay_dun03",155,159; close;
+	wd_payon5: callfunc "Kf_ZWarp","pay_dun04",201,204; close;
 
-	dorc:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Orc Dungeon 1",dorc_1,
-	"- Orc Dungeon 2",dorc_2;
+	sd_prontera_culvert:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Prontera Culvert F1",wd_prontera_culvert1,
+		"- Prontera Culvert F2",wd_prontera_culvert2,
+		"- Prontera Culvert F3",wd_prontera_culvert3,
+		"- Prontera Culvert F4",wd_prontera_culvert4;
+	wd_prontera_culvert1: callfunc "Kf_ZWarp","prt_sewb1",52,17; close; 
+	wd_prontera_culvert2: callfunc "Kf_ZWarp","prt_sewb2",137,171; close; 
+	wd_prontera_culvert3: callfunc "Kf_ZWarp","prt_sewb3",179,91; close; 
+	wd_prontera_culvert4: callfunc "Kf_ZWarp","prt_sewb4",104,129; close;
 
-	dpayon:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Payon Dungeon 1",dpayon_1,
-	"- Payon Dungeon 2",dpayon_2,
-	"- Payon Dungeon 3",dpayon_3,
-	"- Payon Dungeon 4",dpayon_4,
-	"- Payon Dungeon 5",dpayon_5;
+	sd_pyramids:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Inside Pyramid F1",wd_pyramids1,
+		"- Inside Pyramid F2",wd_pyramids2,
+		"- Inside Pyramid F3",wd_pyramids3,
+		"- Inside Pyramid F4",wd_pyramids4,
+		"- Thief Guild",wd_pyramids5,
+		"- Inside Pyramid B1",wd_pyramids6,
+		"- Inside Pyramid B2",wd_pyramids7,
+		"- Pyramid Underground 1F",wd_pyramids8,
+		"- Pyramid Underground 2F",wd_pyramids9;
+	wd_pyramids1: callfunc "Kf_ZWarp","moc_pryd01",192,9; close;
+	wd_pyramids2: callfunc "Kf_ZWarp","moc_pryd02",10,192; close;
+	wd_pyramids3: callfunc "Kf_ZWarp","moc_pryd03",100,92; close;
+	wd_pyramids4: callfunc "Kf_ZWarp","moc_pryd04",181,11; close;
+	wd_pyramids5: callfunc "Kf_ZWarp","moc_prydb1",100,188; close;
+	wd_pyramids6: callfunc "Kf_ZWarp","moc_pryd05",94,96; close;
+	wd_pyramids7: callfunc "Kf_ZWarp","moc_pryd06",192,8; close;
+	wd_pyramids8: callfunc "Kf_ZWarp","moc_prydn1",94,96; close;
+	wd_pyramids9: callfunc "Kf_ZWarp","moc_prydn2",192,8; close;
 
-	dpyramids:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Pyramids 1",dpyramids_1,
-	"- Pyramids 2",dpyramids_2,
-	"- Pyramids 3",dpyramids_3,
-	"- Pyramids 4",dpyramids_4,
-	"- Pyramids 5",dpyramids_5,
-	"- Pyramids 6",dpyramids_6;
+	sd_rachel_sanctuary:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Holy Ground F1",wd_rachel_sanctuary1,
+		"- Holy Ground F2",wd_rachel_sanctuary2,
+		"- Holy Ground F3",wd_rachel_sanctuary3,
+		"- Holy Ground F4",wd_rachel_sanctuary4,
+		"- Holy Ground F5",wd_rachel_sanctuary5;
+	wd_rachel_sanctuary1: callfunc "Kf_ZWarp","ra_san01",139,136; close;
+	wd_rachel_sanctuary2: callfunc "Kf_ZWarp","ra_san02",213,275; close;
+	wd_rachel_sanctuary3: callfunc "Kf_ZWarp","ra_san03",119,283; close;
+	wd_rachel_sanctuary4: callfunc "Kf_ZWarp","ra_san04",119,108; close;
+	wd_rachel_sanctuary5: callfunc "Kf_ZWarp","ra_san05",150,12; close;
 
-	dsphinx:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Sphinx 1",dsphinx_1,
-	"- Sphinx 2",dsphinx_2,
-	"- Sphinx 3",dsphinx_3,
-	"- Sphinx 4",dsphinx_4,
-	"- Sphinx 5",dsphinx_5;
+	sd_rock_ridge_mine:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Rock Ridge Mine F1",wd_rock_ridge_mine1,
+		"- Rock Ridge Mine F2",wd_rock_ridge_mine2;
+	wd_rock_ridge_mine1: callfunc "Kf_ZWarp","rockmi1",245,22; close;
+	wd_rock_ridge_mine2: callfunc "Kf_ZWarp","rockmi2",14,89; close;
 
-	dsunken:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Sunken Ship 1",dsunken_1,
-	"- Sunken Ship 2",dsunken_2;
+	sd_scaraba_hole:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Scaraba Hole 01",wd_scaraba_hole1,
+		"- Scaraba Hole 02",wd_scaraba_hole2,
+		"- Scaraba Hole 03",wd_scaraba_hole3;
+	wd_scaraba_hole1: callfunc "Kf_ZWarp","dic_dun01",35,211; close;
+	wd_scaraba_hole2: callfunc "Kf_ZWarp","dic_dun02",101,143; close;
+	wd_scaraba_hole3: callfunc "Kf_ZWarp","dic_dun03",101,143; close;
 
-	dturtle:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Turtle Dungeon 1",dturtle_1,
-	"- Turtle Dungeon 2",dturtle_2,
-	"- Turtle Dungeon 3",dturtle_3,
-	"- Turtle Dungeon 4",dturtle_4;
+	sd_sphinx:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Sphinx F1",wd_sphinx1,
+		"- Sphinx F2",wd_sphinx2,
+		"- Sphinx F3",wd_sphinx3,
+		"- Sphinx F4",wd_sphinx4,
+		"- Sphinx F5",wd_sphinx5;
+	wd_sphinx1: callfunc "Kf_ZWarp","in_sphinx1",288,9; close;
+	wd_sphinx2: callfunc "Kf_ZWarp","in_sphinx2",149,81; close;
+	wd_sphinx3: callfunc "Kf_ZWarp","in_sphinx3",210,54; close;
+	wd_sphinx4: callfunc "Kf_ZWarp","in_sphinx4",10,222; close;
+	wd_sphinx5: callfunc "Kf_ZWarp","in_sphinx5",100,99; close;
 
-	dmoscovia:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Moscovia Dungeon 1",dmoscovia_1,
-	"- Moscovia Dungeon 2",dmoscovia_2,
-	"- Moscovia Dungeon 3",dmoscovia_3;
+	sd_sunken_ship:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Sunken Ship F1",wd_sunken_ship1,
+		"- Sunken Ship F2",wd_sunken_ship2;
+	wd_sunken_ship1: callfunc "Kf_ZWarp","treasure01",69,24; close;
+	wd_sunken_ship2: callfunc "Kf_ZWarp","treasure02",102,27; close;
 
-	drasan:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Rachel Sanctuary 1",drasan_1,
-	"- Rachel Sanctuary 2",drasan_2,
-	"- Rachel Sanctuary 3",drasan_3,
-	"- Rachel Sanctuary 4",drasan_4,
-	"- Rachel Sanctuary 5",drasan_5;
+	sd_thanatos_tower:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Thanatos Tower F1",wd_thanatos_tower1,
+		"- Thanatos Tower F2",wd_thanatos_tower2,
+		"- Thanatos Tower F3",wd_thanatos_tower3,
+		"- Thanatos Tower F4",wd_thanatos_tower4,
+		"- Thanatos Tower F5",wd_thanatos_tower5,
+		"- Thanatos Tower F6",wd_thanatos_tower6,
+		"- Thanatos Tower F7",wd_thanatos_tower7,
+		"- Thanatos Tower F8",wd_thanatos_tower8,
+		"- Thanatos Tower F9",wd_thanatos_tower9,
+		"- Thanatos Tower F10",wd_thanatos_tower10,
+		"- Thanatos Tower F11",wd_thanatos_tower11,
+		"- Thanatos Tower F12",wd_thanatos_tower12,
+		"- Thanatos Tower Staircase",wd_thanatos_tower13,
+		"- Thanatos Tower Boss",wd_thanatos_tower14;
+	wd_thanatos_tower1: callfunc "Kf_ZWarp","tha_t01",0,0; close;
+	wd_thanatos_tower2: callfunc "Kf_ZWarp","tha_t02",0,0; close;
+	wd_thanatos_tower3: callfunc "Kf_ZWarp","tha_t03",0,0; close;
+	wd_thanatos_tower4: callfunc "Kf_ZWarp","tha_t04",0,0; close;
+	wd_thanatos_tower5: callfunc "Kf_ZWarp","tha_t05",0,0; close;
+	wd_thanatos_tower6: callfunc "Kf_ZWarp","tha_t06",0,0; close;
+	wd_thanatos_tower7: callfunc "Kf_ZWarp","tha_t07",0,0; close;
+	wd_thanatos_tower8: callfunc "Kf_ZWarp","tha_t08",0,0; close;
+	wd_thanatos_tower9: callfunc "Kf_ZWarp","tha_t09",0,0; close;
+	wd_thanatos_tower10: callfunc "Kf_ZWarp","tha_t10",0,0; close;
+	wd_thanatos_tower11: callfunc "Kf_ZWarp","tha_t11",0,0; close;
+	wd_thanatos_tower12: callfunc "Kf_ZWarp","tha_t12",0,0; close;
+	wd_thanatos_tower13: callfunc "Kf_ZWarp","thana_step",0,0; close;
+	wd_thanatos_tower14: callfunc "Kf_ZWarp","thana_boss",0,0; close;
 
-	dtha:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Thanatos Tower 1",dtha_1,
-	"- Thanatos Tower 2",dtha_2,
-	"- Thanatos Tower 3",dtha_3,
-	"- Thanatos Tower 4",dtha_4,
-	"- Thanatos Tower 5",dtha_5,
-	"- Thanatos Tower 6",dtha_6,
-	"- Thanatos Tower 7",dtha_7,
-	"- Thanatos Tower 8",dtha_8,
-	"- Thanatos Tower 9",dtha_9,
-	"- Thanatos Tower 10",dtha_10,
-	"- Thanatos Tower 11",dtha_11,
-	"- Thanatos Tower 12",dtha_12;
+	sd_thors_volcano:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Thors Volcano Dungeon F1",wd_thors_volcano1,
+		"- Thors Volcano Dungeon F2",wd_thors_volcano2,
+		"- Thors Volcano Dungeon F3",wd_thors_volcano3,
+		"- Thor Volcano Camp",wd_thors_volcano4,
+		"- Thor Volcano Dungeon",wd_thors_volcano5;
+	wd_thors_volcano1: callfunc "Kf_ZWarp","thor_v01",0,0; close;
+	wd_thors_volcano2: callfunc "Kf_ZWarp","thor_v02",0,0; close;
+	wd_thors_volcano3: callfunc "Kf_ZWarp","thor_v03",0,0; close;
+	wd_thors_volcano4: callfunc "Kf_ZWarp","thor_camp",0,0; close;
+	wd_thors_volcano5: callfunc "Kf_ZWarp","que_thor",0,0; close;
 
-	dthor:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Thor Valcono 1",dthor_1,
-	"- Thor Valcono 2",dthor_2,
-	"- Thor Valcono 3",dthor_3;
+	sd_toy_factory:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Toy Factory Warehouse",wd_toy_factory1,
+		"- Toy Monitoring Room",wd_toy_factory2;
+	wd_toy_factory1: callfunc "Kf_ZWarp","xmas_dun01",205,15; close;
+	wd_toy_factory2: callfunc "Kf_ZWarp","xmas_dun02",129,133; close;
 
-	dtoy:
-	mes "[ ^FF0000Warp NPC^000000 ]";
-	mes "เลือกดันเจี้ยนที่ต้องการจะไป";
-	next;
-	menu
-	"- Toy Factory 1",dtoy_1,
-	"- Toy Factory 2",dtoy_2;
+	sd_turtle_island:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Entrance to Turtle Island Dungeon",wd_turtle_island1,
+		"- Turtle Island Dungeon",wd_turtle_island2,
+		"- Good Turtles Village",wd_turtle_island3,
+		"- Turtle Palace",wd_turtle_island4;
+	wd_turtle_island1: callfunc "Kf_ZWarp","tur_dun01",154,49; close;
+	wd_turtle_island2: callfunc "Kf_ZWarp","tur_dun02",148,261; close;
+	wd_turtle_island3: callfunc "Kf_ZWarp","tur_dun03",132,189; close;
+	wd_turtle_island4: callfunc "Kf_ZWarp","tur_dun04",100,192; close;
 
-	//==============
-	// Dungeon Warps
-	//==============
-	owodtemp1: callfunc "Kf_ZWarp","odin_tem01",298,167; close;
-	owodtemp2: callfunc "Kf_ZWarp","odin_tem02",224,149; close;
-	owodtemp3: callfunc "Kf_ZWarp","odin_tem03",266,280; close;
-	dicdun1: callfunc "Kf_ZWarp","dic_dun01",349,44; close;
-	dicdun2: callfunc "Kf_ZWarp","dic_dun02",102,142; close;
-	dicdun3: callfunc "Kf_ZWarp","dic_dun03",43,182; close;
-	dabbey_1: callfunc "Kf_ZWarp","abbey01",13,200; close;
-	dabbey_2: callfunc "Kf_ZWarp","abbey02",149,14; close;
-	dabbey_3: callfunc "Kf_ZWarp","abbey03",119,8; close; 
-	dculvert_1: callfunc "Kf_ZWarp","prt_sewb1",52,17; close; 
-	dculvert_2: callfunc "Kf_ZWarp","prt_sewb2",137,171; close; 
-	dculvert_3: callfunc "Kf_ZWarp","prt_sewb3",179,91; close; 
-	dculvert_4: callfunc "Kf_ZWarp","prt_sewb4",104,129; close;
-	dmist1: callfunc "Kf_ZWarp","1@mist",254,124; close;
-	dmagma_1: callfunc "Kf_ZWarp","mag_dun01",126,68; close;
-	dmagma_2: callfunc "Kf_ZWarp","mag_dun02",47,30; close;
-	dorc_1: callfunc "Kf_ZWarp","orcsdun01",32,170; close; 
-	dorc_2: callfunc "Kf_ZWarp","orcsdun02",21,185; close; 
-	dpayon_1: callfunc "Kf_ZWarp","pay_dun00",21,183; close;
-	dpayon_2: callfunc "Kf_ZWarp","pay_dun01",19,33; close;
-	dpayon_3: callfunc "Kf_ZWarp","pay_dun02",19,63; close;
-	dpayon_4: callfunc "Kf_ZWarp","pay_dun03",155,159; close;
-	dpayon_5: callfunc "Kf_ZWarp","pay_dun04",201,204; close;
-	dpyramids_1: callfunc "Kf_ZWarp","moc_pryd01",192,9; close;
-	dpyramids_2: callfunc "Kf_ZWarp","moc_pryd02",10,192; close;
-	dpyramids_3: callfunc "Kf_ZWarp","moc_pryd03",100,92; close;
-	dpyramids_4: callfunc "Kf_ZWarp","moc_pryd04",181,11; close;
-	dpyramids_5: callfunc "Kf_ZWarp","moc_pryd05",94,96; close;
-	dpyramids_6: callfunc "Kf_ZWarp","moc_pryd06",192,8; close;
-	dsphinx_1: callfunc "Kf_ZWarp","in_sphinx1",288,9; close;
-	dsphinx_2: callfunc "Kf_ZWarp","in_sphinx2",149,81; close;
-	dsphinx_3: callfunc "Kf_ZWarp","in_sphinx3",210,54; close;
-	dsphinx_4: callfunc "Kf_ZWarp","in_sphinx4",10,222; close;
-	dsphinx_5: callfunc "Kf_ZWarp","in_sphinx5",100,99; close;
-	dsunken_1: callfunc "Kf_ZWarp","treasure01",69,24; close;
-	dsunken_2: callfunc "Kf_ZWarp","treasure02",102,27; close;
-	dturtle_1: callfunc "Kf_ZWarp","tur_dun01",154,49; close;
-	dturtle_2: callfunc "Kf_ZWarp","tur_dun02",148,261; close;
-	dturtle_3: callfunc "Kf_ZWarp","tur_dun03",132,189; close;
-	dturtle_4: callfunc "Kf_ZWarp","tur_dun04",100,192; close;
-	dmoscovia_1: callfunc "Kf_ZWarp","mosk_dun01",154,49; close;
-	dmoscovia_2: callfunc "Kf_ZWarp","mosk_dun02",148,261; close;
-	dmoscovia_3: callfunc "Kf_ZWarp","mosk_dun03",132,189; close;
-	drasan_1: callfunc "Kf_ZWarp","ra_san01",0,0; close;
-	drasan_2: callfunc "Kf_ZWarp","ra_san02",0,0; close;
-	drasan_3: callfunc "Kf_ZWarp","ra_san03",0,0; close;
-	drasan_4: callfunc "Kf_ZWarp","ra_san04",0,0; close;
-	drasan_5: callfunc "Kf_ZWarp","ra_san05",0,0; close;
-	dtha_1: callfunc "Kf_ZWarp","tha_t01",0,0; close;
-	dtha_2: callfunc "Kf_ZWarp","tha_t02",0,0; close;
-	dtha_3: callfunc "Kf_ZWarp","tha_t03",0,0; close;
-	dtha_4: callfunc "Kf_ZWarp","tha_t04",0,0; close;
-	dtha_5: callfunc "Kf_ZWarp","tha_t05",0,0; close;
-	dtha_6: callfunc "Kf_ZWarp","tha_t06",0,0; close;
-	dtha_7: callfunc "Kf_ZWarp","tha_t07",0,0; close;
-	dtha_8: callfunc "Kf_ZWarp","tha_t08",0,0; close;
-	dtha_9: callfunc "Kf_ZWarp","tha_t09",0,0; close;
-	dtha_10: callfunc "Kf_ZWarp","tha_t10",0,0; close;
-	dtha_11: callfunc "Kf_ZWarp","tha_t11",0,0; close;
-	dtha_12: callfunc "Kf_ZWarp","tha_t12",0,0; close;
-	dthor_1: callfunc "Kf_ZWarp","thor_v01",0,0; close;
-	dthor_2: callfunc "Kf_ZWarp","thor_v02",0,0; close;
-	dthor_3: callfunc "Kf_ZWarp","thor_v03",0,0; close;
-	dtoy_1: callfunc "Kf_ZWarp","xmas_dun01",205,15; close;
-	dtoy_2: callfunc "Kf_ZWarp","xmas_dun02",129,133; close;
-	umbadun1: callfunc "Kf_ZWarp","um_dun01",42,30; close;
-	umbadun2: callfunc "Kf_ZWarp","um_dun02",50,30; close;
-	nnight1: callfunc "Kf_ZWarp","nyd_dun01",60,220; close;
-	nnight2: callfunc "Kf_ZWarp","nyd_dun02",108,113; close;
-	nnyd1: callfunc "Kf_ZWarp","1@nyd",60,220; close;
-	nnyd2: callfunc "Kf_ZWarp","2@nyd",108,113; close;
+	sd_umbala:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Carpenter's Shop in the Tree",wd_umbala1,
+		"- Passage to a Foreign World",wd_umbala2;
+	wd_umbala1: callfunc "Kf_ZWarp","um_dun01",42,30; close;
+	wd_umbala2: callfunc "Kf_ZWarp","um_dun02",50,30; close;
+
 }
 
 function	script	Kf_Guild_Dungeon	{
@@ -1318,7 +1297,7 @@ function	script	Kf_Menu	{
 }
 
 prt_monk,182,211,3	script	Warp Portal::capital_warp_portal_01	10007,{
-	OnInit: waitingroom " Warp Portal ",0;
+	OnInit: waitingroom " Warp Portal ",0,0;
 	mes "[Warp Portal]";
 	mes "Portal Gate แห่งเทคโนโลยี Juno";
 	mes ".....................";
