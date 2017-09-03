@@ -11810,3 +11810,10 @@
 31170,C_Wind_Wings,Costume Wings of Wind,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,493,{},{},{}
 31171,C_Nekomimi,Costume Nekomimi,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,182,{},{},{}
 31172,C_Roast_Memory,Costume Roast Memory,4,0,,0,,,,0,0xFFFFFFFF,63,2,7168,,1,0,1576,{},{},{}
+
+
+// Structure of Database:
+// ID,AegisName,Name,Type,Buy,Sell,Weight,ATK[:MATK],DEF,Range,Slots,Job,Class,Gender,Loc,wLV,eLV[:maxLevel],Refineable,View,{ Script },{ OnEquip_Script },{ OnUnequip_Script }
+//501,Red_Potion,Red Potion,0,50,,70,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(45,65),0; },{},{}
+//701,Ora_Ora,Ora Ora,3,55000,,200,,,,,,,,,,,,,{},{},{}
+32500,TCG_Card,SRO Ticket,3,,,,,,,,,,,,,,,,{},{},{}

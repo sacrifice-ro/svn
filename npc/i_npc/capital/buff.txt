@@ -1,0 +1,246 @@
+function	script	buff	{
+	mes "[" + getarg(0) + "]";
+  mes "ท่านนักเดินทาง...รู้หรือไม่ว่า";
+  mes "เวทย์มนต์บางชนิดสามารถทำให้";
+  mes "ท่านแข็งแกร่งขึ้นได้ ?";
+  next;
+  menu "โอ้! ท่านพูดจริง ?",u_interested,"ข้าไม่สนใจ...",u_dontcare;
+
+  u_interested:
+    mes "[" + getarg(0) + "]";
+    mes "เป็นเช่นนั้นจริง....และอาจต้องมีค่า";
+    mes "ใช้จ่ายบ้าง โปรดลองดูรายการพวกนี้";
+    mes "ข้าได้ใส่รายละเอียดไว้ให้แล้วรวมถึงราคา";
+    next;
+    callfunc "buffList",getarg(0);
+
+  u_dontcare:
+    callfunc "buffEnd",getarg(0),0;
+}
+
+function	script	buffList	{
+  mes "[" + getarg(0) + "]";
+  mes " ";
+  mes "----• ระดับต่ำ •----";
+  mes "• ไม่มีค่าใช้จ่าย";
+  mes "- ฟื้นพลังชีวิตและมานา";
+  mes "- รักษาอาการผิดปกติ";
+  mes " ";
+  mes "----• ระดับปกติ •----";
+  mes "• ค่าบริการ 10,000 zeny";
+  mes "- ระยะเวลาบัพ 30 นาที";
+  mes "- บัพจากระดับต่ำ";
+  mes "- Increase Agility Lv10";
+  mes "- Blessing Lv10";
+  mes "- Magnificat Lv5";
+  mes "- Angelus Lv10";
+  mes "- Gloria Lv5";
+  mes " ";
+  mes "----• ระดับกลาง •----";
+  mes "• ค่าบริการ 100,000 zeny";
+  mes "- ระยะเวลาบัพ 30 นาที";
+  mes "- บัพจากระดับต่ำ";
+  mes "- บัพจากระดับปกติ";
+  mes "- Assumptio Lv5";
+  mes "- Impositio Manus Lv5";
+  mes "- A Poem of Bragi Lv10";
+  mes "- Service for You Lv10";
+  mes "- The Apple of Idun Lv10";
+  mes " ";
+  mes "----• ระดับสูง •----";
+  mes "• ค่าบริการ 100,000 zeny";
+  mes "• SROticket 1ea";
+  mes "- ระยะเวลาบัพ 1 ชั่วโมง";
+  mes "- บัพจากระดับต่ำ";
+  mes "- บัพจากระดับปกติ";
+  mes "- บัพจากระดับกลาง";
+  mes "- บัพเคลือบอุปกรณ์";
+  mes "- บัพโซลิงค์เกอร์ Lv5";
+  mes "- บัพอาหาร All +15";
+  mes "- อัตตราดรอป x2";
+  mes "- ค่าประสบการณ์ Lv x2";
+  mes "- ค่าประสบการณ์ Job x1.5";
+
+  next;
+
+  mes "[" + getarg(0) + "]";
+  mes "จากทุกรายการที่ข้ามี...";
+  mes "ท่านสนใจรายการไหนรึเปล่า ?";
+  next;
+  menu
+    "----• ระดับต่ำ •----",lv_1,
+    "----• ระดับปกติ •----",lv_2,
+    "----• ระดับกลาง •----",lv_3,
+    "----• ระดับสูง •----",lv_4,
+    "ข้าไม่สนใจละ...",u_dontcare;
+
+  lv_1: callfunc "S_Buff",getarg(0),1;
+  lv_2: callfunc "S_Buff",getarg(0),2;
+  lv_3: callfunc "S_Buff",getarg(0),3;
+  lv_4: callfunc "S_Buff",getarg(0),4;
+  u_dontcare: callfunc "buffEnd",getarg(0),0;
+}
+
+function	script	S_Buff	{
+  value = getarg(1);
+	
+  if (value == 1) goto status1;
+  if (value == 2) goto status2;
+  if (value == 3) goto status3;
+  if (value == 4) goto status4;
+
+  status1:
+    percentheal 100,100;
+    sc_end SC_Poison;
+		sc_end SC_Freeze;
+		sc_end SC_Sleep;
+		sc_end SC_Stan;
+		sc_end SC_Stun;
+		sc_end SC_ORCISH;
+		sc_end SC_Stone;
+		sc_end SC_Silence;
+		sc_end SC_Blind;
+		sc_end SC_Bleeding;
+		sc_end SC_Confusion;
+		sc_end SC_Curse;
+		sc_end SC_Hallucination;
+		sc_end SC_DPOISON;
+    callfunc "buffEnd",getarg(0),1;
+  
+  status2:
+    if (Zeny > 10000) {
+      set Zeny, Zeny-10000;
+      percentheal 100,100;
+      sc_end SC_Poison;
+      sc_end SC_Freeze;
+      sc_end SC_Sleep;
+      sc_end SC_Stan;
+      sc_end SC_Stun;
+      sc_end SC_ORCISH;
+      sc_end SC_Stone;
+      sc_end SC_Silence;
+      sc_end SC_Blind;
+      sc_end SC_Bleeding;
+      sc_end SC_Confusion;
+      sc_end SC_Curse;
+      sc_end SC_Hallucination;
+      sc_end SC_DPOISON;
+      sc_start SC_INCREASEAGI,1800000,10;
+      sc_start SC_ANGELUS,1800000,10;
+		  sc_start SC_GLORIA,1800000,5;
+      sc_start SC_BLESSING,1800000,10;
+      sc_start SC_MAGNIFICAT,1800000,5;
+      callfunc "buffEnd",getarg(0),1;
+    } else {
+      callfunc "buffEnd",getarg(0),2;
+    }
+  
+  status3:
+    if (Zeny > 100000) {
+      set Zeny, Zeny-100000;
+      percentheal 100,100;
+      sc_end SC_Poison;
+      sc_end SC_Freeze;
+      sc_end SC_Sleep;
+      sc_end SC_Stan;
+      sc_end SC_Stun;
+      sc_end SC_ORCISH;
+      sc_end SC_Stone;
+      sc_end SC_Silence;
+      sc_end SC_Blind;
+      sc_end SC_Bleeding;
+      sc_end SC_Confusion;
+      sc_end SC_Curse;
+      sc_end SC_Hallucination;
+      sc_end SC_DPOISON;
+      sc_start SC_INCREASEAGI,1800000,10;
+      sc_start SC_ANGELUS,1800000,10;
+		  sc_start SC_GLORIA,1800000,5;
+      sc_start SC_BLESSING,1800000,10;
+      sc_start SC_MAGNIFICAT,1800000,5;
+      sc_start SC_ASSUMPTIO,1800000,5;
+      sc_start SC_IMPOSITIO,1800000,5;
+      sc_start4 SC_POEMBRAGI,1800000,10,120,120,10;
+      sc_start4 SC_SERVICE4U,1800000,10,120,120,10;
+      sc_start4 SC_APPLEIDUN,1800000,10,120,120,10;
+      callfunc "buffEnd",getarg(0),1;
+    } else {
+      callfunc "buffEnd",getarg(0),2;
+    }
+
+  status4:
+    if (Zeny > 100000 && countitem(32500) >= 1) {
+      set Zeny, Zeny-100000;
+      delitem 32500,1;
+      percentheal 100,100;
+      sc_end SC_Poison;
+      sc_end SC_Freeze;
+      sc_end SC_Sleep;
+      sc_end SC_Stan;
+      sc_end SC_Stun;
+      sc_end SC_ORCISH;
+      sc_end SC_Stone;
+      sc_end SC_Silence;
+      sc_end SC_Blind;
+      sc_end SC_Bleeding;
+      sc_end SC_Confusion;
+      sc_end SC_Curse;
+      sc_end SC_Hallucination;
+      sc_end SC_DPOISON;
+      sc_start SC_INCREASEAGI,3600000,10;
+      sc_start SC_ANGELUS,3600000,10;
+		  sc_start SC_GLORIA,3600000,5;
+      sc_start SC_BLESSING,3600000,10;
+      sc_start SC_MAGNIFICAT,3600000,5;
+      sc_start SC_ASSUMPTIO,3600000,5;
+      sc_start SC_IMPOSITIO,3600000,5;
+      sc_start4 SC_POEMBRAGI,3600000,10,120,120,10;
+      sc_start4 SC_SERVICE4U,3600000,10,120,120,10;
+      sc_start4 SC_APPLEIDUN,3600000,10,120,120,10;
+      sc_start SC_STRFood,3600000,15;
+      sc_start SC_AGIFood,3600000,15;
+      sc_start SC_VITFood,3600000,15;
+      sc_start SC_INTFood,3600000,15;
+      sc_start SC_DEXFood,3600000,15;
+      sc_start SC_LUKFood,3600000,15;
+      sc_start SC_EXPBOOST,3600000,100;
+		  sc_start SC_ITEMBOOST,3600000,100;
+      sc_start SC_JEXPBOOST,3600000,100;
+      sc_start4 SC_CP_WEAPON,3600000,5,0,0,1;
+      sc_start4 SC_CP_SHIELD,3600000,5,0,0,1;
+      sc_start4 SC_CP_ARMOR,3600000,5,0,0,1;
+      sc_start4 SC_CP_HELM,3600000,5,0,0,1;
+      skilleffect 452,0; sc_start SC_SPIRIT,3600000,5;
+      callfunc "buffEnd",getarg(0),1;
+    } else {
+      callfunc "buffEnd",getarg(0),2;
+    }
+
+}
+
+function	script	buffEnd	{
+
+  mes "[" + getarg(0) + "]";
+
+  if (getarg(1) == 1) {
+    mes "ขอพรนี้จงสถิตย์อยู่กับท่าน";
+    specialeffect2 338;
+  } else if(getarg(1) == 0) {
+    mes "ช่างน่าเสียดาย...ทว่าหากท่านสนใจ";
+    mes "โปรดกลับมาพูดคุยกับข้าอีกครั้งนะ";
+  } else if(getarg(1) == 2) {
+    mes "ช่างน่าเสียดาย...โปรดตรวจสอบ";
+    mes "เงื่อนไขของข้าใหม่และกลับมาพูด";
+    mes "คุยกับข้าอีกครั้งหนึ่งนะ";
+  }
+  
+  close2;
+  cutin "",255;
+  end;
+}
+
+prt_monk,186,209,3	script	Saint::capital_saint_01	641,{
+  cutin "acact_01",2;
+  callfunc "buff"," นักบุญหญิง ";
+  OnInit: waitingroom " Saint - Buff ",0,0;
+}
