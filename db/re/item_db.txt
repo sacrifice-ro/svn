@@ -11740,7 +11740,7 @@
 31086,C_Long_Pony_Purple,Costume Long Pony Purple,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1526,{},{},{}
 31087,C_Dwarf_Beard,Costume Dwarf Beard,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1349,{},{},{}
 31088,C_Mad_Hatter,Costume Mad Hatter,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1421,{},{},{}
-31089,C_Exploding_Crimson_Flame,Costume Exploding Crimson Flame,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,0,{},{},{}
+31089,C_Exploding_Crimson_Flame,Costume Exploding Crimson Flame,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,0,{ },{},{}
 31090,C_Angelring_Hat,Costume Angelring Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,348,{},{},{}
 31091,C_Show_Me_The_Zeny,Costume Show Me The Zeny,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,0,{},{},{}
 31092,C_Rabbit_Ribbon_Hat,Costume Bunny Ribbon Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,845,{},{},{}
@@ -11814,6 +11814,7 @@
 
 // Structure of Database:
 // ID,AegisName,Name,Type,Buy,Sell,Weight,ATK[:MATK],DEF,Range,Slots,Job,Class,Gender,Loc,wLV,eLV[:maxLevel],Refineable,View,{ Script },{ OnEquip_Script },{ OnUnequip_Script }
-//501,Red_Potion,Red Potion,0,50,,70,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(45,65),0; },{},{}
-//701,Ora_Ora,Ora Ora,3,55000,,200,,,,,,,,,,,,,{},{},{}
+//656,Awakening_Potion,Awakening Potion,2,1500,,150,,,,,0xFFF7FEEF,63,2,,,40,,,{ sc_start SC_ASPDPOTION1,1800000,6; },{},{}
+//607,Yggdrasilberry,Yggdrasil Berry,0,5000,,300,,,,,0xFFFFFFFF,63,2,,,,,,{ percentheal 100,rand(50,100); },{},{}
 32500,TCG_Card,SRO Ticket,3,,,,,,,,,,,,,,,,{},{},{}
+32501,Emergency_Scroll1,SRO Spell,2,,,,,,,,0xFFFFFFFF,63,,,,,,,{ callfunc "S_Buff","",5; },{},{}

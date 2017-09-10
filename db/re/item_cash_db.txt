@@ -11,9 +11,31 @@
 //    3: Rental
 //    4: Gear
 //    5: Buff
-//    6: Heal
+//    6: Heal , Usables
 //    7: Other
 //    8: Sale
 //
 // Price:
 //    Item cost, in cash points (#CASHPOINTS).
+
+// Other Items.
+
+7,32500,10 // SRO Ticket
+7,7621,1 // Token Of Siegfried
+7,7620,5 // Enriched Oridecon
+7,7619,5 // Enriched Elunium
+7,6226,5 // HD Bradium
+7,6225,5 // HD Carnium
+
+// End Other Items.
+
+// Usables Items.
+
+6,14522,1 // Big Bun
+6,14523,1 // Pill
+6,12212,1 // Giant Fly Wing
+6,12221,2 // Megaphone
+6,12214,5 // Convex Mirror
+6,32501,15 // SRO Spell
+
+// End Usables Items.

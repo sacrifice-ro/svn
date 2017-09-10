@@ -1296,7 +1296,7 @@ function	script	Kf_Menu	{
 
 }
 
-prt_monk,182,211,3	script	Warp Portal::capital_warp_portal_01	10007,{
+prt_monk,177,213,3	script	Warp Portal::capital_warp_portal_01	10007,{
 	OnInit: waitingroom " Warp Portal ",0,0;
 	mes "[Warp Portal]";
 	mes "Portal†Gate ·ÀËß‡∑§‚π‚≈¬’†Juno";
