@@ -182,3 +182,4 @@ import: db/path/filename.txt
 
 Example:
 import: db/re/item_bluebox.txt
+import: db/import/sro_item_gift.txt

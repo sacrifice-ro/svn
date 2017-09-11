@@ -11816,5 +11816,8 @@
 // ID,AegisName,Name,Type,Buy,Sell,Weight,ATK[:MATK],DEF,Range,Slots,Job,Class,Gender,Loc,wLV,eLV[:maxLevel],Refineable,View,{ Script },{ OnEquip_Script },{ OnUnequip_Script }
 //656,Awakening_Potion,Awakening Potion,2,1500,,150,,,,,0xFFF7FEEF,63,2,,,40,,,{ sc_start SC_ASPDPOTION1,1800000,6; },{},{}
 //607,Yggdrasilberry,Yggdrasil Berry,0,5000,,300,,,,,0xFFFFFFFF,63,2,,,,,,{ percentheal 100,rand(50,100); },{},{}
+//603,Old_Blue_Box,Old Blue Box,2,10000,,200,,,,,0xFFFFFFFF,63,2,,,,,,{ getrandgroupitem(IG_BlueBox,1); },{},{}
+//13927,Alchemist_Card_Box,Alchemist Card Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 4281,1; getitem 4233,1; getitem 4343,1; getitem 4186,1; getitem 4036,1; },{},{}
 32500,TCG_Card,SRO Ticket,3,,,,,,,,,,,,,,,,{},{},{}
 32501,Emergency_Scroll1,SRO Spell,2,,,,,,,,0xFFFFFFFF,63,,,,,,,{ callfunc "S_Buff","",5; },{},{}
+32502,Chance_Box,SRO Gift,2,,,200,,,,,0xFFFFFFFF,63,2,,,,,,{ getrandgroupitem(IG_SRO_GIFT,1); },{},{}

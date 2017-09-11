@@ -1,0 +1,207 @@
+// [G] = Only found SRO Gift.
+// [CG] = Only found SRO Gift and Costume Cash Shop. 
+
+IG_SRO_GIFT,19689,6 // [G] Costume Ati Atihan
+IG_SRO_GIFT,19985,5 // [G] Costume Aura Quartz
+IG_SRO_GIFT,19648,4 // [G] Costume Autumn Leaves
+IG_SRO_GIFT,19559,6 // [G] Costume Baby Dragon Hat
+IG_SRO_GIFT,20230,3 // [G] Costume Bankruptcy Mask
+IG_SRO_GIFT,19834,6 // [G] Costume Baseball Cap
+IG_SRO_GIFT,20147,3 // [G] Costume Bell of Piegon
+IG_SRO_GIFT,19678,4 // [G] Costume Bell Ribbon
+IG_SRO_GIFT,19623,4 // [G] Costume Bijofnil Wings
+IG_SRO_GIFT,20265,3 // [G] Costume Bird Nest Hat
+IG_SRO_GIFT,20314,5 // [G] Costume New Wave Sunglasses
+IG_SRO_GIFT,20126,6 // [G] Costume Odium Thanatos Mask
+IG_SRO_GIFT,20283,5 // [G] Costume Over Protector
+IG_SRO_GIFT,19652,6 // [G] Costume Rabbit Magic Hat
+IG_SRO_GIFT,20191,6 // [G] Costume Black Cat Ears Beret
+IG_SRO_GIFT,19722,4 // [G] Costume Black Glasses
+IG_SRO_GIFT,19744,6 // [G] Costume Black Tail Ribbon
+IG_SRO_GIFT,19969,6 // [G] Costume Blazing Soul
+IG_SRO_GIFT,20064,5 // [G] Costume Blue Brain Hat
+IG_SRO_GIFT,20258,6 // [G] Costume Blue Headdress
+IG_SRO_GIFT,20101,4 // [G] Costume Bragi Wing Ears
+IG_SRO_GIFT,19725,6 // [G] Costume Bread Bag
+IG_SRO_GIFT,19659,6 // [G] Costume Brown Beanie
+IG_SRO_GIFT,19952,5 // [G] Costume Bubble Gum in Mouth
+IG_SRO_GIFT,19642,4 // [G] Costume Moonlight Flower Hat
+IG_SRO_GIFT,19989,3 // [G] Costume Mouton Life
+IG_SRO_GIFT,19645,4 // [G] Costume Phoenix Crown
+IG_SRO_GIFT,19760,4 // [G] Costume Rainbow Veil
+IG_SRO_GIFT,20446,5 // [G] Costume Bunny Eggshell
+IG_SRO_GIFT,19974,6 // [G] Costume Camouflage Rabbit Hood
+IG_SRO_GIFT,19657,3 // [G] Costume Captain Hat
+IG_SRO_GIFT,20044,6 // [G] Costume Carmen Miranda's Hat
+IG_SRO_GIFT,20313,6 // [G] Costume CD in Mouth
+IG_SRO_GIFT,19992,3 // [G] Costume Chilly Breath
+IG_SRO_GIFT,19560,3 // [G] Costume Coati Hat
+IG_SRO_GIFT,19666,4 // [G] Costume Cookie Hat
+IG_SRO_GIFT,20452,3 // [G] Costume Crown of Strawberry Prince
+IG_SRO_GIFT,19531,5 // [G] Costume Cube Mask
+IG_SRO_GIFT,20035,6 // [G] Costume Miracle Blue Rose
+IG_SRO_GIFT,20198,3 // [G] Costume Misty Ears
+IG_SRO_GIFT,20379,5 // [G] Costume Pocketwatch Hair Ornament
+IG_SRO_GIFT,19646,5 // [G] Costume Ramen Hat
+IG_SRO_GIFT,20006,6 // [G] Costume Dark Knight Mask
+IG_SRO_GIFT,19690,5 // [G] Costume Dark Snake Lord Hat
+IG_SRO_GIFT,19721,3 // [G] Costume Darkness Helm
+IG_SRO_GIFT,19594,5 // [G] Costume Decorative Geographer
+IG_SRO_GIFT,19724,2 // [G] Costume Deprote Doll Hat
+IG_SRO_GIFT,20403,2 // [G] Costume Dolor Thanatos
+IG_SRO_GIFT,19563,6 // [G] Costume Dragon Arhat Mask
+IG_SRO_GIFT,20009,4 // [G] Costume Dragon Skull Hat
+IG_SRO_GIFT,19959,1 // [G] Costume Drooping Argiope
+IG_SRO_GIFT,20103,3 // [G] Costume Drooping Panda
+IG_SRO_GIFT,20376,5 // [G] Costume Memory of Lovers
+IG_SRO_GIFT,19966,4 // [G] Costume Minstrel Song's Hat
+IG_SRO_GIFT,19665,3 // [G] Costume Poring Cake Hat
+IG_SRO_GIFT,19609,4 // [G] Costume Red Glasses
+IG_SRO_GIFT,20346,3 // [G] Costume Drooping Permeter
+IG_SRO_GIFT,20241,5 // [G] Costume Eclipse Hat
+IG_SRO_GIFT,20405,2 // [G] Costume Eremes Scarf
+IG_SRO_GIFT,20199,3 // [G] Costume Evil Marcher Hat
+IG_SRO_GIFT,19589,1 // [G] Costume Fallen Angel Lost
+IG_SRO_GIFT,20156,4 // [G] Costume Fan in Mouth
+IG_SRO_GIFT,19882,6 // [G] Costume Flowerpot Mask
+IG_SRO_GIFT,20193,6 // [G] Costume Foxtail
+IG_SRO_GIFT,19158,3 // [G] Costume GeminiS58 Eyes Blue
+IG_SRO_GIFT,20301,3 // [G] Costume Golden Savage Hat
+IG_SRO_GIFT,19938,4 // [G] Costume Love Rabbit Hood
+IG_SRO_GIFT,20380,3 // [G] Costume Mechanical Feather Hairband
+IG_SRO_GIFT,20129,5 // [G] Costume Poporing Cap
+IG_SRO_GIFT,19579,4 // [G] Costume Red Wind Hat
+IG_SRO_GIFT,19537,2 // [G] Costume Gryphon Hat
+IG_SRO_GIFT,20176,6 // [G] Costume Happy Pierrot Mask
+IG_SRO_GIFT,20291,6 // [G] Costume Helm of Thoth
+IG_SRO_GIFT,19745,3 // [G] Costume Holy Marching Hat
+IG_SRO_GIFT,20256,4 // [G] Costume Honey Pancake
+IG_SRO_GIFT,19772,5 // [G] Costume Honeybee Hat
+IG_SRO_GIFT,20400,3 // [G] Costume Ichthys Rosario
+IG_SRO_GIFT,20375,5 // [G] Costume Ignis Cap
+IG_SRO_GIFT,19599,1 // [G] Costume Imp Hat
+IG_SRO_GIFT,20334,6 // [G] Costume Joystick Hat
+IG_SRO_GIFT,19574,3 // [G] Costume Lord of Death
+IG_SRO_GIFT,20154,1 // [G] Costume Maple Which Falls
+IG_SRO_GIFT,20347,5 // [G] Costume Poring Pirate Hat
+IG_SRO_GIFT,19949,6 // [G] Costume RWC2013 Japan Hat
+IG_SRO_GIFT,19587,3 // [G] Costume King Poring Hat
+IG_SRO_GIFT,19714,3 // [G] Costume Lady Tanee Doll
+IG_SRO_GIFT,20441,4 // [G] Costume Large Ribbon Muffler Red
+IG_SRO_GIFT,19763,5 // [G] Costume Leaf Cat Hat
+IG_SRO_GIFT,20196,4 // [G] Costume Leopard Ear Hat
+IG_SRO_GIFT,19751,1 // [G] Costume Light Darkness Crown
+IG_SRO_GIFT,19835,3 // [G] Costume Lif Doll Hat
+IG_SRO_GIFT,20014,6 // [G] Costume Lincoln Hat
+IG_SRO_GIFT,20325,2 // [G] Costume Little Aquarium
+IG_SRO_GIFT,19712,3 // [G] Costume Little Angel Doll
+IG_SRO_GIFT,20169,6 // [G] Costume Long Tongue
+IG_SRO_GIFT,20303,5 // [G] Costume Mandragora Cap
+IG_SRO_GIFT,20225,6 // [G] Costume Pumpkin-Head
+IG_SRO_GIFT,20326,3 // [G] Costume Sailor Collar
+IG_SRO_GIFT,20416,3 // [G] Costume Grade 1 Balloon
+IG_SRO_GIFT,20417,3 // [G] Costume Grade 2 Balloon
+IG_SRO_GIFT,20418,3 // [G] Costume Grade 3 Balloon
+IG_SRO_GIFT,20420,3 // [G] Costume Grade 5 Balloon
+IG_SRO_GIFT,20421,3 // [G] Costume Grade 6 Balloon
+IG_SRO_GIFT,20422,3 // [G] Costume Grade 7 Balloon
+IG_SRO_GIFT,20423,3 // [G] Costume Grade 8 Balloon
+IG_SRO_GIFT,20424,3 // [G] Costume Grade 9 Balloon
+IG_SRO_GIFT,20425,3 // [G] Costume Grade 10 Balloon
+IG_SRO_GIFT,20426,3 // [G] Costume Grade 11 Balloon
+IG_SRO_GIFT,20427,3 // [G] Costume Grade 12 Balloon
+IG_SRO_GIFT,20428,3 // [G] Costume Grade 13 Balloon
+IG_SRO_GIFT,19842,6 // [G] Costume Puppy Hat
+IG_SRO_GIFT,19750,5 // [G] Costume Saint Frill Ribbon
+IG_SRO_GIFT,20342,4 // [G] Costume Loose Wave Twin
+IG_SRO_GIFT,20364,4 // [G] Costume Loose Wave Twin Yellow
+IG_SRO_GIFT,20369,4 // [G] Costume Loose Wave Twin Blue
+IG_SRO_GIFT,20370,4 // [G] Costume Loose Wave Twin White
+IG_SRO_GIFT,19607,2 // [G] Costume Love Chick Hat
+IG_SRO_GIFT,20022,5 // [G] Costume Love Fragment
+IG_SRO_GIFT,19918,6 // [G] Costume Lude Mask
+IG_SRO_GIFT,19986,5 // [G] Costume Lunatic Hat
+IG_SRO_GIFT,19687,4 // [G] Costume Lush Rose
+IG_SRO_GIFT,19968,5 // [G] Costume Magic Stone Hat
+IG_SRO_GIFT,20160,4 // [G] Costume Magnolia Hat
+IG_SRO_GIFT,19836,3 // [G] Costume Majestic Goat
+IG_SRO_GIFT,19540,4 // [G] Costume Rabbit Earplugs
+IG_SRO_GIFT,20092,5 // [G] Costume Sales Banner
+IG_SRO_GIFT,31063,4 // [G] Costume Hair Bun Blue
+IG_SRO_GIFT,31064,4 // [G] Costume Hair Bun Red
+IG_SRO_GIFT,31065,4 // [G] Costume Hair Bun Yellow
+IG_SRO_GIFT,31066,4 // [G] Costume Hair Bun Green
+IG_SRO_GIFT,31067,4 // [G] Costume Hair Bun Black
+IG_SRO_GIFT,31068,4 // [G] Costume Hair Bun White
+IG_SRO_GIFT,31069,4 // [G] Costume Hair Bun Crimson
+IG_SRO_GIFT,31070,4 // [G] Costume Hair Bun Purple
+IG_SRO_GIFT,31071,4 // [G] Costume Roll Twin Blue
+IG_SRO_GIFT,31072,4 // [G] Costume Roll Twin Red
+IG_SRO_GIFT,31073,4 // [G] Costume Roll Twin Yellow
+IG_SRO_GIFT,31074,4 // [G] Costume Roll Twin Green
+IG_SRO_GIFT,31075,4 // [G] Costume Roll Twin Black
+IG_SRO_GIFT,31076,4 // [G] Costume Roll Twin White
+IG_SRO_GIFT,31077,4 // [G] Costume Roll Twin Crimson
+IG_SRO_GIFT,31078,4 // [G] Costume Roll Twin Purple
+IG_SRO_GIFT,31079,4 // [G] Costume Long Pony Blue
+IG_SRO_GIFT,31080,4 // [G] Costume Long Pony Red
+IG_SRO_GIFT,31081,4 // [G] Costume Long Pony Yellow
+IG_SRO_GIFT,31082,4 // [G] Costume Long Pony Green
+IG_SRO_GIFT,31083,4 // [G] Costume Long Pony Black
+IG_SRO_GIFT,31084,4 // [G] Costume Long Pony White
+IG_SRO_GIFT,31085,4 // [G] Costume Long Pony Crimson
+IG_SRO_GIFT,31086,4 // [G] Costume Long Pony Purple
+IG_SRO_GIFT,19627,5 // [G] Costume Satellite Hairband 
+IG_SRO_GIFT,20294,5 // [G] Costume Savage Babe Hat
+IG_SRO_GIFT,19715,3 // [G] Costume Scarf
+IG_SRO_GIFT,20345,3 // [G] Costume Seagod Protector
+IG_SRO_GIFT,20138,6 // [G] Costume Sea Otter Hat
+IG_SRO_GIFT,20080,6 // [G] Costume Shaman Hair Ornament
+IG_SRO_GIFT,20378,5 // [G] Costume Sky Met
+IG_SRO_GIFT,20451,5 // [G] Costume Sky of Memory
+IG_SRO_GIFT,20447,2 // [G] Costume Small Porings Headband
+IG_SRO_GIFT,19856,4 // [G] Costume Snow Cone Hat
+IG_SRO_GIFT,20273,3 // [G] Costume Soft Sheep Hat
+IG_SRO_GIFT,20381,3 // [G] Costume Steampunk Hat
+IG_SRO_GIFT,20340,4 // [G] Costume Straight Pony Black
+IG_SRO_GIFT,20357,4 // [G] Costume Straight Pony Yellow
+IG_SRO_GIFT,20358,4 // [G] Costume Straight Pony Green
+IG_SRO_GIFT,20359,4 // [G] Costume Straight Pony Purple
+IG_SRO_GIFT,20360,4 // [G] Costume Straight Pony Red
+IG_SRO_GIFT,20361,4 // [G] Costume Straight Pony Crimson
+IG_SRO_GIFT,20362,4 // [G] Costume Straight Pony Blue
+IG_SRO_GIFT,20363,4 // [G] Costume Straight Pony White
+IG_SRO_GIFT,19661,3 // [G] Costume Sweet Bonnet
+IG_SRO_GIFT,20036,3 // [G] Costume Sword Master Crown
+IG_SRO_GIFT,20463,4 // [G] Costume Two Tone Beret
+IG_SRO_GIFT,19759,6 // [G] Costume Umbrella Hat
+IG_SRO_GIFT,20286,3 // [G] Costume Under Rim Glasses Red
+IG_SRO_GIFT,19658,4 // [G] Costume Vacation Hat
+IG_SRO_GIFT,20100,5 // [G] Costume Volume Fhat
+IG_SRO_GIFT,20373,5 // [G] Costume Watermelon Hat
+IG_SRO_GIFT,20335,5 // [G] Costume Watery Eyes
+IG_SRO_GIFT,20280,5 // [G] Costume Well-Chewed Pencil
+IG_SRO_GIFT,20130,2 // [G] Costume Whisper Tall Hat
+IG_SRO_GIFT,20449,2 // [G] Costume White and Black Temptation
+IG_SRO_GIFT,19823,4 // [G] Costume White Cat Hood
+IG_SRO_GIFT,20134,4 // [G] Costume White Helm Of Abyss
+IG_SRO_GIFT,19571,6 // [G] Costume White Musang Hat
+IG_SRO_GIFT,20053,5 // [G] Costume White King Tiger Doll Hat
+IG_SRO_GIFT,20458,1 // [G] Costume Wild Poring Rider
+IG_SRO_GIFT,19530,3 // [G] Costume Wild Rose
+IG_SRO_GIFT,18741,1 // [G] Costume Will O Wisp
+IG_SRO_GIFT,20150,5 // [G] Costume Wind Fan
+IG_SRO_GIFT,20071,2 // [G] Costume Worg In Mouth
+IG_SRO_GIFT,20020,3 // [G] Costume Zaha Doll Hat
+IG_SRO_GIFT,20099,1 // [G] Costume Flying Ljosalfar
+IG_SRO_GIFT,19996,4 // [G] Costume Horse King
+IG_SRO_GIFT,20397,6 // [G] Costume Jack
+IG_SRO_GIFT,20116,3 // [G] Mermaid Headphone
+IG_SRO_GIFT,19543,3 // [G] Oliver Wolf Hood
+IG_SRO_GIFT,19520,5 // [G] Rain Cloud
+IG_SRO_GIFT,19518,5 // [G] Rainbow
+IG_SRO_GIFT,18740,2 // [G] RMSC2012 Special Costume
+IG_SRO_GIFT,20117,6 // [G] Raspberry Mousse Hat
+IG_SRO_GIFT,19516,3 // [G] Singing Bird
+IG_SRO_GIFT,20115,3 // [G] Under Rim Glasses
+IG_SRO_GIFT,20468,4 // [G] You in ONE

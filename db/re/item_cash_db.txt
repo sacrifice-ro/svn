@@ -37,5 +37,6 @@
 6,12221,2 // Megaphone
 6,12214,5 // Convex Mirror
 6,32501,15 // SRO Spell
+6,32502,30 // SRO Gift
 
 // End Usables Items.

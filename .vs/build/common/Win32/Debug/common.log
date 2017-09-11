@@ -1,7 +1,7 @@
-﻿Build started 20/8/2560 7:01:33.
-     1>Project "E:\svn-ragnarok\SVN-01\src\common\common.vcxproj" on node 3 (Build target(s)).
+﻿Build started 12/9/2560 0:09:55.
+     1>Project "E:\svn-ragnarok\svn\src\common\common.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\SVN-01\3rdparty\zlib\include\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\mysql\include\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\mt19937ar\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\libconfig\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\yaml-cpp\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D FD_SETSIZE=4096 /D PCRE_SUPPORT /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt cli.c conf.c db.c des.c ers.c grfio.c malloc.c mapindex.c md5calc.c mempool.c msg_conf.c mutex.c nullpo.c raconf.c random.c showmsg.c socket.c sql.c strlib.c thread.c timer.c utils.c
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\svn\3rdparty\zlib\include\\" /I"E:\svn-ragnarok\svn\3rdparty\mysql\include\\" /I"E:\svn-ragnarok\svn\3rdparty\mt19937ar\\" /I"E:\svn-ragnarok\svn\3rdparty\libconfig\\" /I"E:\svn-ragnarok\svn\3rdparty\yaml-cpp\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D FD_SETSIZE=4096 /D PCRE_SUPPORT /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\\" /Fd"E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt cli.c conf.c db.c des.c ers.c grfio.c malloc.c mapindex.c md5calc.c mempool.c msg_conf.c mutex.c nullpo.c raconf.c random.c showmsg.c socket.c sql.c strlib.c thread.c timer.c utils.c
          utils.c
          timer.c
          thread.c
@@ -27,39 +27,39 @@
          conf.c
          cli.c
          Generating Code...
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\SVN-01\3rdparty\zlib\include\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\mysql\include\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\mt19937ar\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\libconfig\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\yaml-cpp\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D FD_SETSIZE=4096 /D PCRE_SUPPORT /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt core.cpp yamlwrapper.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\svn\3rdparty\zlib\include\\" /I"E:\svn-ragnarok\svn\3rdparty\mysql\include\\" /I"E:\svn-ragnarok\svn\3rdparty\mt19937ar\\" /I"E:\svn-ragnarok\svn\3rdparty\libconfig\\" /I"E:\svn-ragnarok\svn\3rdparty\yaml-cpp\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D FD_SETSIZE=4096 /D PCRE_SUPPORT /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\\" /Fd"E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt core.cpp yamlwrapper.cpp
          yamlwrapper.cpp
-     1>e:\svn-ragnarok\svn-01\src\common\yamlwrapper.cpp(53): warning C4101: 'e' : unreferenced local variable
+     1>e:\svn-ragnarok\svn\src\common\yamlwrapper.cpp(53): warning C4101: 'e' : unreferenced local variable
          core.cpp
          Generating Code...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\svn-ragnarok\SVN-01\.vs\build\common.lib" /NOLOGO "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\cli.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\conf.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\core.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\db.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\des.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\ers.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\grfio.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\malloc.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\mapindex.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\md5calc.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\mempool.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\msg_conf.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\mutex.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\nullpo.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\raconf.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\random.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\showmsg.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\socket.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\sql.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\strlib.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\thread.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\timer.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\utils.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common\Win32\Debug\yamlwrapper.obj"
-         common.vcxproj -> E:\svn-ragnarok\SVN-01\.vs\build\common.lib
-     1>Done Building Project "E:\svn-ragnarok\SVN-01\src\common\common.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\svn-ragnarok\svn\.vs\build\common.lib" /NOLOGO "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\cli.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\conf.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\core.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\db.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\des.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\ers.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\grfio.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\malloc.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\mapindex.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\md5calc.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\mempool.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\msg_conf.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\mutex.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\nullpo.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\raconf.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\random.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\showmsg.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\socket.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\sql.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\strlib.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\thread.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\timer.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\utils.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common\Win32\Debug\yamlwrapper.obj"
+         common.vcxproj -> E:\svn-ragnarok\svn\.vs\build\common.lib
+     1>Done Building Project "E:\svn-ragnarok\svn\src\common\common.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.34
+Time Elapsed 00:00:04.53

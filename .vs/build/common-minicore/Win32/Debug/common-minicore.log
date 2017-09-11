@@ -1,7 +1,7 @@
-﻿Build started 20/8/2560 7:01:15.
-     1>Project "E:\svn-ragnarok\SVN-01\src\common\common-minicore.vcxproj" on node 4 (Build target(s)).
+﻿Build started 12/9/2560 0:09:38.
+     1>Project "E:\svn-ragnarok\svn\src\common\common-minicore.vcxproj" on node 5 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\SVN-01\3rdparty\zlib\include\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\mt19937ar\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\libconfig\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D MINICORE /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt cli.c conf.c des.c grfio.c malloc.c mapindex.c md5calc.c msg_conf.c nullpo.c raconf.c random.c showmsg.c strlib.c utils.c
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\svn\3rdparty\zlib\include\\" /I"E:\svn-ragnarok\svn\3rdparty\mt19937ar\\" /I"E:\svn-ragnarok\svn\3rdparty\libconfig\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D MINICORE /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\\" /Fd"E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt cli.c conf.c des.c grfio.c malloc.c mapindex.c md5calc.c msg_conf.c nullpo.c raconf.c random.c showmsg.c strlib.c utils.c
          utils.c
          strlib.c
          showmsg.c
@@ -17,27 +17,27 @@
          conf.c
          cli.c
          Generating Code...
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\SVN-01\3rdparty\zlib\include\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\mt19937ar\\" /I"E:\svn-ragnarok\SVN-01\3rdparty\libconfig\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D MINICORE /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt core.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\svn-ragnarok\svn\3rdparty\zlib\include\\" /I"E:\svn-ragnarok\svn\3rdparty\mt19937ar\\" /I"E:\svn-ragnarok\svn\3rdparty\libconfig\\" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D MINICORE /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\\" /Fd"E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt core.cpp
          core.cpp
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\svn-ragnarok\SVN-01\.vs\build\common-minicore.lib" /NOLOGO "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\cli.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\conf.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\core.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\des.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\grfio.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\malloc.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\mapindex.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\md5calc.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\msg_conf.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\nullpo.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\raconf.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\random.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\showmsg.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\strlib.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\common-minicore\Win32\Debug\utils.obj"
-         common-minicore.vcxproj -> E:\svn-ragnarok\SVN-01\.vs\build\common-minicore.lib
-     1>Done Building Project "E:\svn-ragnarok\SVN-01\src\common\common-minicore.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\svn-ragnarok\svn\.vs\build\common-minicore.lib" /NOLOGO "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\cli.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\conf.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\core.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\des.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\grfio.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\malloc.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\mapindex.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\md5calc.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\msg_conf.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\nullpo.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\raconf.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\random.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\showmsg.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\strlib.obj"
+         "E:\svn-ragnarok\svn\.vs\build\common-minicore\Win32\Debug\utils.obj"
+         common-minicore.vcxproj -> E:\svn-ragnarok\svn\.vs\build\common-minicore.lib
+     1>Done Building Project "E:\svn-ragnarok\svn\src\common\common-minicore.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.29
+Time Elapsed 00:00:01.99

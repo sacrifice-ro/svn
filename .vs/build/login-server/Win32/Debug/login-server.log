@@ -1,7 +1,7 @@
-﻿Build started 20/8/2560 7:01:36.
-     1>Project "E:\svn-ragnarok\SVN-01\src\login\login-server.vcxproj" on node 4 (Build target(s)).
+﻿Build started 12/9/2560 0:09:59.
+     1>Project "E:\svn-ragnarok\svn\src\login\login-server.vcxproj" on node 3 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D FD_SETSIZE=4096 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt account.c ipban.c loginchrif.c loginclif.c logincnslif.c loginlog.c
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D FD_SETSIZE=4096 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\\" /Fd"E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt account.c ipban.c loginchrif.c loginclif.c logincnslif.c loginlog.c
          loginlog.c
          logincnslif.c
          loginclif.c
@@ -9,19 +9,19 @@
          ipban.c
          account.c
          Generating Code...
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D FD_SETSIZE=4096 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\\" /Fd"E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt login.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D FD_SETSIZE=4096 /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _WINSOCK_DEPRECATED_NO_WARNINGS /D LIBCONFIG_STATIC /D YY_USE_CONST /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\\" /Fd"E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt login.cpp
          login.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\svn-ragnarok\SVN-01\login-server.exe" /INCREMENTAL /NOLOGO ws2_32.lib "E:\svn-ragnarok\SVN-01\.vs\build\common.lib" "E:\svn-ragnarok\SVN-01\.vs\build\mt19937ar.lib" "E:\svn-ragnarok\SVN-01\3rdparty\mysql\lib\Win32\libmysql.lib" "E:\svn-ragnarok\SVN-01\.vs\build\yaml-cpp.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\svn-ragnarok\SVN-01\login-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\svn-ragnarok\SVN-01\login-server.lib" /MACHINE:X86 "E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\account.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\ipban.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\login.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\loginchrif.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\loginclif.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\logincnslif.obj"
-         "E:\svn-ragnarok\SVN-01\.vs\build\login-server\Win32\Debug\loginlog.obj"
-         login-server.vcxproj -> E:\svn-ragnarok\SVN-01\login-server.exe
-     1>Done Building Project "E:\svn-ragnarok\SVN-01\src\login\login-server.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\svn-ragnarok\svn\login-server.exe" /INCREMENTAL /NOLOGO ws2_32.lib "E:\svn-ragnarok\svn\.vs\build\common.lib" "E:\svn-ragnarok\svn\.vs\build\mt19937ar.lib" "E:\svn-ragnarok\svn\3rdparty\mysql\lib\Win32\libmysql.lib" "E:\svn-ragnarok\svn\.vs\build\yaml-cpp.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\svn-ragnarok\svn\login-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\svn-ragnarok\svn\login-server.lib" /MACHINE:X86 "E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\account.obj"
+         "E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\ipban.obj"
+         "E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\login.obj"
+         "E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\loginchrif.obj"
+         "E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\loginclif.obj"
+         "E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\logincnslif.obj"
+         "E:\svn-ragnarok\svn\.vs\build\login-server\Win32\Debug\loginlog.obj"
+         login-server.vcxproj -> E:\svn-ragnarok\svn\login-server.exe
+     1>Done Building Project "E:\svn-ragnarok\svn\src\login\login-server.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.48
+Time Elapsed 00:00:03.52
