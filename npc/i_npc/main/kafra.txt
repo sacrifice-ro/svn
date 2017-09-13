@@ -1,0 +1,82 @@
+function	script	Kf_Main	{
+	cutin "kafra_05",2;
+	callfunc "F_KafSet";
+	mes "[æπ—°ß“π Kafra]";
+	mes "Kafra†Corporation†¬‘π¥’„ÀÈ∫√‘°“√§Ë–";
+	mes "‰¡Ë∑√“∫«Ë“∑Ë“ππ—°‡¥‘π∑“ß†µÈÕß°“√„™È∫√‘°“√„¥§– ?";
+	callfunc "F_Kafra",5,11,1,60,600;
+	savepoint getarg(0),getarg(1),getarg(2);
+	callfunc "CUSTOM_KafEnd";
+}
+
+prt_monk,177,209,5	script	Kafra Employee::capital_krafa_01	113,{ callfunc "Kf_Main","prt_monk",180,203; OnInit: waitingroom " Kafra Employee ",0; }
+
+alberta,137,186,5	script	Kafra Employee::alberta_krafa_01	113,{ callfunc "Kf_Main","alberta",140,180; OnInit: waitingroom " Kafra Employee ",0; }
+
+aldebaran,117,120,3	script	Kafra Employee::aldebaran_krafa_01	113,{ callfunc "Kf_Main","aldebaran",115,113; OnInit: waitingroom " Kafra Employee ",0; }
+
+amatsu,207,214,5	script	Kafra Employee::amatsu_krafa_01	113,{ callfunc "Kf_Main","amatsu",210,207; OnInit: waitingroom " Kafra Employee ",0; }
+
+ayothaya,148,172,5	script	Kafra Employee::ayothaya_krafa_01	113,{ callfunc "Kf_Main","ayothaya",151,165; OnInit: waitingroom " Kafra Employee ",0; }
+
+brasilis,244,323,5	script	Kafra Employee::brasilis_krafa_01	113,{ callfunc "Kf_Main","brasilis",242,316; OnInit: waitingroom " Kafra Employee ",0; }
+
+comodo,163,163,5	script	Kafra Employee::comodo_krafa_01	113,{ callfunc "Kf_Main","comodo",166,158; OnInit: waitingroom " Kafra Employee ",0; }
+
+dewata,75,155,5	script	Kafra Employee::dewata_krafa_01	113,{ callfunc "Kf_Main","dewata",78,147; OnInit: waitingroom " Kafra Employee ",0; }
+
+dicastes01,195,227,5	script	Kafra Employee::dicastes01_krafa_01	113,{ callfunc "Kf_Main","dicastes01",198,221; OnInit: waitingroom " Kafra Employee ",0; }
+
+dicastes02,117,100,5	script	Kafra Employee::dicastes02_krafa_01	113,{ callfunc "Kf_Main","dicastes02",119,94; OnInit: waitingroom " Kafra Employee ",0; }
+
+dali,62,119,5	script	Kafra Employee::dali_krafa_01	113,{ callfunc "Kf_Main","dali",64,113; OnInit: waitingroom " Kafra Employee ",0; }
+
+dali02,111,87,5	script	Kafra Employee::dali02_krafa_01	113,{ callfunc "Kf_Main","dali02",114,82; OnInit: waitingroom " Kafra Employee ",0; }
+
+einbroch,155,302,5	script	Kafra Employee::einbroch_krafa_01	113,{ callfunc "Kf_Main","einbroch",158,296; OnInit: waitingroom " Kafra Employee ",0; }
+
+einbech,100,204,5	script	Kafra Employee::einbech_krafa_01	113,{ callfunc "Kf_Main","einbech",102,199; OnInit: waitingroom " Kafra Employee ",0; }
+
+geffen,150,64,5	script	Kafra Employee::geffen_krafa_01	113,{ callfunc "Kf_Main","geffen",157,61; OnInit: waitingroom " Kafra Employee ",0; }
+
+gonryun,186,135,5	script	Kafra Employee::gonryun_krafa_01	113,{ callfunc "Kf_Main","gonryun",189,130; OnInit: waitingroom " Kafra Employee ",0; }
+
+hugel,92,135,5	script	Kafra Employee::hugel_krafa_01	113,{ callfunc "Kf_Main","hugel",94,128; OnInit: waitingroom " Kafra Employee ",0; }
+
+izlude,125,64,5	script	Kafra Employee::izlude_krafa_01	113,{ callfunc "Kf_Main","izlude",127,58; OnInit: waitingroom " Kafra Employee ",0; }
+
+lasagna,178,200,5	script	Kafra Employee::lasagna_krafa_01	113,{ callfunc "Kf_Main","lasagna",180,196; OnInit: waitingroom " Kafra Employee ",0; }
+
+lighthalzen,161,240,5	script	Kafra Employee::lighthalzen_krafa_01	113,{ callfunc "Kf_Main","lighthalzen",164,233; OnInit: waitingroom " Kafra Employee ",0; }
+
+louyang,95,218,5	script	Kafra Employee::louyang_krafa_01	113,{ callfunc "Kf_Main","louyang",98,212; OnInit: waitingroom " Kafra Employee ",0; }
+
+xmas,145,169,5	script	Kafra Employee::xmas_krafa_01	113,{ callfunc "Kf_Main","xmas",147,161; OnInit: waitingroom " Kafra Employee ",0; }
+
+manuk,135,230,5	script	Kafra Employee::manuk_krafa_01	113,{ callfunc "Kf_Main","manuk",138,225; OnInit: waitingroom " Kafra Employee ",0; }
+
+mora,93,61,5	script	Kafra Employee::mora_krafa_01	113,{ callfunc "Kf_Main","mora",95,55; OnInit: waitingroom " Kafra Employee ",0; }
+
+morocc,53,172,5	script	Kafra Employee::morocc_krafa_01	113,{ callfunc "Kf_Main","morocc",55,167; OnInit: waitingroom " Kafra Employee ",0; }
+
+moscovia,236,188,5	script	Kafra Employee::moscovia_krafa_01	113,{ callfunc "Kf_Main","moscovia",238,182; OnInit: waitingroom " Kafra Employee ",0; }
+
+nameless_i,226,216,5	script	Kafra Employee::nameless_i_krafa_01	113,{ callfunc "Kf_Main","nameless_i",228,211; OnInit: waitingroom " Kafra Employee ",0; }
+
+payon,178,314,5	script	Kafra Employee::payon_krafa_01	113,{ callfunc "Kf_Main","payon",180,308; OnInit: waitingroom " Kafra Employee ",0; }
+
+prontera,62,63,5	script	Kafra Employee::prontera_krafa_01	113,{ callfunc "Kf_Main","prontera",64,57; OnInit: waitingroom " Kafra Employee ",0; }
+
+rachel,179,75,5	script	Kafra Employee::rachel_krafa_01	113,{ callfunc "Kf_Main","rachel",181,69; OnInit: waitingroom " Kafra Employee ",0; }
+
+mid_camp,237,238,5	script	Kafra Employee::mid_camp_krafa_01	113,{ callfunc "Kf_Main","mid_camp",239,232; OnInit: waitingroom " Kafra Employee ",0; }
+
+splendide,192,104,5	script	Kafra Employee::splendide_krafa_01	113,{ callfunc "Kf_Main","splendide",194,98; OnInit: waitingroom " Kafra Employee ",0; }
+
+umbala,119,142,5	script	Kafra Employee::umbala_krafa_01	113,{ callfunc "Kf_Main","umbala",121,136; OnInit: waitingroom " Kafra Employee ",0; }
+
+jawaii,176,130,5	script	Kafra Employee::jawaii_krafa_01	113,{ callfunc "Kf_Main","jawaii",178,125; OnInit: waitingroom " Kafra Employee ",0; }
+
+veins,202,110,5	script	Kafra Employee::veins_krafa_01	113,{ callfunc "Kf_Main","veins",204,104; OnInit: waitingroom " Kafra Employee ",0; }
+
+yuno,155,169,5	script	Kafra Employee::yuno_krafa_01	113,{ callfunc "Kf_Main","yuno",157,163; OnInit: waitingroom " Kafra Employee ",0; }
