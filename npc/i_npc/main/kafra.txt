@@ -9,7 +9,7 @@ function	script	Kf_Main	{
 	callfunc "CUSTOM_KafEnd";
 }
 
-prt_monk,177,209,5	script	Kafra Employee::capital_krafa_01	113,{ callfunc "Kf_Main","prt_monk",180,203; OnInit: waitingroom " Kafra Employee ",0; }
+capital_sro,177,209,5	script	Kafra Employee::capital_krafa_01	113,{ callfunc "Kf_Main","capital_sro",180,203; OnInit: waitingroom " Kafra Employee ",0; }
 
 alberta,137,186,5	script	Kafra Employee::alberta_krafa_01	113,{ callfunc "Kf_Main","alberta",140,180; OnInit: waitingroom " Kafra Employee ",0; }
 

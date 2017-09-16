@@ -1073,3 +1073,4 @@ tur_d04_i
 //test
 
 scythero
+capital_sro

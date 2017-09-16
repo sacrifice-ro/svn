@@ -282,7 +282,7 @@ function	script	buffEnd	{
   end;
 }
 
-prt_monk,186,209,3	script	Saint::capital_saint_01	641,{ cutin "acact_01",2; callfunc "buff"," �ѡ�ح˭ԧ "; OnInit: waitingroom " Saint - Buff ",0; }
+capital_sro,186,209,3	script	Saint::capital_saint_01	641,{ cutin "acact_01",2; callfunc "buff"," �ѡ�ح˭ԧ "; OnInit: waitingroom " Saint - Buff ",0; }
 
 alberta,142,186,3	script	Saint::alberta_saint_01	641,{ cutin "acact_01",2; callfunc "buff"," �ѡ�ح˭ԧ "; OnInit: waitingroom " Saint - Buff ",0; }
 

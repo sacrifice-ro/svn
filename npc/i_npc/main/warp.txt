@@ -14,7 +14,7 @@ function	script	Kf_MessageSelect	{
 
 function	script	Kf_Towns	{
 	menu 
-		"^FF0033- Pontera Monk ( เมืองหลวง )^000000",warp_capital,
+		"^FF0033- SRO Capital ( เมืองหลวง )^000000",warp_capital,
 		"^3FCC10- Market Place ( ตลาดขายของ )^000000",warp_market,
 		"- Alberta",warp_alberta,
 		"- Aldebaran",warp_aldebaran,
@@ -55,7 +55,7 @@ function	script	Kf_Towns	{
 		"- Yuno",warp_yuno;
 	// ------ end Menu
 
-	warp_capital: callfunc "Kf_ZWarp", "prt_monk",181,242; close;
+	warp_capital: callfunc "Kf_ZWarp", "capital_sro",181,242; close;
 	warp_market: callfunc "Kf_ZWarp", "scythero",87,99; close;
 	warp_alberta: callfunc "Kf_ZWarp", "alberta",140,182; close;
 	warp_aldebaran: callfunc "Kf_ZWarp", "aldebaran",113,115; close;
@@ -1305,7 +1305,7 @@ function	script	Kf_MainWarp	{
 	callfunc "Kf_Menu";
 }
 
-prt_monk,177,213,3	script	Warp Portal::capital_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+capital_sro,177,213,3	script	Warp Portal::capital_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
 
 alberta,132,189,3	script	Warp Portal::alberta_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
 
@@ -1351,7 +1351,7 @@ xmas,141,167,5	script	Warp Portal::xmas_warp_portal_01	10248,{ callfunc "Kf_Main
 
 manuk,131,228,5	script	Warp Portal::manuk_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
 
-mora,89,62,5	script	Warp Portal::manuk_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+mora,89,62,5	script	Warp Portal::mora_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
 
 morocc,49,170,5	script	Warp Portal::morocc_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
 
