@@ -1,0 +1,1628 @@
+function	script	SRO_userNovice	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Novice และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Swordman",u_swordman,
+  "- Magician",u_magician,
+  "- Archer",u_archer,
+  "- Acolyte",u_acolyte,
+  "- Merchant",u_merchant,
+  "- Thief",u_thief,
+  "- Gunslinger",u_gunslinger,
+  "- Ninja",u_ninja,
+  "- Teakwon",u_teakwon,
+  "- Super Novice",u_supernovice;
+
+  u_swordman:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",1;
+  
+  u_magician:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",2;
+  
+  u_archer:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",3;
+
+  u_acolyte:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4;
+
+  u_merchant:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",5;
+  
+  u_thief:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",6;
+  
+  u_gunslinger:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",24;
+  
+  u_ninja:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",25;
+  
+  u_teakwon:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4046;
+
+  u_supernovice:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 45) callfunc "SRO_jobNotAvaliable",2,45;
+    callfunc "SRO_jobchange",23;
+
+}
+
+function	script	SRO_userHighNovice	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Novice";
+  mes "และรายการต่อไปนี้คืออาชีพ";
+  mes "ที่ท่านสามารถเลือกได้";
+  next;
+  switch(lastClass$) {
+    case 7: menu "- High Swordman",u_high_swordman;
+    case 14: menu "- High Swordman",u_high_swordman;
+
+    case 8: menu "- High Acolyte",u_high_acolyte;
+    case 15: menu "- High Acolyte",u_high_acolyte;
+    
+    case 9: menu "- High Magician",u_high_magician;
+    case 16: menu "- High Magician",u_high_magician;
+    
+    case 10: menu "- High Merchant",u_high_merchant;
+    case 18: menu "- High Merchant",u_high_merchant;
+
+    case 11: menu "- High Archer",u_high_archer;
+    case 19: menu "- High Archer",u_high_archer;
+    case 20: menu "- High Archer",u_high_archer;
+
+    case 12: menu "- High Thief",u_high_thief;
+    case 17: menu "- High Thief",u_high_thief;
+  }
+
+  u_high_swordman:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4002;
+
+  u_high_acolyte:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4005;
+
+  u_high_magician:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4003;
+
+  u_high_merchant:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4006;
+
+  u_high_archer:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4004;
+
+  u_high_thief:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4007;
+
+}
+
+function	script	SRO_babyNovice	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Novice";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Baby Swordman",baby_swordman,
+  "- Baby Magician",baby_magician,
+  "- Baby Archer",baby_archer,
+  "- Baby Acolyte",baby_acolyte,
+  "- Baby Merchant",baby_merchant,
+  "- Baby Thief",baby_thief,
+  "- Baby Gunslinger",baby_gunslinger,
+  "- Baby Ninja",baby_ninja,
+  "- Baby Teakwon",baby_teakwon,
+  "- Baby Super Novice",baby_supernovice;
+
+  baby_swordman:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4024;
+  
+  baby_magician:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4025;
+  
+  baby_archer:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4026;
+
+  baby_acolyte:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4027;
+
+  baby_merchant:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4028;
+  
+  baby_thief:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4029;
+  
+  baby_gunslinger:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4228;
+  
+  baby_ninja:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4222;
+  
+  baby_teakwon:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4225;
+
+  baby_supernovice:
+    if (joblevel < 10) callfunc "SRO_jobNotAvaliable",0,10;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 45) callfunc "SRO_jobNotAvaliable",2,45;
+    callfunc "SRO_jobchange",4045;
+}
+
+function	script	SRO_userSwordman	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Swordman และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Knight",u_knight,
+  "- Crusader",u_crusader;
+
+  u_knight:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",7;
+  
+  u_crusader:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",14;
+}
+
+function	script	SRO_babySwordman	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Swordman";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Baby Knight",baby_knight,
+  "- Baby Crusader",baby_crusader;
+
+  baby_knight:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4030;
+  
+  baby_crusader:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4037;
+}
+
+function	script	SRO_userMagician	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Magician และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Wizard",u_wizard,
+  "- Sage",u_sage;
+
+  u_wizard:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",9;
+
+  u_sage:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",16;
+}
+
+function	script	SRO_babyMagician	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Magician";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Baby Wizard",baby_wizard,
+  "- Baby Sage",baby_sage;
+
+  baby_wizard:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4032;
+
+  baby_sage:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4039;
+}
+
+function	script	SRO_userArcher	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Archer และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  if (Sex == SEX_MALE) {
+    menu
+    "- Hunter",u_hunter,
+    "- Bard",u_bard;
+  } else {
+    menu
+    "- Hunter",u_hunter,
+    "- Dancer",u_dancer;
+  }
+
+  u_hunter:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",11;
+
+  u_bard:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",19;
+
+  u_dancer:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",20;
+}
+
+function	script	SRO_babyArcher	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Archer";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  if (Sex == SEX_MALE) {
+    menu
+    "- Baby Hunter",baby_hunter,
+    "- Baby Bard",baby_bard;
+  } else {
+    menu
+    "- Baby Hunter",baby_hunter,
+    "- Baby Dancer",baby_dancer;
+  }
+
+  baby_hunter:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4034;
+
+  baby_bard:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4042;
+
+  baby_dancer:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4043;
+}
+
+function	script	SRO_userAcolyte	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Acolyte และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Priest",u_priest,
+  "- Monk",u_monk;
+
+  u_priest:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",8;
+
+  u_monk:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",15;
+}
+
+function	script	SRO_babyAcolyte	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Acolyte";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Baby Priest",baby_priest,
+  "- Baby Monk",baby_monk;
+
+  baby_priest:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4031;
+
+  baby_monk:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4038;
+}
+
+function	script	SRO_userMerchant	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Merchant และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Blacksmith",u_blacksmith,
+  "- Alchemist",u_alchemist;
+
+  u_blacksmith:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",10;
+
+  u_alchemist:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",18;
+}
+
+function	script	SRO_babyMerchant	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Merchant";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Baby Blacksmith",baby_blacksmith,
+  "- Baby Alchemist",baby_alchemist;
+
+  baby_blacksmith:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4033;
+
+  baby_alchemist:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4041;
+}
+
+function	script	SRO_userThief	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Thief และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Assassin",u_assassin,
+  "- Rogue",u_rogue;
+
+  u_assassin:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",12;
+
+  u_rogue:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",17;
+}
+
+function	script	SRO_babyThief	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Thief";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Baby Assassin",baby_assassin,
+  "- Baby Rogue",baby_rogue;
+
+  baby_assassin:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4035;
+
+  baby_rogue:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4040;
+}
+
+function	script	SRO_userGunslinger	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Gunslinger และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Rebellion",u_rebellion;
+
+  u_rebellion:
+    if (joblevel < 70) callfunc "SRO_jobNotAvaliable",0,70;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4215;
+}
+
+function	script	SRO_babyGunslinger	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Gunslinger";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Baby Rebellion",baby_rebellion;
+
+  baby_rebellion:
+    if (joblevel < 70) callfunc "SRO_jobNotAvaliable",0,70;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4229;
+}
+
+function	script	SRO_userNinja	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Ninja และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  if (Sex == SEX_MALE) {
+    menu "- Kagerou",u_kagerou;
+  } else {
+    menu "- Oboro",u_oboro;
+  }
+
+  u_kagerou:
+    if (joblevel < 70) callfunc "SRO_jobNotAvaliable",0,70;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4211;
+
+  u_oboro:
+    if (joblevel < 70) callfunc "SRO_jobNotAvaliable",0,70;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4212;
+}
+
+function	script	SRO_babyNinja	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Ninja";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  if (Sex == SEX_MALE) {
+    menu "- Baby Kagerou",baby_kagerou;
+  } else {
+    menu "- Baby Oboro",baby_oboro;
+  }
+
+  baby_kagerou:
+    if (joblevel < 70) callfunc "SRO_jobNotAvaliable",0,70;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4223;
+
+  baby_oboro:
+    if (joblevel < 70) callfunc "SRO_jobNotAvaliable",0,70;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4224;
+}
+
+function	script	SRO_userTeakwon	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Teakwon และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Star Gladiator",u_star_gladiator,
+  "- Soul Linker",u_soul_linker;
+
+  u_star_gladiator:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4047;
+
+  u_soul_linker:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4049;
+}
+
+function	script	SRO_babyTeakwon	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Teakwon";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- Baby Star Gladiator",baby_star_gladiator,
+  "- Baby Soul Linker",baby_soul_linker;
+
+  baby_star_gladiator:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4226;
+
+  baby_soul_linker:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4227;
+}
+
+function	script	SRO_userSuperNovice	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Super Novice";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Super Novice Expansion",u_super_novice_expansion;
+
+  u_super_novice_expansion:
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4190;
+}
+
+function	script	SRO_babySuperNovice	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Super Novice";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Super Novice Expansion",baby_super_novice_expansion;
+
+  baby_super_novice_expansion:
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4191;
+}
+
+function	script	SRO_userKnight	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Knight และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Rune Knight",u_rune_knight;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_rune_knight:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4054;
+}
+
+function	script	SRO_babyKnight	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Knight";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Rune Knight",baby_rune_knight;
+  
+  baby_rune_knight:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4096;
+}
+
+function	script	SRO_userCrusader	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Crusader และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Royal Guard",u_royal_guard;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_royal_guard:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4066;
+}
+
+function	script	SRO_babyCrusader	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Crusader";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Royal Guard",baby_royal_guard;
+  
+  baby_royal_guard:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4102;
+}
+
+function	script	SRO_userWizard	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Wizard และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Warlock",u_warlock;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_warlock:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4055;
+}
+
+function	script	SRO_babyWizard	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Wizard";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Warlock",baby_warlock;
+  
+  baby_warlock:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4097;
+}
+
+function	script	SRO_userSage	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Sage และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Sorcerer",u_sorcerer;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_sorcerer:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4067;
+}
+
+function	script	SRO_babySage	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Sage";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Sorcerer",baby_sorcerer;
+  
+  baby_sorcerer:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4103;
+}
+
+function	script	SRO_userHunter	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Hunter และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Ranger",u_ranger;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_ranger:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4056;
+}
+
+function	script	SRO_babyHunter	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Hunter";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Ranger",baby_ranger;
+  
+  baby_ranger:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4098;
+}
+
+function	script	SRO_userBard	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Bard และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Minstrel",u_minstrel;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_minstrel:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4068;
+}
+
+function	script	SRO_babyBard	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Bard";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Minstrel",baby_minstrel;
+  
+  baby_minstrel:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4104;
+}
+
+function	script	SRO_userDancer	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Dancer และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Wanderer",u_wanderer;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_wanderer:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4069;
+}
+
+function	script	SRO_babyDancer	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby?Dancer";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Wanderer",baby_wanderer;
+  
+  baby_wanderer:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4105;
+}
+
+function	script	SRO_userPriest	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Priest และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Arch Bishop",u_arch_bishop;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_arch_bishop:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4057;
+}
+
+function	script	SRO_babyPriest	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Priest";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Arch Bishop",baby_arch_bishop;
+  
+  baby_arch_bishop:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4099;
+}
+
+function	script	SRO_userMonk	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Monk และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Sura",u_sura;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_sura:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4070;
+}
+
+function	script	SRO_babyMonk	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Monk";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Sura",baby_sura;
+  
+  baby_sura:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4106;
+}
+
+function	script	SRO_userBlacksmith	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Blacksmith และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Mechanic",u_mechanic;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_mechanic:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4058;
+}
+
+function	script	SRO_babyBlacksmith	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Blacksmith";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Mechanic",baby_mechanic;
+  
+  baby_mechanic:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4100;
+}
+
+function	script	SRO_userAlchemist	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Alchemist และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Genetic",u_genetic;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_genetic:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4071;
+}
+
+function	script	SRO_babyAlchemist	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Alchemist";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Genetic",baby_genetic;
+  
+  baby_genetic:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4107;
+}
+
+function	script	SRO_userAssassin	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Assassin และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Guillotine Cross",u_guillotine_cross;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_guillotine_cross:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4059;
+}
+
+function	script	SRO_babyAssassin	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Assassin";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Guillotine Cross",baby_guillotine_cross;
+  
+  baby_guillotine_cross:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4101;
+}
+
+function	script	SRO_userRogue	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Rogue และ";
+  mes "รายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu
+  "- High Novice",u_high_novice,
+  "- Shadow Chaser",u_shadow_chaser;
+
+  u_high_novice:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4001;
+  
+  u_shadow_chaser:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4072;
+}
+
+function	script	SRO_babyRogue	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Baby Rogue";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Baby Shadow Chaser",baby_shadow_chaser;
+  
+  baby_shadow_chaser:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4108;
+}
+
+function	script	SRO_userHighSwordman	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Swordman";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  switch(lastClass$) {
+    case 7: menu "- Lord Knight",u_lord_knight;
+    case 14: menu "- Paladin",u_paladin;
+  }
+
+  u_lord_knight:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4008;
+  
+  u_paladin:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4015;
+}
+
+function	script	SRO_userHighMagician	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Magician";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  switch(lastClass$) {
+    case 9: menu "- High Wizard",u_high_wizard;
+    case 16: menu "- Professor",u_professor;
+  }
+
+  u_high_wizard:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4010;
+  
+  u_professor:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4017;
+}
+
+function	script	SRO_userHighArcher	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Archer";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  switch(lastClass$) {
+    case 11: menu "- Sniper",u_sniper;
+    case 19: menu "- Clown",u_clown;
+    case 20: menu "- Gypsy",u_gypsy;
+  }
+
+  u_sniper:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4012;
+  
+  u_clown:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4020;
+
+  u_gypsy:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4021;
+}
+
+function	script	SRO_userHighAcolyte	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Acolyte";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  switch(lastClass$) {
+    case 8: menu "- High Priest",u_high_priest;
+    case 15: menu "- Champion",u_champion;
+  }
+
+  u_high_priest:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4009;
+  
+  u_champion:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4016;
+}
+
+function	script	SRO_userHighMerchant	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Merchant";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  switch(lastClass$) {
+    case 10: menu "- Whitesmith",u_whitesmith;
+    case 18: menu "- Creator",u_creator;
+  }
+
+  u_whitesmith:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4011;
+  
+  u_creator:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4019;
+}
+
+function	script	SRO_userHighThief	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Merchant";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  switch(lastClass$) {
+    case 12: menu "- Assassin Cross",u_assassin_cross;
+    case 17: menu "- Stalker",u_stalker;
+  }
+
+  u_assassin_cross:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4013;
+  
+  u_stalker:
+    if (joblevel < 40) callfunc "SRO_jobNotAvaliable",0,40;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    callfunc "SRO_jobchange",4018;
+}
+
+function	script	SRO_userLordKnight	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Lord Knight";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Rune Knight",u_rune_knight;
+
+  u_rune_knight:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4060;
+  
+}
+
+function	script	SRO_userPaladin	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Paladin";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Royal Guard",u_royal_guard;
+
+  u_royal_guard:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4073;
+  
+}
+
+function	script	SRO_userHighWizard	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Wizard";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Warlock",u_warlock;
+
+  u_warlock:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4061;
+  
+}
+
+function	script	SRO_userProfessor	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Professor";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Sorcerer",u_sorcerer;
+
+  u_sorcerer:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4074;
+  
+}
+
+function	script	SRO_userSniper	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Sniper";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Ranger",u_ranger;
+
+  u_ranger:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4062;
+  
+}
+
+function	script	SRO_userClown	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Clown";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Minstrel",u_minstrel;
+
+  u_minstrel:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4075;
+  
+}
+
+function	script	SRO_userGypsy	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Gypsy";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Wanderer",u_wanderer;
+
+  u_wanderer:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4076;
+  
+}
+
+function	script	SRO_userHighPriest	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ High Priest";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Arch Bishop",u_arch_bishop;
+
+  u_arch_bishop:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4063;
+  
+}
+
+function	script	SRO_userChampion	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Champion";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Sura",u_sura;
+
+  u_sura:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4077;
+  
+}
+
+function	script	SRO_userWhitesmith	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Whitesmith";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Mechanic",u_mechanic;
+
+  u_mechanic:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4064;
+  
+}
+
+function	script	SRO_userCreator	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Creator";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Genetic",u_genetic;
+
+  u_genetic:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4078;
+  
+}
+
+function	script	SRO_userAssassinCross	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Assassin Cross";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Guillotine Cross",u_guillotine_cross;
+
+  u_guillotine_cross:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4065;
+  
+}
+
+function	script	SRO_userStalker	{
+  mes "[เทพี วาลคิรี]";
+  mes "ตอนนี้ท่านคือ Stalker";
+  mes "และรายการเหล่านี้คืออาชีพที่";
+  mes "ท่านสามารถเลือกได้";
+  next;
+  menu "- Shadow Chaser",u_shadow_chaser;
+
+  u_shadow_chaser:
+    if (joblevel < 50) callfunc "SRO_jobNotAvaliable",0,50;
+    if (SkillPoint != 0) callfunc "SRO_jobNotAvaliable",1;
+    if (BaseLevel < 99) callfunc "SRO_jobNotAvaliable",2,99;
+    callfunc "SRO_jobchange",4079;
+  
+}
+
+// ----------------------------------------------------------------------------------------
+
+function	script	SRO_Jobchanger	{
+  mes "[เทพี วาลคิรี]";
+  mes "ข้ารับองค์การจากท่านโอดิน";
+  mes "เพื่อมาสร้างนักรบที่เหมาะสม";
+  mes "ไหนมาดูกันว่าท่านจะเป็นนัก";
+  mes "รบเช่นใดได้ ....!!";
+  next;
+
+  if (checkfalcon() || checkcart() || checkriding() || ismounting()) {
+    mes "[เทพี วาลคิรี]";
+		mes "อย่างไรก็ตามท่านต้องปลด";
+    if (checkfalcon()) {
+      mes "falcon " + "ก่อนในการเปลี่ยนคราส";
+    } else if (checkcart()) {
+      mes "cart " + "ก่อนในการเปลี่ยนคราส";
+    } else if (checkriding()) {
+      mes "Riding " + "ก่อนในการเปลี่ยนคราส";
+    } else if (ismounting()) {
+      mes "mount " + "ก่อนในการเปลี่ยนคราส";
+    }
+		callfunc "SRO_JobchangerEnd";
+	}
+
+  switch(class) {
+    case 0: callfunc "SRO_userNovice"; break;
+    case 4001: callfunc "SRO_userHighNovice"; break;
+    case 4023: callfunc "SRO_babyNovice"; break;
+
+    case 1: callfunc "SRO_userSwordman"; break;
+    case 2: callfunc "SRO_userMagician"; break;
+    case 3: callfunc "SRO_userArcher"; break;
+    case 4: callfunc "SRO_userAcolyte"; break;
+    case 5: callfunc "SRO_userMerchant"; break;
+    case 6: callfunc "SRO_userThief"; break;
+    case 24: callfunc "SRO_userGunslinger"; break;
+    case 25: callfunc "SRO_userNinja"; break;
+    case 4046: callfunc "SRO_userTeakwon"; break;
+    case 23: callfunc "SRO_userSuperNovice"; break;
+
+    case 4024: callfunc "SRO_babySwordman"; break;
+    case 4025: callfunc "SRO_babyMagician"; break;
+    case 4026: callfunc "SRO_babyArcher"; break;
+    case 4027: callfunc "SRO_babyAcolyte"; break;
+    case 4028: callfunc "SRO_babyMerchant"; break;
+    case 4029: callfunc "SRO_babyThief"; break;
+    case 4228: callfunc "SRO_babyGunslinger"; break;
+    case 4222: callfunc "SRO_babyNinja"; break;
+    case 4225: callfunc "SRO_babyTeakwon"; break;
+    case 4045: callfunc "SRO_babySuperNovice"; break;
+
+    case 7: callfunc "SRO_userKnight"; break;
+    case 14: callfunc "SRO_userCrusader"; break;
+    case 9: callfunc "SRO_userWizard"; break;
+    case 16: callfunc "SRO_userSage"; break;
+    case 11: callfunc "SRO_userHunter"; break;
+    case 19: callfunc "SRO_userBard"; break;
+    case 20: callfunc "SRO_userDancer"; break;
+    case 8: callfunc "SRO_userPriest"; break;
+    case 15: callfunc "SRO_userMonk"; break;
+    case 10: callfunc "SRO_userBlacksmith"; break;
+    case 18: callfunc "SRO_userAlchemist"; break;
+    case 12: callfunc "SRO_userAssassin"; break;
+    case 17: callfunc "SRO_userRogue"; break;
+
+    case 4030: callfunc "SRO_babyKnight"; break;
+    case 4037: callfunc "SRO_babyCrusader"; break;
+    case 4032: callfunc "SRO_babyWizard"; break;
+    case 4039: callfunc "SRO_babySage"; break;
+    case 4034: callfunc "SRO_babyHunter"; break;
+    case 4042: callfunc "SRO_babyBard"; break;
+    case 4043: callfunc "SRO_babyDancer"; break;
+    case 4031: callfunc "SRO_babyPriest"; break;
+    case 4038: callfunc "SRO_babyMonk"; break;
+    case 4033: callfunc "SRO_babyBlacksmith"; break;
+    case 4041: callfunc "SRO_babyAlchemist"; break;
+    case 4035: callfunc "SRO_babyAssassin"; break;
+    case 4040: callfunc "SRO_babyRogue"; break;
+
+    case 4002: callfunc "SRO_userHighSwordman"; break;
+    case 4003: callfunc "SRO_userHighMagician"; break;
+    case 4004: callfunc "SRO_userHighArcher"; break;
+    case 4005: callfunc "SRO_userHighAcolyte"; break;
+    case 4006: callfunc "SRO_userHighMerchant"; break;
+    case 4007: callfunc "SRO_userHighThief"; break;
+
+    case 4008: callfunc "SRO_userLordKnight"; break;
+    case 4015: callfunc "SRO_userPaladin"; break;
+    case 4010: callfunc "SRO_userHighWizard"; break;
+    case 4017: callfunc "SRO_userProfessor"; break;
+    case 4012: callfunc "SRO_userSniper"; break;
+    case 4020: callfunc "SRO_userClown"; break;
+    case 4021: callfunc "SRO_userGypsy"; break;
+    case 4009: callfunc "SRO_userHighPriest"; break;
+    case 4016: callfunc "SRO_userChampion"; break;
+    case 4011: callfunc "SRO_userWhitesmith"; break;
+    case 4019: callfunc "SRO_userCreator"; break;
+    case 4013: callfunc "SRO_userAssassinCross"; break;
+    case 4018: callfunc "SRO_userStalker"; break;
+
+    default: break;
+  }
+
+  callfunc "SRO_JobchangerEnd";
+}
+
+function	script	SRO_jobNotAvaliable	{
+  mes "[เทพี วาลคิรี]";
+  switch(getarg(0)) {
+    case 0:
+      mes "ระดับ Job Level ของท่านต้อง";
+      mes "มากกว่าหรือเท่ากับ " + getarg(1);
+      break;
+    case 1:
+      mes "โปรดใช้ Skill Point ที่ยัง";
+      mes "เหลืออยู่ให้กลายเป็น 0";
+      break;
+    case 2:
+      mes "ระดับ Level ของท่านต้อง";
+      mes "มากกว่าหรือเท่ากับ " + getarg(1);
+  }
+  callfunc "SRO_JobchangerEnd";
+}
+
+function	script	SRO_jobchange	{
+  mes "[เทพี วาลคิรี]";
+  mes "ท่านแน่ใจแล้วใช่หรือไม่ ?";
+  next;
+  menu "ข้ามั่นใจ !!",u_confirm,"ยังก่อนดีกว่า",u_notsure;
+
+  u_confirm:
+    mes "[เทพี วาลคิรี]";
+    mes "...................";
+    if (getarg(0) == 4001) {
+      set lastClass$,class;
+      jobchange getarg(0);
+      resetlvl(1);
+    } else {
+      jobchange getarg(0);
+    }
+    specialeffect 435;
+    callfunc "SRO_JobchangerEnd";
+
+  u_notsure:
+    mes "[เทพี วาลคิรี]";
+    mes "...................";
+    callfunc "SRO_JobchangerEnd";
+}
+
+function	script	SRO_JobchangerEnd	{
+  close2;
+  cutin "",255;
+  end;
+}
+
+// ----------------------------------------------------------------------------------------
+
+capital_sro,161,209,5	script	Goddess Valkyrie::capital_jobchange_01	811,{
+  cutin "3rd_ab_valkyrie",2;
+  callfunc "SRO_Jobchanger";
+}

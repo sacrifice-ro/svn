@@ -1,0 +1,1378 @@
+function	script	Kf_ZWarp	{
+	set warp_last_map$,getarg(0);
+	set warp_last_x,getarg(1);
+	set warp_last_y,getarg(2);
+	warp getarg(0),getarg(1),getarg(2);
+}
+
+function	script	Kf_MessageSelect	{
+	mes "[Warp Portal]";
+	mes "เลือกแมพที่ต้องการ";
+	next;
+	return;
+}
+
+function	script	Kf_Towns	{
+	menu 
+		"^FF0033- SRO Capital ( เมืองหลวง )^000000",warp_capital,
+		"^3FCC10- Market Place ( ตลาดขายของ )^000000",warp_market,
+		"- Alberta",warp_alberta,
+		"- Aldebaran",warp_aldebaran,
+		"- Amatsu",warp_amatsu,
+		"- Ayothaya",warp_ayothaya,
+		"- Brasilis",warp_brasilis,
+		"- Comodo",warp_comodo,
+		"- Dewata",warp_dewata,
+		"- Dicastes Capital",warp_dicastes_capital,
+		"- Dicastes Diel",warp_dicastes_diel,
+		"- Dimensional A",war_dimensional_a,
+		"- Dimensional B",war_dimensional_b,
+		"- Einbech",warp_einbroch,
+		"- Einbech Mining Village",warp_einbech_mv,
+		"- Geffen",warp_geffen,
+		"- Gonryun",warp_gonryun,
+		"- Hugel",warp_hugel,
+		"- Izlude",warp_izlude,
+		"- Lasagna",war_lasagna,
+		"- Lighthalzen",warp_lighthalzen,
+		"- Louyang",warp_louyang,
+		"- Lutie",warp_lutie,
+		"- Manuk",warp_manuk,
+		"- Mora",warp_mora,
+		"- Morocc",warp_morocc,
+		"- Moscovia",warp_moscovia,
+		"- Nameless Island (Day Time)",warp_namelessi,
+		"- Nameless Island (Night Time)",warp_namelessn,
+		"- Niflheim",warp_niflheim,
+		"- Payon",warp_payon,
+		"- Prontera",warp_prontera,
+		"- Rachel",warp_rachel,
+		"- Rune Mid Camp",warp_midcamp,
+		"- Splendide",warp_splendide,
+		"- Umbala",warp_umbala,
+		"- Jawaii",warp_jawaii,
+		"- Veins",warp_veins,
+		"- Yuno",warp_yuno;
+	// ------ end Menu
+
+	warp_capital: callfunc "Kf_ZWarp", "capital_sro",181,242; close;
+	warp_market: callfunc "Kf_ZWarp", "scythero",87,99; close;
+	warp_alberta: callfunc "Kf_ZWarp", "alberta",140,182; close;
+	warp_aldebaran: callfunc "Kf_ZWarp", "aldebaran",113,115; close;
+	warp_amatsu: callfunc "Kf_ZWarp", "amatsu",210,207; close;
+	warp_ayothaya: callfunc "Kf_ZWarp", "ayothaya",151,165; close;
+	warp_brasilis: callfunc "Kf_ZWarp", "brasilis",247,316; close;
+	warp_comodo: callfunc "Kf_ZWarp", "comodo",166,157; close;
+	warp_dewata: callfunc "Kf_ZWarp", "dewata",78,147; close;
+	warp_dicastes_capital: callfunc "Kf_ZWarp", "dicastes01",198,220; close;
+	warp_dicastes_diel: callfunc "Kf_ZWarp", "dicastes02",120,94; close;
+	war_dimensional_a: callfunc "Kf_ZWarp", "dali",66,113; close;
+	war_dimensional_b: callfunc "Kf_ZWarp", "dali02",114,82; close;
+	warp_einbroch: callfunc "Kf_ZWarp", "einbroch",158,296; close;
+	warp_einbech_mv: callfunc "Kf_ZWarp", "einbech",102,199; close;
+	warp_geffen: callfunc "Kf_ZWarp", "geffen",157,61; close;
+	warp_gonryun: callfunc "Kf_ZWarp", "gonryun",189,130; close;
+	warp_hugel: callfunc "Kf_ZWarp", "hugel",94,128; close;
+	warp_izlude: callfunc "Kf_ZWarp", "izlude",127,58; close;
+	war_lasagna: callfunc "Kf_ZWarp", "lasagna",180,196; close;
+	warp_lighthalzen: callfunc "Kf_ZWarp", "lighthalzen",164,233; close;
+	warp_louyang: callfunc "Kf_ZWarp", "louyang",98,212; close;
+	warp_lutie: callfunc "Kf_ZWarp", "xmas",147,161; close;
+	warp_manuk: callfunc "Kf_ZWarp", "manuk",138,225; close;
+	warp_mora: callfunc "Kf_ZWarp", "mora",95,55; close;
+	warp_morocc: callfunc "Kf_ZWarp", "morocc",55,167; close;
+	warp_moscovia: callfunc "Kf_ZWarp", "moscovia",238,182; close;
+	warp_midcamp: callfunc "Kf_ZWarp", "mid_camp",239,232; close;
+	warp_namelessi: callfunc "Kf_ZWarp", "nameless_i",228,211; close;
+	warp_namelessn: callfunc "Kf_ZWarp", "nameless_n",228,211; close;
+	warp_niflheim: callfunc "Kf_ZWarp", "niflheim",200,172; close;
+	warp_payon: callfunc "Kf_ZWarp", "payon",180,308; close;
+	warp_prontera: callfunc "Kf_ZWarp", "prontera",64,57; close;
+	warp_rachel: callfunc "Kf_ZWarp", "rachel",181,69; close;
+	warp_splendide: callfunc "Kf_ZWarp", "splendide",194,98; close;
+	warp_umbala: callfunc "Kf_ZWarp", "umbala",121,136; close;
+	warp_jawaii: callfunc "Kf_ZWarp", "jawaii",178,125; close;
+	warp_veins: callfunc "Kf_ZWarp", "veins",204,104; close;
+	warp_yuno: callfunc "Kf_ZWarp", "yuno",157,163; close;
+}
+
+function	script	Kf_Fields	{
+	menu 
+		"- Amatsu Fields",sf_amatsu,
+		"- Ayothaya Fields",sf_ayothaya,
+		"- Bifroft Fields",sf_bifrost,
+		"- Brasilis Fields",sf_brasills,
+		"- Comodo Fields",sf_comodo,
+		"- Dewata Fields",sf_dewata,
+		"- Eclage Fields",sf_eclage,
+		"- Einbroch Fields",sf_enibroch,
+		"- El Dicastes Fields",sf_el_dicastes,
+		"- Flame Basin",sf_flame_basin,
+		"- Geffen Fields",sf_geffen,
+		"- Gonryun Fields",sf_gonryun,
+		"- Hugel Fields",sf_hugel,
+		"- Lasagna Fields",sf_lasagna,
+		"- Lighthalzen Fields",sf_lighthalzen,
+		"- Louyang Fields",sf_louyang,
+		"- Lutie Fields",sf_lutie,
+		"- Malaya Fields & Scenes",sf_malaya,
+		"- Manuk Fields",sf_manuk,
+		"- Morocc Fields",sf_morroc,
+		"- Moscovia",sf_moscovia,
+		"- Mjolnir Fields",sf_mjolnir,
+		"- Niflheim Fields",sf_niflheim,
+		"- Payon Forest",sf_payon,
+		"- Prontera Fields",sf_prontera,
+		"- Rachel Fields",sf_rachel,
+		"- Rock Ridge Desert",sd_rock_rider,
+		"- Splendide Fields",sf_splendide,
+		"- Umbala Forest",sf_umbala,
+		"- Veins Fields",sf_veins,
+		"- Yggdrasil Tree",sf_yggdrasil_tree,
+		"- Yuno Fields",sf_yuno;
+	// ------ end Menu
+
+	sf_amatsu:
+		callfunc "Kf_MessageSelect";
+		menu "- Amatsu Field 1",wf_amatsu1;
+	wf_amatsu1: callfunc "Kf_ZWarp","ama_fild01",190,197; close;
+
+	sf_ayothaya:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Ayothaya Field 1",wf_ayothaya1,
+		"- Ayothaya Field 2",wf_ayothaya2;
+	wf_ayothaya1: callfunc "Kf_ZWarp","ayo_fild01",173,134; close;
+	wf_ayothaya2: callfunc "Kf_ZWarp","ayo_fild02",212,150; close;
+
+	sf_bifrost:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Bifroft Fields 1",wf_bifroft1,
+		"- Bifroft Fields 2",wf_bifroft2;
+	wf_bifroft1: callfunc "Kf_ZWarp","bif_fild01",195,229; close;
+	wf_bifroft2: callfunc "Kf_ZWarp","bif_fild02",107,167; close;
+
+	sf_brasills:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Brasilis Field 1",wf_brasills1;
+	wf_brasills1: callfunc "Kf_ZWarp","bra_fild01",82,32; close;
+
+	sf_comodo:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Comodo Field 1",wf_comodo1,
+		"- Comodo Field 2",wf_comodo2,
+		"- Comodo Field 3",wf_comodo3,
+		"- Comodo Field 4",wf_comodo4,
+		"- Comodo Field 5",wf_comodo5,
+		"- Comodo Field 6",wf_comodo6,
+		"- Comodo Field 7",wf_comodo7,
+		"- Comodo Field 8",wf_comodo8,
+		"- Comodo Field 9",wf_comodo9;
+	wf_comodo1: callfunc "Kf_ZWarp","cmd_fild01",180,178; close;
+	wf_comodo2: callfunc "Kf_ZWarp","cmd_fild02",231,160; close;
+	wf_comodo3: callfunc "Kf_ZWarp","cmd_fild03",191,172; close;
+	wf_comodo4: callfunc "Kf_ZWarp","cmd_fild04",228,194; close;
+	wf_comodo5: callfunc "Kf_ZWarp","cmd_fild05",224,203; close;
+	wf_comodo6: callfunc "Kf_ZWarp","cmd_fild06",190,223; close;
+	wf_comodo7: callfunc "Kf_ZWarp","cmd_fild07",234,177; close;
+	wf_comodo8: callfunc "Kf_ZWarp","cmd_fild08",194,175; close;
+	wf_comodo9: callfunc "Kf_ZWarp","cmd_fild09",172,172; close;
+
+	sf_dewata:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Dewata Fields 1",wf_dewata1;
+	wf_dewata1: callfunc "Kf_ZWarp","dew_fild01",0,0; close;
+
+	sf_eclage:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Eclage Fields 1",wf_eclage1;
+	wf_eclage1: callfunc "Kf_ZWarp", "ecl_fild01",203,308; close;
+
+	sf_enibroch:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Einbroch Field 1",wf_enibroch1,
+		"- Einbroch Field 2",wf_enibroch2,
+		"- Einbroch Field 3",wf_enibroch3,
+		"- Einbroch Field 4",wf_enibroch4,
+		"- Einbroch Field 5",wf_enibroch5,
+		"- Einbroch Field 6",wf_enibroch6,
+		"- Einbroch Field 7",wf_enibroch7,
+		"- Einbroch Field 8",wf_enibroch8,
+		"- Einbroch Field 9",wf_enibroch9,
+		"- Einbroch Field 10",wf_enibroch10;
+	wf_enibroch1: callfunc "Kf_ZWarp","ein_fild01",142,225; close;
+	wf_enibroch2: callfunc "Kf_ZWarp","ein_fild02",182,141; close;
+	wf_enibroch3: callfunc "Kf_ZWarp","ein_fild03",187,228; close;
+	wf_enibroch4: callfunc "Kf_ZWarp","ein_fild04",185,173; close;
+	wf_enibroch5: callfunc "Kf_ZWarp","ein_fild05",216,173; close;
+	wf_enibroch6: callfunc "Kf_ZWarp","ein_fild06",195,148; close;
+	wf_enibroch7: callfunc "Kf_ZWarp","ein_fild07",272,220; close;
+	wf_enibroch8: callfunc "Kf_ZWarp","ein_fild08",173,214; close;
+	wf_enibroch9: callfunc "Kf_ZWarp","ein_fild09",207,174; close;
+	wf_enibroch10: callfunc "Kf_ZWarp","ein_fild10",196,200; close;
+
+	sf_el_dicastes:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- El Dicastes Field 1",wf_el_dicastes1,
+		"- El Dicastes Field 2",wf_el_dicastes2;
+	wf_el_dicastes1: callfunc "Kf_ZWarp","dic_fild01",75,42; close;
+	wf_el_dicastes2: callfunc "Kf_ZWarp","dic_fild02",73,359; close;
+
+	sf_flame_basin:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Flame Basin volcano",wf_flame_basin1;
+	wf_flame_basin1: callfunc "Kf_ZWarp","moro_vol",214,176; close;
+
+	sf_geffen:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Geffen Field 0",wf_geffen0,
+		"- Geffen Field 1",wf_geffen1,
+		"- Geffen Field 2",wf_geffen2,
+		"- Geffen Field 3",wf_geffen3,
+		"- Geffen Field 4",wf_geffen4,
+		"- Geffen Field 5",wf_geffen5,
+		"- Geffen Field 6",wf_geffen6,
+		"- Geffen Field 7",wf_geffen7,
+		"- Geffen Field 8",wf_geffen8,
+		"- Geffen Field 9",wf_geffen9,
+		"- Geffen Field 10",wf_geffen10,
+		"- Geffen Field 11",wf_geffen11,
+		"- Geffen Field 12",wf_geffen12,
+		"- Geffen Field 13",wf_geffen13,
+		"- Geffen Field 14",wf_geffen14;
+	wf_geffen0: callfunc "Kf_ZWarp","gef_fild00",46,199; close;
+	wf_geffen1: callfunc "Kf_ZWarp","gef_fild01",213,204; close;
+	wf_geffen2: callfunc "Kf_ZWarp","gef_fild02",195,212; close;
+	wf_geffen3: callfunc "Kf_ZWarp","gef_fild03",257,192; close;
+	wf_geffen4: callfunc "Kf_ZWarp","gef_fild04",188,171; close;
+	wf_geffen5: callfunc "Kf_ZWarp","gef_fild05",166,263; close;
+	wf_geffen6: callfunc "Kf_ZWarp","gef_fild06",248,158; close;
+	wf_geffen7: callfunc "Kf_ZWarp","gef_fild07",195,191; close;
+	wf_geffen8: callfunc "Kf_ZWarp","gef_fild08",186,183; close;
+	wf_geffen9: callfunc "Kf_ZWarp","gef_fild09",221,117; close;
+	wf_geffen10: callfunc "Kf_ZWarp","gef_fild10",178,218; close;
+	wf_geffen11: callfunc "Kf_ZWarp","gef_fild11",136,328; close;
+	wf_geffen12: callfunc "Kf_ZWarp","gef_fild12",240,181; close;
+	wf_geffen13: callfunc "Kf_ZWarp","gef_fild13",235,235; close;
+	wf_geffen14: callfunc "Kf_ZWarp","gef_fild14",211,185; close;
+
+	sf_gonryun:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Gonryun Field 1",wf_gonryun1;
+	wf_gonryun1: callfunc "Kf_ZWarp","gon_fild01",220,227; close;
+
+	sf_hugel:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Hugel Field 1",wf_hugel1,
+		"- Hugel Field 2",wf_hugel2,
+		"- Hugel Field 3",wf_hugel3,
+		"- Hugel Field 4",wf_hugel4,
+		"- Hugel Field 5",wf_hugel5,
+		"- Hugel Field 6",wf_hugel6,
+		"- Hugel Field 7",wf_hugel7;
+	wf_hugel1: callfunc "Kf_ZWarp","hu_fild01",268,101; close;
+	wf_hugel2: callfunc "Kf_ZWarp","hu_fild02",222,193; close;
+	wf_hugel3: callfunc "Kf_ZWarp","hu_fild03",232,185; close;
+	wf_hugel4: callfunc "Kf_ZWarp","hu_fild04",252,189; close;
+	wf_hugel5: callfunc "Kf_ZWarp","hu_fild05",196,106; close;
+	wf_hugel6: callfunc "Kf_ZWarp","hu_fild06",216,220; close;
+	wf_hugel7: callfunc "Kf_ZWarp","hu_fild07",227,197; close;
+
+	sf_lasagna:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Lasagna Field 1",wf_lasagna1,
+		"- Lasagna Field 2",wf_lasagna2;
+	wf_lasagna1: callfunc "Kf_ZWarp","lasa_fild01",343,369; close;
+	wf_lasagna2: callfunc "Kf_ZWarp","lasa_fild02",339,244; close;
+
+	sf_lighthalzen:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Lighthalzen Field 1",wf_lighthalzen1,
+		"- Lighthalzen Field 2",wf_lighthalzen2,
+		"- Lighthalzen Field 3",wf_lighthalzen3;
+	wf_lighthalzen1: callfunc "Kf_ZWarp","lhz_fild01",240,179; close;
+	wf_lighthalzen2: callfunc "Kf_ZWarp","lhz_fild02",185,235; close;
+	wf_lighthalzen3: callfunc "Kf_ZWarp","lhz_fild03",240,226; close;
+
+	sf_louyang:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Louyang Field 1",wf_louyang1,
+		"- Louyang Field 2",wf_louyang2;
+	wf_louyang1: callfunc "Kf_ZWarp","lou_fild01",229,187; close;
+	wf_louyang2: callfunc "Kf_ZWarp","lou_fild01",181,170; close;
+
+	sf_lutie:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Lutie Field 1",wf_lutie1;
+	wf_lutie1: callfunc "Kf_ZWarp","xmas_fild01",115,145; close;
+
+	sf_malaya:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Malaya Field 1",wf_malaya1,
+		"- Malaya Field 2",wf_malaya2,
+		"- Malaya Scene 1",wf_malaya_s1;
+	wf_malaya1: callfunc "Kf_ZWarp","ma_fild01",37,268; close;
+	wf_malaya2: callfunc "Kf_ZWarp","ma_fild02",52,243; close;
+	wf_malaya_s1: callfunc "Kf_ZWarp","ma_scene01",144,77; close;
+
+	sf_manuk:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Manuk Field 1",wf_manuk1,
+		"- Manuk Field 2",wf_manuk2,
+		"- Manuk Field 3",wf_manuk3;
+	wf_manuk1: callfunc "Kf_ZWarp","man_fild01",0,0; close;
+	wf_manuk2: callfunc "Kf_ZWarp","man_fild02",0,0; close;
+	wf_manuk3: callfunc "Kf_ZWarp","man_fild03",0,0; close;
+
+	sf_morroc:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Morroc Field 1",wf_mooroc1,
+		"- Morroc Field 2",wf_mooroc2,
+		"- Morroc Field 3",wf_mooroc3,
+		"- Morroc Field 4",wf_mooroc4,
+		"- Morroc Field 5",wf_mooroc5,
+		"- Morroc Field 6",wf_mooroc6,
+		"- Morroc Field 7",wf_mooroc7,
+		"- Morroc Field 8",wf_mooroc8,
+		"- Morroc Field 9",wf_mooroc9,
+		"- Morroc Field 10",wf_mooroc10,
+		"- Morroc Field 11",wf_mooroc11,
+		"- Morroc Field 12",wf_mooroc12,
+		"- Morroc Field 13",wf_mooroc13,
+		"- Morroc Field 14",wf_mooroc14,
+		"- Morroc Field 15",wf_mooroc15,
+		"- Morroc Field 16",wf_mooroc16,
+		"- Morroc Field 17",wf_mooroc17,
+		"- Morroc Field 18",wf_mooroc18,
+		"- Morroc Field 19",wf_mooroc19,
+		"- Morroc Field 20",wf_mooroc20,
+		"- Morroc Field 21",wf_mooroc21,
+		"- Morroc Field 22",wf_mooroc22;
+	wf_mooroc1: callfunc "Kf_ZWarp","moc_fild01",219,205; close;
+	wf_mooroc2: callfunc "Kf_ZWarp","moc_fild02",177,206; close;
+	wf_mooroc3: callfunc "Kf_ZWarp","moc_fild03",194,182; close;
+	wf_mooroc4: callfunc "Kf_ZWarp","moc_fild04",184,217; close;
+	wf_mooroc5: callfunc "Kf_ZWarp","moc_fild05",203,213; close;
+	wf_mooroc6: callfunc "Kf_ZWarp","moc_fild06",213,208; close;
+	wf_mooroc7: callfunc "Kf_ZWarp","moc_fild07",224,170; close;
+	wf_mooroc8: callfunc "Kf_ZWarp","moc_fild08",229,177; close;
+	wf_mooroc9: callfunc "Kf_ZWarp","moc_fild09",195,198; close;
+	wf_mooroc10: callfunc "Kf_ZWarp","moc_fild10",209,168; close;
+	wf_mooroc11: callfunc "Kf_ZWarp","moc_fild11",198,216; close;
+	wf_mooroc12: callfunc "Kf_ZWarp","moc_fild12",156,187; close;
+	wf_mooroc13: callfunc "Kf_ZWarp","moc_fild13",185,263; close;
+	wf_mooroc14: callfunc "Kf_ZWarp","moc_fild14",209,219; close;
+	wf_mooroc15: callfunc "Kf_ZWarp","moc_fild15",223,188; close;
+	wf_mooroc16: callfunc "Kf_ZWarp","moc_fild16",206,228; close;
+	wf_mooroc17: callfunc "Kf_ZWarp","moc_fild17",208,238; close;
+	wf_mooroc18: callfunc "Kf_ZWarp","moc_fild18",209,223; close;
+	wf_mooroc19: callfunc "Kf_ZWarp","moc_fild19",85,97; close;
+	wf_mooroc20: callfunc "Kf_ZWarp","moc_fild20",0,0; close;
+	wf_mooroc21: callfunc "Kf_ZWarp","moc_fild21",0,0; close;
+	wf_mooroc22: callfunc "Kf_ZWarp","moc_fild22",0,0; close;
+
+	sf_moscovia:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Moscovia Field 1",wf_moscovia1,
+		"- Moscovia Field 2",wf_moscovia2;
+	wf_moscovia1: callfunc "Kf_ZWarp","mosk_fild01",0,0; close;
+	wf_moscovia2: callfunc "Kf_ZWarp","mosk_fild02",0,0; close;
+
+	sf_mjolnir:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Mjolnir Field 1",wf_mjolnir1,
+		"- Mjolnir Field 2",wf_mjolnir2,
+		"- Mjolnir Field 3",wf_mjolnir3,
+		"- Mjolnir Field 4",wf_mjolnir4,
+		"- Mjolnir Field 5",wf_mjolnir5,
+		"- Mjolnir Field 6",wf_mjolnir6,
+		"- Mjolnir Field 7",wf_mjolnir7,
+		"- Mjolnir Field 8",wf_mjolnir8,
+		"- Mjolnir Field 9",wf_mjolnir9,
+		"- Mjolnir Field 10",wf_mjolnir10,
+		"- Mjolnir Field 11",wf_mjolnir11,
+		"- Mjolnir Field 12",wf_mjolnir12;
+	wf_mjolnir1: callfunc "Kf_ZWarp","mjolnir_01",204,120; close;
+	wf_mjolnir2: callfunc "Kf_ZWarp","mjolnir_02",175,193; close;
+	wf_mjolnir3: callfunc "Kf_ZWarp","mjolnir_03",208,213; close;
+	wf_mjolnir4: callfunc "Kf_ZWarp","mjolnir_04",179,180; close;
+	wf_mjolnir5: callfunc "Kf_ZWarp","mjolnir_05",181,240; close;
+	wf_mjolnir6: callfunc "Kf_ZWarp","mjolnir_06",195,270; close;
+	wf_mjolnir7: callfunc "Kf_ZWarp","mjolnir_07",235,202; close;
+	wf_mjolnir8: callfunc "Kf_ZWarp","mjolnir_08",188,215; close;
+	wf_mjolnir9: callfunc "Kf_ZWarp","mjolnir_09",205,144; close;
+	wf_mjolnir10: callfunc "Kf_ZWarp","mjolnir_10",245,223; close;
+	wf_mjolnir11: callfunc "Kf_ZWarp","mjolnir_11",180,206; close;
+	wf_mjolnir12: callfunc "Kf_ZWarp","mjolnir_12",196,208; close;
+
+	sf_niflheim:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Niflheim Field 1",wf_niflheim1,
+		"- Niflheim Field 2",wf_niflheim2;
+	wf_niflheim1: callfunc "Kf_ZWarp","nif_fild01",215,229; close;
+	wf_niflheim2: callfunc "Kf_ZWarp","nif_fild02",167,234; close;
+
+	sf_payon:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Payon Forest 1",wf_payon1,
+		"- Payon Forest 2",wf_payon2,
+		"- Payon Forest 3",wf_payon3,
+		"- Payon Forest 4",wf_payon4,
+		"- Payon Forest 5",wf_payon5,
+		"- Payon Forest 6",wf_payon6,
+		"- Payon Forest 7",wf_payon7,
+		"- Payon Forest 8",wf_payon8,
+		"- Payon Forest 9",wf_payon9,
+		"- Payon Forest 10",wf_payon10,
+		"- Payon Forest 11",wf_payon11;
+	wf_payon1: callfunc "Kf_ZWarp","pay_fild01",158,206; close;
+	wf_payon2: callfunc "Kf_ZWarp","pay_fild02",151,219; close;
+	wf_payon3: callfunc "Kf_ZWarp","pay_fild03",205,148; close;
+	wf_payon4: callfunc "Kf_ZWarp","pay_fild04",186,247; close;
+	wf_payon5: callfunc "Kf_ZWarp","pay_fild05",134,204; close;
+	wf_payon6: callfunc "Kf_ZWarp","pay_fild06",193,235; close;
+	wf_payon7: callfunc "Kf_ZWarp","pay_fild07",200,177; close;
+	wf_payon8: callfunc "Kf_ZWarp","pay_fild08",137,189; close;
+	wf_payon9: callfunc "Kf_ZWarp","pay_fild09",201,224; close;
+	wf_payon10: callfunc "Kf_ZWarp","pay_fild10",160,205; close;
+	wf_payon11: callfunc "Kf_ZWarp","pay_fild11",194,150; close;
+
+	sf_prontera:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Prontera Field 0",wf_prontera0,
+		"- Prontera Field 1",wf_prontera1,
+		"- Prontera Field 2",wf_prontera2,
+		"- Prontera Field 3",wf_prontera3,
+		"- Prontera Field 4",wf_prontera4,
+		"- Prontera Field 5",wf_prontera5,
+		"- Prontera Field 6",wf_prontera6,
+		"- Prontera Field 7",wf_prontera7,
+		"- Prontera Field 8",wf_prontera8,
+		"- Prontera Field 9",wf_prontera9,
+		"- Prontera Field 10",wf_prontera10,
+		"- Prontera Field 11",wf_prontera11;
+	wf_prontera0: callfunc "Kf_ZWarp","prt_fild00",184,235; close;
+	wf_prontera1: callfunc "Kf_ZWarp","prt_fild01",190,206; close;
+	wf_prontera2: callfunc "Kf_ZWarp","prt_fild02",240,206; close;
+	wf_prontera3: callfunc "Kf_ZWarp","prt_fild03",190,143; close;
+	wf_prontera4: callfunc "Kf_ZWarp","prt_fild04",307,252; close;
+	wf_prontera5: callfunc "Kf_ZWarp","prt_fild05",239,213; close;
+	wf_prontera6: callfunc "Kf_ZWarp","prt_fild06",185,188; close;
+	wf_prontera7: callfunc "Kf_ZWarp","prt_fild07",193,194; close;
+	wf_prontera8: callfunc "Kf_ZWarp","prt_fild08",187,218; close;
+	wf_prontera9: callfunc "Kf_ZWarp","prt_fild09",210,183; close;
+	wf_prontera10: callfunc "Kf_ZWarp","prt_fild10",195,149; close;
+	wf_prontera11: callfunc "Kf_ZWarp","prt_fild11",198,164; close;
+
+	sf_rachel:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Rachel Field 1",wf_rachel1,
+		"- Rachel Field 2",wf_rachel2,
+		"- Rachel Field 3",wf_rachel3,
+		"- Rachel Field 4",wf_rachel4,
+		"- Rachel Field 5",wf_rachel5,
+		"- Rachel Field 6",wf_rachel6,
+		"- Rachel Field 7",wf_rachel7,
+		"- Rachel Field 8",wf_rachel8,
+		"- Rachel Field 9",wf_rachel9,
+		"- Rachel Field 10",wf_rachel10,
+		"- Rachel Field 11",wf_rachel11,
+		"- Rachel Field 12",wf_rachel12,
+		"- Rachel Field 13",wf_rachel13;
+	wf_rachel1: callfunc "Kf_ZWarp","ra_fild01",192,162; close;
+	wf_rachel2: callfunc "Kf_ZWarp","ra_fild02",235,166; close;
+	wf_rachel3: callfunc "Kf_ZWarp","ra_fild03",202,206; close;
+	wf_rachel4: callfunc "Kf_ZWarp","ra_fild04",202,208; close;
+	wf_rachel5: callfunc "Kf_ZWarp","ra_fild05",225,202; close;
+	wf_rachel6: callfunc "Kf_ZWarp","ra_fild06",202,214; close;
+	wf_rachel7: callfunc "Kf_ZWarp","ra_fild07",263,196; close;
+	wf_rachel8: callfunc "Kf_ZWarp","ra_fild08",217,201; close;
+	wf_rachel9: callfunc "Kf_ZWarp","ra_fild09",87,121; close;
+	wf_rachel10: callfunc "Kf_ZWarp","ra_fild10",277,181; close;
+	wf_rachel11: callfunc "Kf_ZWarp","ra_fild11",221,185; close;
+	wf_rachel12: callfunc "Kf_ZWarp","ra_fild12",175,200; close;
+	wf_rachel13: callfunc "Kf_ZWarp","ra_fild13",174,197; close;
+
+	sd_rock_rider:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Rock Rider Desert 1",wd_rockrider1,
+		"- Rock Rider Desert 2",wd_rockrider2;
+	wd_rockrider1: callfunc "Kf_ZWarp","rockrdg1",330,124; close;
+	wd_rockrider2: callfunc "Kf_ZWarp","rockrdg2",304,323; close;
+
+	sf_splendide:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Splendide Field 1",wf_splendide1,
+		"- Splendide Field 2",wf_splendide2,
+		"- Splendide Field 3",wf_splendide3;
+	wf_splendide1: callfunc "Kf_ZWarp","spl_fild01",0,0; close;
+	wf_splendide2: callfunc "Kf_ZWarp","spl_fild02",0,0; close;
+	wf_splendide3: callfunc "Kf_ZWarp","spl_fild03",0,0; close;
+
+	sf_umbala:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Umbala Forest 1",wf_umbala1,
+		"- Umbala Forest 2",wf_umbala2,
+		"- Umbala Forest 3",wf_umbala3,
+		"- Umbala Forest 4",wf_umbala4;
+	wf_umbala1: callfunc "Kf_ZWarp","um_fild01",217,206; close;
+	wf_umbala2: callfunc "Kf_ZWarp","um_fild02",223,221; close;
+	wf_umbala3: callfunc "Kf_ZWarp","um_fild03",237,215; close;
+	wf_umbala4: callfunc "Kf_ZWarp","um_fild04",202,197; close;
+
+	sf_veins:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Veins Field 1",wf_veins1,
+		"- Veins Field 2",wf_veins2,
+		"- Veins Field 3",wf_veins3,
+		"- Veins Field 4",wf_veins4,
+		"- Veins Field 5",wf_veins5,
+		"- Veins Field 6",wf_veins6,
+		"- Veins Field 7",wf_veins7;
+	wf_veins1: callfunc "Kf_ZWarp","ve_fild01",186,175; close;
+	wf_veins2: callfunc "Kf_ZWarp","ve_fild02",196,370; close;
+	wf_veins3: callfunc "Kf_ZWarp","ve_fild03",222,45; close;
+	wf_veins4: callfunc "Kf_ZWarp","ve_fild04",51,250; close;
+	wf_veins5: callfunc "Kf_ZWarp","ve_fild05",202,324; close;
+	wf_veins6: callfunc "Kf_ZWarp","ve_fild06",150,223; close;
+	wf_veins7: callfunc "Kf_ZWarp","ve_fild07",149,307; close;
+
+	sf_yggdrasil_tree:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Yggdrasil Tree 01",wf_yggdrasil_tree;
+	wf_yggdrasil_tree: callfunc "Kf_ZWarp","yggdrasil01",204,78; close;
+
+	sf_yuno:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Yuno Field 1",wf_yuno1,
+		"- Yuno Field 2",wf_yuno2,
+		"- Yuno Field 3",wf_yuno3,
+		"- Yuno Field 4",wf_yuno4,
+		"- Yuno Field 5",wf_yuno5,
+		"- Yuno Field 6",wf_yuno6,
+		"- Yuno Field 7",wf_yuno7,
+		"- Yuno Field 8",wf_yuno8,
+		"- Yuno Field 9",wf_yuno9,
+		"- Yuno Field 10",wf_yuno10,
+		"- Yuno Field 11",wf_yuno11,
+		"- Yuno Field 12",wf_yuno12;
+	wf_yuno1: callfunc "Kf_ZWarp","yuno_fild01",189,224; close;
+	wf_yuno2: callfunc "Kf_ZWarp","yuno_fild02",192,207; close;
+	wf_yuno3: callfunc "Kf_ZWarp","yuno_fild03",221,157; close;
+	wf_yuno4: callfunc "Kf_ZWarp","yuno_fild04",226,199; close;
+	wf_yuno5: callfunc "Kf_ZWarp","yuno_fild05",223,177; close;
+	wf_yuno6: callfunc "Kf_ZWarp","yuno_fild06",187,232; close;
+	wf_yuno7: callfunc "Kf_ZWarp","yuno_fild07",231,174; close;
+	wf_yuno8: callfunc "Kf_ZWarp","yuno_fild08",196,203; close;
+	wf_yuno9: callfunc "Kf_ZWarp","yuno_fild09",183,214; close;
+	wf_yuno10: callfunc "Kf_ZWarp","yuno_fild10",200,124; close;
+	wf_yuno11: callfunc "Kf_ZWarp","yuno_fild11",195,226; close;
+	wf_yuno12: callfunc "Kf_ZWarp","yuno_fild12",210,304; close;
+}
+
+function	script	Kf_Dungeon	{
+	menu
+		"- Abyss Lake Dungeon",sd_abyss_lake,
+		"- Amatsu Dungeon",sd_amatsu,
+		"- Ant Hell",sd_ant_hell,
+		"- Ayothaya Ancient Shrine",sd_ayothaya,
+		"- Bangungot Hospital",sd_bangungot,
+		"- Beach Dungeon",sd_beach,
+		"- Bifrost Tower",sd_bifrost_tower,
+		"- Bio Laboratory",sd_bio_laboratory,
+		"- Brasilis Dungeon",sd_brasills,
+		"- Byalan Island Dungeon",sd_byalan_island,
+		"- Clock Tower",sd_clock_tower,
+		"- Coal Mine",sd_coal_mine,
+		"- Dewata Dungeon",sd_dewata,
+		"- Dragon's Nest",sd_dragon_nest,
+		"- Einbroch Mine Dungeon",sd_enibroch_mine,
+		"- Geffen Dungeon",sd_geffen,
+		"- Gefenia",sd_gefenia,
+		"- Glast Heim",sd_glast_heim,
+		"- Gonryun Dungeon",sd_gonryun,
+		"- Hidden Temple",sd_hidden_temple,
+		"- Ice Cave",sd_icecave,
+		"- Illusion Dungeons",sd_illusion,
+		"- Juperos Ruins",sd_juperos,
+		"- Kiel Robot Factory",sd_kiel,
+		"- Lou Yang Dungeon",sd_louyang,
+		"- Magma Dungeon",sd_magma,
+		"- Malangdo Dungeon",sd_malangdo,
+		"- Moscovia Dungeon",sd_moscovia,
+		"- Nameless Island",sd_nameless,
+		"- Nidhogg's Dungeon",sd_nidhogg,
+		"- Odin Temple",sd_odin,
+		"- Orc Dungeon",sd_orc,
+		"- Payon Cave",sd_payon,
+		"- Prontera Culvert",sd_prontera_culvert,
+		"- Pyramids",sd_pyramids,
+		"- Rachel Sanctuary",sd_rachel_sanctuary,
+		"- Rock Ridge Mine",sd_rock_ridge_mine,
+		"- Scaraba Hole Dungeon",sd_scaraba_hole,
+		"- Sphinx",sd_sphinx,
+		"- Sunken Ship",sd_sunken_ship,
+		"- Thanatos Tower",sd_thanatos_tower,
+		"- Thors Volcano Dungeon",sd_thors_volcano,
+		"- Toy Factory",sd_toy_factory,
+		"- Turtle Island Dungeon",sd_turtle_island,
+		"- Umbala Dungeon",sd_umbala;
+	
+	sd_abyss_lake:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Abyss Lake 1",wd_abyss_lake1,
+		"- Abyss Lake 2",wd_abyss_lake2,
+		"- Abyss Lake 3",wd_abyss_lake3;
+	wd_abyss_lake1: callfunc "Kf_ZWarp","abyss_01",258,270; close;
+	wd_abyss_lake2: callfunc "Kf_ZWarp","abyss_02",273,274; close;
+	wd_abyss_lake3: callfunc "Kf_ZWarp","abyss_03",116,27; close;
+
+	sd_amatsu:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Amatsu Dungeon 1",wd_amatsu1,
+		"- Amatsu Dungeon 2",wd_amatsu2,
+		"- Amatsu Dungeon 3",wd_amatsu3;
+	wd_amatsu1: callfunc "Kf_ZWarp","ama_dun01",228,11; close;
+	wd_amatsu2: callfunc "Kf_ZWarp","ama_dun02",123,115; close;
+	wd_amatsu3: callfunc "Kf_ZWarp","ama_dun03",90,79; close;
+
+	sd_ant_hell:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Ant Hell 1",wd_ant_hell1,
+		"- Ant Hell 2",wd_ant_hell2;
+	wd_ant_hell1: callfunc "Kf_ZWarp","anthell01",35,262; close;
+	wd_ant_hell2: callfunc "Kf_ZWarp","anthell02",34,261; close;
+
+	sd_ayothaya:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Ayothaya Ancient Shrine 1",wd_ayothaya1,
+		"- Ayothaya Ancient Shrine 2",wd_ayothaya2;
+	wd_ayothaya1: callfunc "Kf_ZWarp","ayo_dun01",0,0; close;
+	wd_ayothaya2: callfunc "Kf_ZWarp","ayo_dun02",150,16; close;
+
+	sd_bangungot:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Bangungot Hospital 1",wd_bangungot1;
+	wd_bangungot1: callfunc "Kf_ZWarp","ma_dun01",39,109; close;
+
+	sd_beach:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Beach Dungeon 1",wd_beach1,
+		"- Beach Dungeon 2",wd_beach2,
+		"- Beach Dungeon 3",wd_beach3;
+	wd_beach1: callfunc "Kf_ZWarp","beach_dun",266,67; close;
+	wd_beach2: callfunc "Kf_ZWarp","beach_dun2",255,244; close;
+	wd_beach3: callfunc "Kf_ZWarp","beach_dun3",23,260; close;
+
+	sd_bifrost_tower:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Bifrost Tower 1",wd_bifrost_tower1,
+		"- Bifrost Tower 2",wd_bifrost_tower2,
+		"- Bifrost Tower 3",wd_bifrost_tower3;
+	wd_bifrost_tower1: callfunc "Kf_ZWarp","ecl_tdun01",61,22; close;
+	wd_bifrost_tower2: callfunc "Kf_ZWarp","ecl_tdun02",48,10; close;
+	wd_bifrost_tower3: callfunc "Kf_ZWarp","ecl_tdun03",45,12; close;
+
+	sd_bio_laboratory:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Bio Laboratory 1",wd_bio_laboratory1,
+		"- Bio Laboratory 2",wd_bio_laboratory2,
+		"- Bio Laboratory 3",wd_bio_laboratory3,
+		"- Bio Laboratory 4",wd_bio_laboratory4,
+		"- Human Experimentation Laboratory",wd_bio_laboratory5,
+		"- Tomb of the Fallen",wd_bio_laboratory6;
+	wd_bio_laboratory1: callfunc "Kf_ZWarp","lhz_dun01",143,11; close;
+	wd_bio_laboratory2: callfunc "Kf_ZWarp","lhz_dun02",155,19; close;
+	wd_bio_laboratory3: callfunc "Kf_ZWarp","lhz_dun03",140,134; close;
+	wd_bio_laboratory4: callfunc "Kf_ZWarp","lhz_dun04",102,144; close;
+	wd_bio_laboratory5: callfunc "Kf_ZWarp","que_lhz",155,213; close;
+	wd_bio_laboratory6: callfunc "Kf_ZWarp","lhz_dun_n",139,137; close;
+
+	sd_brasills:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Brasilis Dungeon 1",wd_brasills1,
+		"- Brasilis Dungeon 2",wd_brasills2;
+	wd_brasills1: callfunc "Kf_ZWarp","bra_dun01",128,138; close;
+	wd_brasills2: callfunc "Kf_ZWarp","bra_dun02",157,249; close;
+
+	sd_byalan_island:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Byalan Dungeon 0",wd_byalan_island0,
+		"- Byalan Dungeon 1",wd_byalan_island1,
+		"- Byalan Dungeon 2",wd_byalan_island2,
+		"- Byalan Dungeon 3",wd_byalan_island3,
+		"- Byalan Dungeon 4",wd_byalan_island4,
+		"- Byalan Dungeon 5",wd_byalan_island5;
+	wd_byalan_island0: callfunc "Kf_ZWarp","iz_dun00",168,168; close; 
+	wd_byalan_island1: callfunc "Kf_ZWarp","iz_dun01",41,40; close; 
+	wd_byalan_island2: callfunc "Kf_ZWarp","iz_dun02",236,204; close; 
+	wd_byalan_island3: callfunc "Kf_ZWarp","iz_dun03",33,64; close; 
+	wd_byalan_island4: callfunc "Kf_ZWarp","iz_dun04",26,30; close;
+	wd_byalan_island5: callfunc "Kf_ZWarp","iz_dun05",141,187; close;
+
+	sd_clock_tower:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Clock Tower 1F",wd_clock_tower1,
+		"- Clock Tower 2F",wd_clock_tower2,
+		"- Clock Tower 3F",wd_clock_tower3,
+		"- Clock Tower 4F",wd_clock_tower4,
+		"- Clock Tower B1",wd_clock_tower5,
+		"- Clock Tower B2",wd_clock_tower6,
+		"- Clock Tower B3",wd_clock_tower7,
+		"- Clock Tower B4",wd_clock_tower8,
+		"- Clock Tower Twisted Time 2F",wd_clock_tower9,
+		"- Clock Tower Twisted Time 3F",wd_clock_tower10;
+	wd_clock_tower1: callfunc "Kf_ZWarp","c_tower1",199,159; close;
+	wd_clock_tower2: callfunc "Kf_ZWarp","c_tower2",148,283; close;
+	wd_clock_tower3: callfunc "Kf_ZWarp","c_tower3",65,174; close;
+	wd_clock_tower4: callfunc "Kf_ZWarp","c_tower4",56,155; close;
+	wd_clock_tower5: callfunc "Kf_ZWarp","alde_dun01",297,25; close;
+	wd_clock_tower6: callfunc "Kf_ZWarp","alde_dun02",127,169; close;
+	wd_clock_tower7: callfunc "Kf_ZWarp","alde_dun03",277,178; close;
+	wd_clock_tower8: callfunc "Kf_ZWarp","alde_dun04",268,74; close;
+	wd_clock_tower9: callfunc "Kf_ZWarp","c_tower2_",268,26; close;
+	wd_clock_tower10: callfunc "Kf_ZWarp","c_tower3_",64,148; close;
+
+	sd_coal_mine:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Coal Mine 1",wd_coal1,
+		"- Coal Mine 2",wd_coal2,
+		"- Coal Mine 3",wd_coal3;
+	wd_coal1: callfunc "Kf_ZWarp","mjo_dun01",52,32; close;
+	wd_coal2: callfunc "Kf_ZWarp","mjo_dun02",58,174; close;
+	wd_coal3: callfunc "Kf_ZWarp","mjo_dun03",84,132; close;
+
+	sd_dewata:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Dewata Dungeon 01",wd_dewata1,
+		"- Dewata Dungeon 02",wd_dewata2;
+	wd_dewata1: callfunc "Kf_ZWarp","dew_dun01",166,128; close;
+	wd_dewata2: callfunc "Kf_ZWarp","dew_dun02",300,30; close;
+
+	sd_dragon_nest:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Dragon's Nest 01",wd_dragon_nest1,
+		"- Dragon's Nest 02",wd_dragon_nest2,
+		"- Dragon's Nest 03",wd_dragon_nest3,
+		"- Dragon's Nest, Lasagna Dungeon",wd_dragon_nest4;
+	wd_dragon_nest1: callfunc "Kf_ZWarp","lasa_dun01",22,143; close;
+	wd_dragon_nest2: callfunc "Kf_ZWarp","lasa_dun02",22,171; close;
+	wd_dragon_nest3: callfunc "Kf_ZWarp","lasa_dun03",190,20; close;
+	wd_dragon_nest4: callfunc "Kf_ZWarp","lasa_dun_q",190,20; close;
+
+	sd_enibroch_mine:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Mine Dungeon F1",wd_enibroch_mine1,
+		"- Mine Dungeon F2",wd_enibroch_mine2;
+	wd_enibroch_mine1: callfunc "Kf_ZWarp","ein_dun01",197,49; close;
+	wd_enibroch_mine2: callfunc "Kf_ZWarp","ein_dun02",248,20; close;
+
+	sd_geffen:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Geffen Dungeon F1",wd_geffen1,
+		"- Geffen Dungeon F2",wd_geffen2,
+		"- Geffen Dungeon F3",wd_geffen3,
+		"- Geffen Dungeon F4",wd_geffen4;
+	wd_geffen1: callfunc "Kf_ZWarp","gef_dun00",104,99; close;
+	wd_geffen2: callfunc "Kf_ZWarp","gef_dun01",115,236; close;
+	wd_geffen3: callfunc "Kf_ZWarp","gef_dun02",106,132; close;
+	wd_geffen4: callfunc "Kf_ZWarp","gef_dun03",203,200; close;
+
+	sd_gefenia:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Gefenia 1",wd_gefenia1,
+		"- Gefenia 2",wd_gefenia2,
+		"- Gefenia 3",wd_gefenia3,
+		"- Gefenia 4",wd_gefenia4;
+	wd_gefenia1: callfunc "Kf_ZWarp","gefenia01",40,103; close;
+	wd_gefenia2: callfunc "Kf_ZWarp","gefenia02",203,34; close;
+	wd_gefenia3: callfunc "Kf_ZWarp","gefenia03",266,168; close;
+	wd_gefenia4: callfunc "Kf_ZWarp","gefenia04",130,272; close;
+
+	sd_glast_heim:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Glast Heim St.Abbey",wd_glast_heim3,
+		"- Glast Heim Churchyard",wd_glast_heim4,
+		"- Glast Heim 1F",wd_glast_heim1,
+		"- Glast Heim 2F",wd_glast_heim2,
+		"- Glast Heim Underprison F1",wd_glast_heim10,
+		"- Glast Heim Underprison F2",wd_glast_heim11,
+		"- Inside Glast Heim Chivalry F1",wd_glast_heim8,
+		"- Inside Glast Heim Chivalry F2",wd_glast_heim9,
+		"- Inside Glast Heim",wd_glast_heim7,
+		"- Glast Heim Staircase Dungeon",wd_glast_heim16,
+		"- Glast Heim Culvert F1",wd_glast_heim12,
+		"- Glast Heim Culvert F2",wd_glast_heim13,
+		"- Glast Heim Culvert F3",wd_glast_heim14,
+		"- Glast Heim Culvert F4",wd_glast_heim15,
+		"- Lowest Cave in Glast Heim F1",wd_glast_heim5,
+		"- Lowest Cave in Glast Heim F2",wd_glast_heim6,
+		"- Nightmare 2nd Hall",wd_glast_heim17,
+		"- Nightmare Churchyard",wd_glast_heim18;
+	wd_glast_heim1: callfunc "Kf_ZWarp","gl_cas01",199,29; close; 
+	wd_glast_heim2: callfunc "Kf_ZWarp","gl_cas02",104,25; close;
+	wd_glast_heim3: callfunc "Kf_ZWarp","gl_church",156,7; close;
+	wd_glast_heim4: callfunc "Kf_ZWarp","gl_chyard",147,15; close;
+	wd_glast_heim5: callfunc "Kf_ZWarp","gl_dun01",133,271; close;
+	wd_glast_heim6: callfunc "Kf_ZWarp","gl_dun02",224,274; close;
+	wd_glast_heim7: callfunc "Kf_ZWarp","gl_in01",0,0; close;
+	wd_glast_heim8: callfunc "Kf_ZWarp","gl_knt01",150,15; close;
+	wd_glast_heim9: callfunc "Kf_ZWarp","gl_knt02",157,287; close;
+	wd_glast_heim10: callfunc "Kf_ZWarp","gl_prison",14,70; close;
+	wd_glast_heim11: callfunc "Kf_ZWarp","gl_prison1",150,14; close;
+	wd_glast_heim12: callfunc "Kf_ZWarp","gl_sew01",258,255; close;
+	wd_glast_heim13: callfunc "Kf_ZWarp","gl_sew02",108,291; close;
+	wd_glast_heim14: callfunc "Kf_ZWarp","gl_sew03",171,283; close;
+	wd_glast_heim15: callfunc "Kf_ZWarp","gl_sew04",68,277; close;
+	wd_glast_heim16: callfunc "Kf_ZWarp","gl_step",12,7; close;
+	wd_glast_heim17: callfunc "Kf_ZWarp","gl_cas02_",102,180; close;
+	wd_glast_heim18: callfunc "Kf_ZWarp","gl_chyard_",147,139; close;
+
+	sd_gonryun:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Gonryun Dungeon 1",wd_gonryun1,
+		"- Gonryun Dungeon 2",wd_gonryun2,
+		"- Gonryun Dungeon 3",wd_gonryun3;
+	wd_gonryun1: callfunc "Kf_ZWarp","gon_dun01",153,50; close;
+	wd_gonryun2: callfunc "Kf_ZWarp","gon_dun02",16,108; close;
+	wd_gonryun3: callfunc "Kf_ZWarp","gon_dun03",68,12; close;
+
+	sd_hidden_temple:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Labyrinth Forest F1",wd_hiden_temple1,
+		"- Labyrinth Forest F2",wd_hiden_temple2,
+		"- Labyrinth Forest F3",wd_hiden_temple3;
+	wd_hiden_temple1: callfunc "Kf_ZWarp","prt_maze01",176,7; close;
+	wd_hiden_temple2: callfunc "Kf_ZWarp","prt_maze02",92,22; close;
+	wd_hiden_temple3: callfunc "Kf_ZWarp","prt_maze03",23,8; close;
+
+	sd_icecave:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Ice Cave F1",wd_icecave1,
+		"- Ice Cave F2",wd_icecave2,
+		"- Ice Cave F3",wd_icecave3,
+		"- Ice Cave F4",wd_icecave4;
+	wd_icecave1: callfunc "Kf_ZWarp","ice_dun01",0,0; close;
+	wd_icecave2: callfunc "Kf_ZWarp","ice_dun02",0,0; close;
+	wd_icecave3: callfunc "Kf_ZWarp","ice_dun03",0,0; close;
+	wd_icecave4: callfunc "Kf_ZWarp","ice_dun04",0,0; close;
+
+	sd_illusion:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Illusion of Vampire",wd_illusion1,
+		"- Illusion of Frozen",wd_illusion2,
+		"- Illusion of Moonlight",wd_illusion3,
+		"- Illusion of Lonely Village",wd_illusion4,
+		"- Illusion of Archery",wd_illusion5;
+	wd_illusion1: callfunc "Kf_ZWarp","gef_d01_i",115,235; close;
+	wd_illusion2: callfunc "Kf_ZWarp","ice_d03_i",149,25; close;
+	wd_illusion3: callfunc "Kf_ZWarp","pay_d03_i",155,155; close;
+	wd_illusion4: callfunc "Kf_ZWarp","tur_d03_i",132,187; close;
+	wd_illusion5: callfunc "Kf_ZWarp","tur_d04_i",99,193; close;
+
+	sd_juperos:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Juperos Ruins F1",wd_juperos1,
+		"- Juperos Ruins F2",wd_juperos2,
+		"- Juperos Core",wd_juperos3;
+	wd_juperos1: callfunc "Kf_ZWarp","juperos_01",53,224; close;
+	wd_juperos2: callfunc "Kf_ZWarp","juperos_02",33,64; close;
+	wd_juperos3: callfunc "Kf_ZWarp","jupe_core",150,125; close;
+
+	sd_kiel:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Robot Factory Level 1",wd_kiel1,
+		"- Robot Factory Level 2",wd_kiel2;
+	wd_kiel1: callfunc "Kf_ZWarp","kh_dun01",0,0; close;
+	wd_kiel2: callfunc "Kf_ZWarp","kh_dun02",0,0; close;
+
+	sd_louyang:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Lou Yang Dungeon F1",wd_louyang1,
+		"- Lou Yang Dungeon F2",wd_louyang2,
+		"- Lou Yang Dungeon F3",wd_louyang3;
+	wd_louyang1: callfunc "Kf_ZWarp","lou_dun01",215,195; close;
+	wd_louyang2: callfunc "Kf_ZWarp","lou_dun02",279,20; close;
+	wd_louyang3: callfunc "Kf_ZWarp","lou_dun03",165,38; close;
+
+	sd_magma:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Nogg Road F1",wd_magma1,
+		"- Nogg Road F2",wd_magma2;
+	wd_magma1: callfunc "Kf_ZWarp","mag_dun01",126,68; close;
+	wd_magma2: callfunc "Kf_ZWarp","mag_dun02",47,30; close;
+
+	sd_malangdo:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Starry Coral Area",wd_malangdo1;
+	wd_malangdo1: callfunc "Kf_ZWarp","mal_dun01",37,232; close;
+
+	sd_moscovia:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Moscovia Dungeon 1",wd_moscovia1,
+		"- Moscovia Dungeon 2",wd_moscovia2,
+		"- Moscovia Dungeon 3",wd_moscovia3;
+	wd_moscovia1: callfunc "Kf_ZWarp","mosk_dun01",154,49; close;
+	wd_moscovia2: callfunc "Kf_ZWarp","mosk_dun02",148,261; close;
+	wd_moscovia3: callfunc "Kf_ZWarp","mosk_dun03",132,189; close;
+
+	sd_nameless:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Cursed Monastery F1",wd_nameless1,
+		"- Cursed Monastery F2",wd_nameless2,
+		"- Cursed Monastery F3",wd_nameless3;
+	wd_nameless1: callfunc "Kf_ZWarp","abbey01",13,200; close;
+	wd_nameless2: callfunc "Kf_ZWarp","abbey02",149,14; close;
+	wd_nameless3: callfunc "Kf_ZWarp","abbey03",119,8; close;
+
+	sd_nidhogg:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Nidhogg's Dungeon Lv 1",wd_nidhogg1,
+		"- Nidhogg's Dungeon Lv 2",wd_nidhogg2;
+	wd_nidhogg1: callfunc "Kf_ZWarp","nyd_dun01",60,220; close;
+	wd_nidhogg2: callfunc "Kf_ZWarp","nyd_dun02",108,113; close;
+
+	sd_odin:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Odin Temple 1",wd_odin1,
+		"- Odin Temple 2",wd_odin2,
+		"- Odin Temple 3",wd_odin3;
+	wd_odin1: callfunc "Kf_ZWarp","odin_tem01",298,167; close;
+	wd_odin2: callfunc "Kf_ZWarp","odin_tem02",224,149; close;
+	wd_odin3: callfunc "Kf_ZWarp","odin_tem03",266,280; close;
+
+	sd_orc:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Orc Dungeon F1",wd_orc1,
+		"- Orc Dungeon F2",wd_orc2;
+	wd_orc1: callfunc "Kf_ZWarp","orcsdun01",32,170; close; 
+	wd_orc2: callfunc "Kf_ZWarp","orcsdun02",21,185; close;
+
+	sd_payon:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Payon Cave F1",wd_payon1,
+		"- Payon Cave F2",wd_payon2,
+		"- Payon Cave F3",wd_payon3,
+		"- Payon Cave F4",wd_payon4,
+		"- Payon Cave F5",wd_payon5;
+	wd_payon1: callfunc "Kf_ZWarp","pay_dun00",21,183; close;
+	wd_payon2: callfunc "Kf_ZWarp","pay_dun01",19,33; close;
+	wd_payon3: callfunc "Kf_ZWarp","pay_dun02",19,63; close;
+	wd_payon4: callfunc "Kf_ZWarp","pay_dun03",155,159; close;
+	wd_payon5: callfunc "Kf_ZWarp","pay_dun04",201,204; close;
+
+	sd_prontera_culvert:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Prontera Culvert F1",wd_prontera_culvert1,
+		"- Prontera Culvert F2",wd_prontera_culvert2,
+		"- Prontera Culvert F3",wd_prontera_culvert3,
+		"- Prontera Culvert F4",wd_prontera_culvert4;
+	wd_prontera_culvert1: callfunc "Kf_ZWarp","prt_sewb1",52,17; close; 
+	wd_prontera_culvert2: callfunc "Kf_ZWarp","prt_sewb2",137,171; close; 
+	wd_prontera_culvert3: callfunc "Kf_ZWarp","prt_sewb3",179,91; close; 
+	wd_prontera_culvert4: callfunc "Kf_ZWarp","prt_sewb4",104,129; close;
+
+	sd_pyramids:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Inside Pyramid F1",wd_pyramids1,
+		"- Inside Pyramid F2",wd_pyramids2,
+		"- Inside Pyramid F3",wd_pyramids3,
+		"- Inside Pyramid F4",wd_pyramids4,
+		"- Thief Guild",wd_pyramids5,
+		"- Inside Pyramid B1",wd_pyramids6,
+		"- Inside Pyramid B2",wd_pyramids7,
+		"- Pyramid Underground 1F",wd_pyramids8,
+		"- Pyramid Underground 2F",wd_pyramids9;
+	wd_pyramids1: callfunc "Kf_ZWarp","moc_pryd01",192,9; close;
+	wd_pyramids2: callfunc "Kf_ZWarp","moc_pryd02",10,192; close;
+	wd_pyramids3: callfunc "Kf_ZWarp","moc_pryd03",100,92; close;
+	wd_pyramids4: callfunc "Kf_ZWarp","moc_pryd04",181,11; close;
+	wd_pyramids5: callfunc "Kf_ZWarp","moc_prydb1",100,188; close;
+	wd_pyramids6: callfunc "Kf_ZWarp","moc_pryd05",94,96; close;
+	wd_pyramids7: callfunc "Kf_ZWarp","moc_pryd06",192,8; close;
+	wd_pyramids8: callfunc "Kf_ZWarp","moc_prydn1",94,96; close;
+	wd_pyramids9: callfunc "Kf_ZWarp","moc_prydn2",192,8; close;
+
+	sd_rachel_sanctuary:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Holy Ground F1",wd_rachel_sanctuary1,
+		"- Holy Ground F2",wd_rachel_sanctuary2,
+		"- Holy Ground F3",wd_rachel_sanctuary3,
+		"- Holy Ground F4",wd_rachel_sanctuary4,
+		"- Holy Ground F5",wd_rachel_sanctuary5;
+	wd_rachel_sanctuary1: callfunc "Kf_ZWarp","ra_san01",139,136; close;
+	wd_rachel_sanctuary2: callfunc "Kf_ZWarp","ra_san02",213,275; close;
+	wd_rachel_sanctuary3: callfunc "Kf_ZWarp","ra_san03",119,283; close;
+	wd_rachel_sanctuary4: callfunc "Kf_ZWarp","ra_san04",119,108; close;
+	wd_rachel_sanctuary5: callfunc "Kf_ZWarp","ra_san05",150,12; close;
+
+	sd_rock_ridge_mine:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Rock Ridge Mine F1",wd_rock_ridge_mine1,
+		"- Rock Ridge Mine F2",wd_rock_ridge_mine2;
+	wd_rock_ridge_mine1: callfunc "Kf_ZWarp","rockmi1",245,22; close;
+	wd_rock_ridge_mine2: callfunc "Kf_ZWarp","rockmi2",14,89; close;
+
+	sd_scaraba_hole:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Scaraba Hole 01",wd_scaraba_hole1,
+		"- Scaraba Hole 02",wd_scaraba_hole2,
+		"- Scaraba Hole 03",wd_scaraba_hole3;
+	wd_scaraba_hole1: callfunc "Kf_ZWarp","dic_dun01",35,211; close;
+	wd_scaraba_hole2: callfunc "Kf_ZWarp","dic_dun02",101,143; close;
+	wd_scaraba_hole3: callfunc "Kf_ZWarp","dic_dun03",101,143; close;
+
+	sd_sphinx:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Sphinx F1",wd_sphinx1,
+		"- Sphinx F2",wd_sphinx2,
+		"- Sphinx F3",wd_sphinx3,
+		"- Sphinx F4",wd_sphinx4,
+		"- Sphinx F5",wd_sphinx5;
+	wd_sphinx1: callfunc "Kf_ZWarp","in_sphinx1",288,9; close;
+	wd_sphinx2: callfunc "Kf_ZWarp","in_sphinx2",149,81; close;
+	wd_sphinx3: callfunc "Kf_ZWarp","in_sphinx3",210,54; close;
+	wd_sphinx4: callfunc "Kf_ZWarp","in_sphinx4",10,222; close;
+	wd_sphinx5: callfunc "Kf_ZWarp","in_sphinx5",100,99; close;
+
+	sd_sunken_ship:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Sunken Ship F1",wd_sunken_ship1,
+		"- Sunken Ship F2",wd_sunken_ship2;
+	wd_sunken_ship1: callfunc "Kf_ZWarp","treasure01",69,24; close;
+	wd_sunken_ship2: callfunc "Kf_ZWarp","treasure02",102,27; close;
+
+	sd_thanatos_tower:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Thanatos Tower F1",wd_thanatos_tower1,
+		"- Thanatos Tower F2",wd_thanatos_tower2,
+		"- Thanatos Tower F3",wd_thanatos_tower3,
+		"- Thanatos Tower F4",wd_thanatos_tower4,
+		"- Thanatos Tower F5",wd_thanatos_tower5,
+		"- Thanatos Tower F6",wd_thanatos_tower6,
+		"- Thanatos Tower F7",wd_thanatos_tower7,
+		"- Thanatos Tower F8",wd_thanatos_tower8,
+		"- Thanatos Tower F9",wd_thanatos_tower9,
+		"- Thanatos Tower F10",wd_thanatos_tower10,
+		"- Thanatos Tower F11",wd_thanatos_tower11,
+		"- Thanatos Tower F12",wd_thanatos_tower12,
+		"- Thanatos Tower Staircase",wd_thanatos_tower13,
+		"- Thanatos Tower Boss",wd_thanatos_tower14;
+	wd_thanatos_tower1: callfunc "Kf_ZWarp","tha_t01",0,0; close;
+	wd_thanatos_tower2: callfunc "Kf_ZWarp","tha_t02",0,0; close;
+	wd_thanatos_tower3: callfunc "Kf_ZWarp","tha_t03",0,0; close;
+	wd_thanatos_tower4: callfunc "Kf_ZWarp","tha_t04",0,0; close;
+	wd_thanatos_tower5: callfunc "Kf_ZWarp","tha_t05",0,0; close;
+	wd_thanatos_tower6: callfunc "Kf_ZWarp","tha_t06",0,0; close;
+	wd_thanatos_tower7: callfunc "Kf_ZWarp","tha_t07",0,0; close;
+	wd_thanatos_tower8: callfunc "Kf_ZWarp","tha_t08",0,0; close;
+	wd_thanatos_tower9: callfunc "Kf_ZWarp","tha_t09",0,0; close;
+	wd_thanatos_tower10: callfunc "Kf_ZWarp","tha_t10",0,0; close;
+	wd_thanatos_tower11: callfunc "Kf_ZWarp","tha_t11",0,0; close;
+	wd_thanatos_tower12: callfunc "Kf_ZWarp","tha_t12",0,0; close;
+	wd_thanatos_tower13: callfunc "Kf_ZWarp","thana_step",0,0; close;
+	wd_thanatos_tower14: callfunc "Kf_ZWarp","thana_boss",0,0; close;
+
+	sd_thors_volcano:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Thors Volcano Dungeon F1",wd_thors_volcano1,
+		"- Thors Volcano Dungeon F2",wd_thors_volcano2,
+		"- Thors Volcano Dungeon F3",wd_thors_volcano3,
+		"- Thor Volcano Camp",wd_thors_volcano4,
+		"- Thor Volcano Dungeon",wd_thors_volcano5;
+	wd_thors_volcano1: callfunc "Kf_ZWarp","thor_v01",0,0; close;
+	wd_thors_volcano2: callfunc "Kf_ZWarp","thor_v02",0,0; close;
+	wd_thors_volcano3: callfunc "Kf_ZWarp","thor_v03",0,0; close;
+	wd_thors_volcano4: callfunc "Kf_ZWarp","thor_camp",0,0; close;
+	wd_thors_volcano5: callfunc "Kf_ZWarp","que_thor",0,0; close;
+
+	sd_toy_factory:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Toy Factory Warehouse",wd_toy_factory1,
+		"- Toy Monitoring Room",wd_toy_factory2;
+	wd_toy_factory1: callfunc "Kf_ZWarp","xmas_dun01",205,15; close;
+	wd_toy_factory2: callfunc "Kf_ZWarp","xmas_dun02",129,133; close;
+
+	sd_turtle_island:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Entrance to Turtle Island Dungeon",wd_turtle_island1,
+		"- Turtle Island Dungeon",wd_turtle_island2,
+		"- Good Turtles Village",wd_turtle_island3,
+		"- Turtle Palace",wd_turtle_island4;
+	wd_turtle_island1: callfunc "Kf_ZWarp","tur_dun01",154,49; close;
+	wd_turtle_island2: callfunc "Kf_ZWarp","tur_dun02",148,261; close;
+	wd_turtle_island3: callfunc "Kf_ZWarp","tur_dun03",132,189; close;
+	wd_turtle_island4: callfunc "Kf_ZWarp","tur_dun04",100,192; close;
+
+	sd_umbala:
+		callfunc "Kf_MessageSelect";
+		menu
+		"- Carpenter's Shop in the Tree",wd_umbala1,
+		"- Passage to a Foreign World",wd_umbala2;
+	wd_umbala1: callfunc "Kf_ZWarp","um_dun01",42,30; close;
+	wd_umbala2: callfunc "Kf_ZWarp","um_dun02",50,30; close;
+
+}
+
+function	script	Kf_Guild_Dungeon	{
+	mes "[Warp Portal]";
+	mes "Warp Gate ต้องการค่าใช้จ่าย 100,000";
+	mes "Zeny ในการส่งท่านไปยัง GuildDungeon";
+	mes "ที่ต้องการ...กรุณาเตรียมเงินให้";
+	mes "พร้อมก่อนเลือกแผนที่";
+	next;
+	menu
+		"- Al De Baran",sgd_luina,
+		"- Geffen",sgd_britoniah,
+		"- Payon",sgd_greenwood_lake,
+		"- Prontera",sgd_valkyrie,
+		"- Rachel",sgd_arunafeltz,
+		"- (TE)",sgd_te_subterranean,
+		"- Yuno",sgd_schwartzvald;
+
+	sgd_luina:
+		menu
+		"- Luina Guild Dungeon F1",wd_luina1,
+		"- Luina Guild Dungeon F2",wd_luina2,
+		"- Luina Guild Hall of the Abyss",wd_luina3;
+	wd_luina1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun02",25,159; close;
+	wd_luina2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun02_2",25,159; close;
+	wd_luina3: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld2_ald",194,148; close;
+
+	sgd_britoniah:
+		menu
+		"- Britoniah Guild Dungeon F1",wd_britoniah1,
+		"- Britoniah Guild Dungeon F2",wd_britoniah2,
+		"- Britoniah Guild Hall of the Abyss",wd_britoniah3;
+	wd_britoniah1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun02",43,230; close;
+	wd_britoniah2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun04_2",43,230; close;
+	wd_britoniah3: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld2_gef",101,122; close;
+
+	sgd_greenwood_lake:
+		menu
+		"- Greenwood Lake Guild Dungeon F1",wd_greenwood_lake1,
+		"- Greenwood Lake Guild Dungeon F2",wd_greenwood_lake2,
+		"- Greenwood Lake Guild Hall of the Abyss",wd_greenwood_lake3;
+	wd_greenwood_lake1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun01",120,20; close;
+	wd_greenwood_lake2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun01_2",120,20; close;
+	wd_greenwood_lake3: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld2_pay",99,168; close;
+
+	sgd_valkyrie:
+		menu
+		"- Valkyrie Guild Dungeon F1",wd_valkyrie1,
+		"- Valkyrie Guild Dungeon F2",wd_valkyrie2,
+		"- Valkyrie Guild Hall of the Abyss",wd_valkyrie3;
+	wd_valkyrie1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun03",41,35; close;
+	wd_valkyrie2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld_dun03_2",41,35; close;
+	wd_valkyrie3: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","gld2_prt",91,102; close;
+
+	sgd_arunafeltz:
+		menu
+		"- Arunafeltz Guild Dungeon",wd_arunafeltz1;
+	wd_arunafeltz1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","arug_dun01",199,14; close;
+
+	sgd_te_subterranean:
+		menu
+		"- TE Subterranean Guild Dungeon F1",wd_te_subterranean1,
+		"- TE Subterranean Guild Dungeon F2",wd_te_subterranean2;
+	wd_te_subterranean1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","teg_dun01",236,268; close;
+	wd_te_subterranean2: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","teg_dun02",26,159; close;
+
+	sgd_schwartzvald:
+		menu
+		"- Schwartzvald Guild Dungeon",wd_schwartzvald1;
+	wd_schwartzvald1: callfunc "Kf_minus_zeny",100000; callfunc "Kf_ZWarp","schg_dun01",200,134; close;
+}
+
+function	script	Kf_minus_zeny	{
+	set $minusZeny,getarg(0);
+
+	if (Zeny > $minusZeny) {
+		set Zeny, Zeny-$minusZeny;
+		return;
+	}
+
+	mes "[Warp Portal]";
+	mes "เสียใจด้วย... ท่านมีเงินไม่เพียงพอ";
+	close;
+	end;
+}
+
+function	script	Kf_Menu	{
+	if(warp_last_map$ != "") {
+		menu
+		"^FF0033- วาปไปยังสถานที่ล่าสุด -^000000",checksafewarp,
+		"->  Town",menuTown,
+		"->  Field",menuField,
+		"->  Dungeon",menuDungeon,
+		"^#FF000->  Guild Dungeon^000000",menuGuildDungeon;
+	} else {
+		menu
+		"->  Town",menuTown,
+		"->  Field",menuField,
+		"->  Dungeon",menuDungeon,
+		"^#FF000->  Guild Dungeon^000000",menuGuildDungeon;
+	}
+
+	checksafewarp: warp warp_last_map$,warp_last_x,warp_last_y; end;
+	menuTown: callfunc "Kf_Towns"; close;
+	menuField: callfunc "Kf_Fields"; close;
+	menuDungeon: callfunc "Kf_Dungeon"; close;
+	menuGuildDungeon: callfunc "Kf_Guild_Dungeon"; close;
+
+}
+
+function	script	Kf_MainWarp	{
+	mes "[Warp Portal]";
+	mes "Portal Gate แห่งเทคโนโลยี Juno";
+	mes ".....................";
+	mes "โปรดเลือกพิกัดก่อนใช้งาน Gate";
+	next;
+	callfunc "Kf_Menu";
+}
+
+capital_sro,177,213,3	script	Warp Portal::capital_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+alberta,132,189,3	script	Warp Portal::alberta_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+aldebaran,114,123,3	script	Warp Portal::aldebaran_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+amatsu,203,212,3	script	Warp Portal::amatsu_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+ayothaya,143,172,3	script	Warp Portal::ayothaya_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+brasilis,240,325,3	script	Warp Portal::brasilis_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+comodo,159,161,3	script	Warp Portal::comodo_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+dewata,71,153,3	script	Warp Portal::dewata_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+dicastes01,191,225,3	script	Warp Portal::dicastes01_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+dicastes02,113,102,3	script	Warp Portal::dicastes02_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+dali,58,117,3	script	Warp Portal::dali_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+dali02,107,85,3	script	Warp Portal::dali02_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+einbroch,151,300,3	script	Warp Portal::einbroch_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+einbech,96,202,3	script	Warp Portal::einbech_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+geffen,147,61,5	script	Warp Portal::geffen_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+gonryun,181,135,5	script	Warp Portal::gonryun_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+hugel,88,133,5	script	Warp Portal::hugel_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+izlude,121,62,5	script	Warp Portal::izlude_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+lasagna,174,198,5	script	Warp Portal::lasagna_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+lighthalzen,157,238,5	script	Warp Portal::lighthalzen_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+louyang,91,216,5	script	Warp Portal::louyang_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+xmas,141,167,5	script	Warp Portal::xmas_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+manuk,131,228,5	script	Warp Portal::manuk_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+mora,89,62,5	script	Warp Portal::mora_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+morocc,49,170,5	script	Warp Portal::morocc_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+moscovia,232,186,5	script	Warp Portal::moscovia_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+nameless_i,222,214,5	script	Warp Portal::nameless_i_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+payon,174,312,5	script	Warp Portal::payon_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+prontera,58,61,5	script	Warp Portal::prontera_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+rachel,175,73,5	script	Warp Portal::rachel_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+mid_camp,233,236,5	script	Warp Portal::mid_camp_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+splendide,188,102,5	script	Warp Portal::splendide_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+umbala,115,139,5	script	Warp Portal::umbala_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+jawaii,172,128,5	script	Warp Portal::jawaii_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+veins,198,108,5	script	Warp Portal::veins_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }
+
+yuno,151,167,5	script	Warp Portal::yuno_warp_portal_01	10248,{ callfunc "Kf_MainWarp"; OnInit: waitingroom " Warp Portal ",0; }

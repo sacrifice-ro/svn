@@ -1,0 +1,73 @@
+-	shop	toolDealer1#hidden	-1,602:300,601:60,501:50,502:200,503:550,504:1200,505:5000,545:150,546:600,547:1650,11522:2500,11523:3000,11524:3500,1750:1,1766:40,1767:3,1755:3,1754:3,1761:10,1773:5,1752:3,1760:10,1759:10,1772:3,1774:5,1757:3,1770:2,1769:10,1765:30,1762:3,1764:20,1776:10,1775:10,1751:3,1768:10,1753:4,1756:3,1758:10,13215:10,13202:30,13200:1,13218:10,7663:200,13217:10,13219:10,13216:10,13220:10,13201:15,13212:750,13210:250,13211:500,13213:1,13214:1,13206:80,7665:1500,13203:80,13207:80,13204:80,13205:80,7664:450,13252:20,13251:10,13253:40,13250:4,13254:100,13256:10,13292:10,13294:100,13259:10,13293:10,13258:10,13257:10,13255:10,18000:100,18002:200,18001:200,18004:500,18003:200,1771:50
+
+capital_sro,186,213,3	script	Tool Dealer::capital_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+alberta,147,189,3	script	Tool Dealer::alberta_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+aldebaran,123,114,3	script	Tool Dealer::aldebaran_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+amatsu,217,212,3	script	Tool Dealer::amatsu_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+ayothaya,158,172,3	script	Tool Dealer::ayothaya_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+brasilis,253,325,3	script	Tool Dealer::brasilis_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+comodo,173,161,3	script	Tool Dealer::comodo_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+dewata,85,153,3	script	Tool Dealer::dewata_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+dicastes01,204,225,3	script	Tool Dealer::dicastes01_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+dicastes02,126,102,3	script	Tool Dealer::dicastes02_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+dali,71,117,3	script	Tool Dealer::dali_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+dali02,120,85,3	script	Tool Dealer::dali02_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+einbroch,164,300,3	script	Tool Dealer::einbroch_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+einbech,109,202,3	script	Tool Dealer::einbech_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+geffen,156,70,5	script	Tool Dealer::geffen_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+gonryun,196,135,3	script	Tool Dealer::gonryun_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+hugel,100,133,3	script	Tool Dealer::hugel_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+izlude,133,62,3	script	Tool Dealer::izlude_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+lasagna,186,198,3	script	Tool Dealer::lasagna_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+lighthalzen,170,238,3	script	Tool Dealer::lighthalzen_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+louyang,104,216,3	script	Tool Dealer::louyang_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+xmas,154,167,3	script	Tool Dealer::xmas_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+manuk,144,228,3	script	Tool Dealer::manuk_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+mora,101,62,3	script	Tool Dealer::mora_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+morocc,61,170,3	script	Tool Dealer::morocc_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+moscovia,244,186,3	script	Tool Dealer::moscovia_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+nameless_i,234,214,3	script	Tool Dealer::nameless_i_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+payon,186,312,3	script	Tool Dealer::payon_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+prontera,70,61,3	script	Tool Dealer::prontera_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+rachel,187,73,3	script	Tool Dealer::rachel_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+mid_camp,245,236,3	script	Tool Dealer::mid_camp_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+splendide,200,102,3	script	Tool Dealer::splendide_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+umbala,127,140,3	script	Tool Dealer::umbala_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+jawaii,184,128,3	script	Tool Dealer::jawaii_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+veins,210,108,3	script	Tool Dealer::veins_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
+
+yuno,163,167,3	script	Tool Dealer::yuno_tool_dealer_01	474,{ callshop "toolDealer1#hidden"; end; OnInit: waitingroom " Tool Dealer ",0; }
