@@ -1,0 +1,113 @@
+function	script	SRO_SlotMachine	{
+  mes "[Slot Machine]";
+  mes "‚ª√¥‡≈◊Õ°‡¡πŸ∑’Ë∑Ë“π π„®";
+  next;
+
+  menu 
+  "1.†À¡ÿπ†slot†¥È«¬ 150,000z.",step_playZeny,
+  "2.†À¡ÿπ slot ¥È«¬ SRO†Tricket 1ea.",step_playSroticket,
+  "3. ¥Ÿ√“¬°“√¢Õß√“ß«—≈ ( ÿË¡)",step_viewReward,
+  "4. ¬°‡≈‘°",step_cancel;
+
+  step_playZeny: callfunc "SRO_SlotMachinePlay",0,getarg(0),getarg(1),getarg(2),getarg(3);
+
+  step_playSroticket: callfunc "SRO_SlotMachinePlay",1,getarg(0),getarg(1),getarg(2),getarg(3);
+
+  step_viewReward: callfunc "SRO_ViewSlotItem",getarg(1),getarg(4);
+
+  step_cancel: end;
+
+}
+
+function	script	SRO_SlotMachinePlay	{
+  mes "[Slot Machine]";
+  switch (getarg(0)) {
+    case 0:
+      mes "À“°µÈÕß°“√À¡ÿπ†slot†¥È«¬‡ß‘π†Zeny","®ß„ Ë‡ß‘π‡¢È“‰ª„π‡§√◊ËÕß®”π«π",getarg(1)+"z.";
+      next;
+      menu "„ Ë‡ß‘π≈ß‰ª„π‡§√◊ËÕß "+getarg(1)+"z.",set_zeny;
+      break;
+    case 1:
+      mes "À“°µÈÕß°“√À¡ÿπ†slot†¥È«¬∫—µ√æ‘‡»…","SRO†Tricket†®ß„ Ë∫—µ√‡¢È“¡“„π","‡§√◊ËÕß®”π«π†"+getarg(4)+"†™‘Èπ";
+      next;
+      menu "„ Ë∫—µ√†SRO†Tricket†≈ß‰ª",set_sroticket;
+      break;
+    default: end; break;
+  }
+
+  set_zeny:
+    if (Zeny > getarg(1)) {
+      set Zeny, Zeny-getarg(1);
+      callfunc "SRO_OnSlot",getarg(2),getarg(3);
+    } else {
+      mes  "[" + strcharinfo(0) + "]","¥Ÿ‡À¡◊Õπ«Ë“‡√“®–¡’‡ß‘π‰¡ËæÕπ–";
+      close; end;
+    }
+  set_sroticket:
+    if (countitem(32500) >= getarg(4)) {
+      delitem 32500,getarg(4);
+      callfunc "SRO_OnSlot",getarg(2),getarg(3);
+    } else {
+      mes "[" + strcharinfo(0) + "]","‡√“‰¡Ë¡’†SRO†Ticket†π’ËπË“";
+      close; end;
+    }
+}
+
+function	script	SRO_OnSlot	{
+  for(.@i = 0; .@i < getarraysize(getarg(0)); .@i++) {
+    set .@item_s[.@i], getelementofarray(getarg(0), .@i);
+  }
+  for(.@s = 0; .@s < getarraysize(getarg(1)); .@s++) {
+    set .@rate_r[.@s],getelementofarray(getarg(1), .@s);
+  }
+  setarray .a_status$[0],"FFF_","FFS_","FSF_","FSS_","SFF_","SFS_","SSF_","SSS_";
+  .@a = .@rate_r[rand(getarraysize(.@rate_r))];
+ 
+
+  if (.@a == 0 || .@a == 6) {
+    .@slotloop = 37;
+  } else if (.@a == 1 || .@a == 3 || .@a == 5 || .@a == 7) {
+    .@slotloop = 41;
+  } else if (.@a == 2 || .@a == 4) {
+    .@slotloop = 45;
+  }
+
+	for(.@b = 1; .@b <= .@slotloop; .@b++) {
+    cutin .a_status$[.@a] + .@b,1;
+    //cutin "FFF_10",4;
+    if (.@b == .@slotloop) {
+      sleep2(1000);
+    } else {
+      sleep2(50);
+    }
+  }
+	cutin "",255;
+  
+ 
+	if(.@a == 7) {
+    getitem(.@item_s[rand(getarraysize(.@item_s))],1);
+    mes "[" + strcharinfo(0) + "]","‰¥È‚«È¬¬¬¬¬¬......‡®Îß!!!!";
+  } else {
+    mes "[" + strcharinfo(0) + "]","¥«ß·¬Ë™–¡—¥ T^T";
+  }
+  close;
+	end;
+}
+
+function	script	SRO_ViewSlotItem	{
+  for(.@i = 0; .@i < getarraysize(getarg(0)); .@i++) {
+    npcshopdelitem getarg(1),getelementofarray(getarg(0), .@i);
+    npcshopadditem getarg(1),getelementofarray(getarg(0), .@i),0;
+  }
+  npcshopdelitem getarg(1),909;
+  callshop getarg(1),1;
+  npcshopattach getarg(1);
+  end;
+}
+
+capital_sro,216,151,5	script	Upg Weapon::capital_slotmachine_01	563,{
+  setarray(.@random_item,21000,1394,2015,13115,16019,1491,1292,13316,13071,18112,1585);
+  setarray(.@rate_random,0,7,1,2,3,4,5,6,7);
+  callfunc "SRO_SlotMachine",150000,.@random_item,.@rate_random,1,"upgslotdummy";
+}
+-	shop	upgslotdummy	-1,909:-1

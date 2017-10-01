@@ -26,7 +26,7 @@
 //	callfunc "qshop"{,<shop ID>{,<shop ID>{,...}}};
 //============================================================
 prontera,164,203,6	script	Quest Shop#1	998,{ callfunc "qshop"; }
-
+capital_sro,222,151,6	script	Quest Shop#1	998,{ callfunc "qshop"; }
 
 // Script Core
 //============================================================
